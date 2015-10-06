@@ -1,0 +1,214 @@
+library(httr)#
+library(ggplot2)#
+add_cat <- function(width = 400, height = 400){#
+  r <- GET(paste("http://theoldreader.com/kittens", width, height, sep = "/"))#
+  stop_for_status(r)#
+  img <- content(r)#
+  bw <- 0.2989*img[,,1] + 0.5870*img[,,2] + 0.1140*img[,,3]#
+  lighter <- bw + (0.7 * (1-bw))#
+  annotation_raster(lighter, xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)#
+}#
+ggplot(mpg, aes(cty, hwy)) +#
+  add_cat() +#
+  geom_point()
+http://www.theguardian.com/stage/2014/aug/01/edinburgh-festival-diary-israeli-theatre-group-venue-hunt
+library(httr)#
+library(ggplot2)#
+add_cat <- function(width = 400, height = 400){#
+  r <- GET(paste("http://theoldreader.com/kittens", width, height, sep = "/"))#
+  stop_for_status(r)#
+  img <- content(r)#
+  bw <- 0.2989*img[,,1] + 0.5870*img[,,2] + 0.1140*img[,,3]#
+  lighter <- bw + (0.7 * (1-bw))#
+  annotation_raster(lighter, xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf)#
+}#
+ggplot(mpg, aes(cty, hwy)) +#
+  add_cat() +#
+  geom_point()
+?power.t.test
+power.t.test(delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
+power.t.test(delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8, type = "paired")
+power.t.test(delta = 0.4, sd = 1, sig.level = 0.05, power = 0.8, type = "paired")
+power.t.test(delta = 0.3, sd = 1, sig.level = 0.05, power = 0.8, type = "paired")
+power.t.test(delta = 0.45, sd = 1, sig.level = 0.05, power = 0.8, type = "paired")
+power.t.test(delta = 0.43, sd = 1, sig.level = 0.05, power = 0.8, type = "paired")
+power.t.test(delta = 0.4, sd = 1, sig.level = 0.05, power = 0.8, type = "paired")
+rep(1,2,60)
+rep(c(1,2),60)
+rep(c(1,2),each = 40)
+rep(c(1,2),each = c(38,40))
+a = c(rep(1,38), rep(2,40))
+a
+b = c(rep(c("a","b"), each = 19), rep(c("a","b"), each = 20))
+cbind(a,b)
+a = c(rep(1,76), rep(2,80))
+b = c(rep(c("a","b"), each = 38), rep(c("a","b"), each = 40))
+cbind(a,b)
+c = c(rep(1:38,2),rep(40:80,2))
+cbind(a,b,c)
+length(b)
+length(c)
+c = c(rep(1:38,2),rep(41:80,2))
+cbind(a,b,c)
+d = c(rep(c("Co","Exp"),38), rep(c("Co","Exp"),80))
+cbind(a,b,c,d)
+length(d)
+d = c(rep(c("Co","Exp"),19), rep(c("Co","Exp"),40))
+length(d)
+length(c)
+rep(c("Co","Exp"),19)
+c = c(rep(1:38,2),rep(41:80,2))
+length(c)
+length(b)
+length(a)
+38*2
+cbind(a,b,c)
+d = c(rep(c("Co","Exp"),38), rep(c("Co","Exp"),40))
+length(d)
+cbind(a,b,c,d)
+cbind(a,b,c,d) -> k
+libraru(ez)
+library(ez)
+rnorm(3)
+cbind(a,b,c,d, rnorm(156)) -> k
+k[,3]
+ezANOVA(k,dv = k[,5], wid = k[,3], within = k[,2], between = .(k[,1],k[,4]))
+k <- data.frame(k)
+summary(k)
+ezANOVA(k,dv = V5, wid = c, within = b, between = .(a,d))
+k$V5 <- as.numeric(as.character(k$V5))
+ezANOVA(k,dv = V5, wid = c, within = b, between = .(a,d))
+length(k$c)
+length(k$V5)
+length(k$d)
+length(k$e)
+length(k$d)
+summary(k)
+ezANOVA(k,dv = V5, wid = c, within = b, between = .(a,d))
+ezANOVA(k,dv = k$V5, wid = k$c, within = k$b, between = .(k$a,k$d))
+ezANOVA(k,dv = V5, wid = c, within = b, between = .(a,d), type = 3)
+?ezANOVA
+k[1:40]
+k[1:40,]
+ezANOVA(k,dv = V5, wid = c, within = b, between = .(a), type = 3)
+ezANOVA(k,dv = V5, wid = c, between = .(a), type = 3)
+ezANOVA(k,dv = V5, wid = c, within = .(b), type = 3)
+ezANOVA(k,dv = V5, wid = c, within = .(b), between = .(a),type = 3)
+options(contrasts=c("contr.sum","contr.poly"))
+ezANOVA(k,dv = V5, wid = c, within = .(b), between = .(a),type = 3)
+library(arm)
+logit(0.99)
+logit(0.9)
+library(jsonlite)#
+#
+# This script is used to read in all the csv files in a folder.#
+#
+library(doBy)#
+#
+Catch_Import= function(path_name){#
+library(jsonlite)#
+#
+list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
+comp = c()#
+for (x in file_list){#
+	file_name = x#
+	df <- fromJSON(file_name)#
+	d <- df$data[4]$trialdata[1:2,]   ##df$data[4]$trialdata$key_press %in% c(71,32),]#
+	d$Subj <- unique(df$data[4]$trialdata[df$data[4]$trialdata$Screen == "Real-Response",]$Subj)[2]#
+	output <- cbind(key = d$key_press,Subj = d$Subj)#
+	comp = rbind(comp,output)#
+	print(x)#
+	}#
+	return(comp)#
+}#
+Comp_Import = function(path_name){#
+library(jsonlite)#
+#
+list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
+comp = c()#
+for (x in file_list){#
+	file_name = x#
+	df <- fromJSON(file_name)#
+	d <- df$data[4]$trialdata[df$data[4]$trialdata$Screen == "Real-Response",]#
+	d <- d[ grep("match",d$stims$Cond, ignore.case = TRUE),]#
+	#d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
+	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
+	d$Cond <- as.factor(d$stims$Cond)#
+	d$Item <- as.factor(d$stims$Item)#
+	d$Task <- "Phrase"#
+	#d[grep("list",d$Cond, ignore.case = TRUE),]$Task <- "List"#
+	d$Task <- as.factor(d$Task)#
+	d$Stim <- "Red Boat"#
+	d[grep("full-mask",d$Cond, ignore.case = TRUE),]$Stim <- "Boat"#
+	d[grep("no-mask",d$Cond, ignore.case = TRUE),]$Stim <- "Big Red Boat"#
+	d$Stim <- ordered(d$Stim, levels = c("Big Red Boat", "Red Boat", "Boat"))#
+	d$PicType <- "Big"#
+	d[grep("small_",d$Item, ignore.case = TRUE),]$PicType <- "Small"#
+	d$Match <- "Match"#
+	d[grep("mismatch",d$Cond, ignore.case = TRUE),]$Match <- "MisMatch"#
+	d$Match <- as.factor(d$Match)#
+	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Pic = d$stimulus, Match = d$Match, PicType = d$PicType)#
+	output$rt <- as.numeric(as.character(output$rt))#
+	comp = rbind(comp,output)#
+	print(x)#
+	}#
+	return(comp)#
+}#
+#
+# Function for plotting data#
+Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit){#
+DV.se <- DV.se/(sqrt(length(unique(Subj))))#
+comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
+comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
+barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = "msec", main = title, legend = T, xpd = FALSE)#
+arrows(c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) + c(comp.graph.se)+0.01), c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
+}#
+#
+library(lme4)#
+library(ez)#
+catch <- Catch_Import("./data")#
+print(catch)#
+comp <- Comp_Import("./data")#
+contrasts(comp$Stim) <- c(-0.5,0.5)#
+contrasts(comp$Task) <- c(-0.5,0.5)#
+comp <- comp[comp$rt > 300 & comp$rt <1500,]#
+comp$Acc <- 0#
+comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
+comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
+comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
+#
+comp$rtAdj <- NA#
+comp$AccAdj <- NA#
+for (i in unique(comp$Subj)){#
+	comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
+	comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
+	}#
+#summary(lmer(rt ~ Stim*Task + (1+ Stim*Task|Subj), data = subset(comp, Acc ==1 & Match == "Match")))#
+ezANOVA(subset(comp, Acc ==1 & Match == "Match" ), rt, wid = .(Subj), within = .(Stim, Task))$ANOVA#
+ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task == "Phrase"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
+ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task == "List"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
+#summary(glmer(Acc ~ Stim*Task + (1+ Stim*Task|Subj), data = comp, family = "binomial"))#
+#
+comp.rt <- summaryBy(rt + rtAdj ~ Task + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
+comp.rt <- summaryBy(rt + rtAdj ~ Task + Stim , , data = comp.rt, FUN = c(mean,sd), na.rm = T )#
+print(comp.rt)#
+Comp_Graph(comp.rt$rt.mean,comp.rt$rtAdj.sd, comp.rt$Stim, comp.rt$Task, comp$Subj, "Reaction Time", c(650,850))#
+#
+comp.Acc <- summaryBy(Acc + AccAdj~  Task + Stim  +Subj, , data = comp, FUN = c(mean), na.rm = T , keep.names = T)#
+comp.Acc <- summaryBy(Acc + AccAdj~  Task + Stim  , , data = comp.Acc, FUN = c(mean,sd), na.rm = T )#
+print(comp.Acc)#
+Comp_Graph(comp.Acc$Acc.mean,comp.Acc$AccAdj.sd, comp.Acc$Stim, comp.Acc$Task, comp$Subj, "Accuracy", c(0.5,1))#
+comp$PicType = NA#
+for (colors in c("big", "small")){#
+	comp[grep(colors,comp$Pic, ignore.case = TRUE),]$PicType <- colors#
+	}#
+comp$PicType <- as.factor(comp$PicType)#
+comp.sh.rt <- summaryBy(rt ~ PicType + Task + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
+comp.sh.rt <- summaryBy(rt ~ PicType +Task+ Stim , data = comp.sh.rt, FUN = c(mean,sd), na.rm = T )#
+print(comp.sh.rt)#
+#
+comp.sh.Acc <- summaryBy(Acc ~ PicType + Task + Stim + Subj, , data = comp, FUN = c(mean), na.rm = T , keep.names = T)#
+comp.sh.Acc <- summaryBy(Acc ~ PicType +Task+ Stim , data = comp.sh.Acc, FUN = c(mean,sd), na.rm = T )#
+print(comp.sh.Acc)
+summaryBy(rt ~ PicType + Task + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)
+summaryBy(rt ~ Subj + Stim, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)
