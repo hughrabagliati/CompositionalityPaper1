@@ -1,0 +1,2892 @@
+{
+    "status": "user data saved", 
+    "assignmentId": "3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+    "workerId": "togt519479rata", 
+    "questiondata": {}, 
+    "bonus": 0, 
+    "hitId": "371DNNCG442RUDPC0QMMNO2WDHF8T5", 
+    "counterbalance": 0, 
+    "useragent": "", 
+    "eventdata": [
+        {
+            "eventtype": "initialized", 
+            "interval": 0, 
+            "value": null, 
+            "timestamp": 1431698322224
+        }, 
+        {
+            "eventtype": "window_resize", 
+            "interval": 1, 
+            "value": [
+                1024, 
+                705
+            ], 
+            "timestamp": 1431698322225
+        }, 
+        {
+            "eventtype": "focus", 
+            "interval": 120604, 
+            "value": "off", 
+            "timestamp": 1431698442829
+        }, 
+        {
+            "eventtype": "focus", 
+            "interval": 7078, 
+            "value": "on", 
+            "timestamp": 1431698449907
+        }, 
+        {
+            "eventtype": "window_resize", 
+            "interval": 2342, 
+            "value": [
+                1366, 
+                677
+            ], 
+            "timestamp": 1431698452249
+        }, 
+        {
+            "eventtype": "focus", 
+            "interval": 167710, 
+            "value": "off", 
+            "timestamp": 1431698619959
+        }, 
+        {
+            "eventtype": "focus", 
+            "interval": 1101, 
+            "value": "on", 
+            "timestamp": 1431698621060
+        }
+    ], 
+    "data": [
+        {
+            "current_trial": 0, 
+            "trialdata": {
+                "rt": 193821, 
+                "trial_type": "text", 
+                "internal_chunk_id": "0-0", 
+                "time_elapsed": 193896, 
+                "key_press": 71, 
+                "trial_index": 0, 
+                "trial_index_global": 0
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698548739
+        }, 
+        {
+            "current_trial": 1, 
+            "trialdata": {
+                "rt": 12755, 
+                "trial_type": "text", 
+                "internal_chunk_id": "0-0", 
+                "time_elapsed": 206860, 
+                "key_press": 89, 
+                "trial_index": 0, 
+                "trial_index_global": 1
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698561702
+        }, 
+        {
+            "current_trial": 2, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "house_lamp", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.2-0", 
+                "time_elapsed": 208076, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 2
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698562917
+        }, 
+        {
+            "current_trial": 3, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "house_lamp", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">house</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.2-0", 
+                "time_elapsed": 208589, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 3
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698563430
+        }, 
+        {
+            "current_trial": 4, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "house_lamp", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">lamp</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.2-0", 
+                "time_elapsed": 209095, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 4
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698563936
+        }, 
+        {
+            "current_trial": 5, 
+            "trialdata": {
+                "rt": 3068, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "house_lamp", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BlueBoat_1.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.2-0", 
+                "time_elapsed": 212508, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "correct": true, 
+                "trial_index": 0, 
+                "trial_index_global": 5
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698567350
+        }, 
+        {
+            "current_trial": 6, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_lamp", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.3-0", 
+                "time_elapsed": 214895, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 6
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698569736
+        }, 
+        {
+            "current_trial": 7, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_lamp", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">xkq</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.3-0", 
+                "time_elapsed": 215400, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 7
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698570241
+        }, 
+        {
+            "current_trial": 8, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_lamp", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">house</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.3-0", 
+                "time_elapsed": 215905, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 8
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698570746
+        }, 
+        {
+            "current_trial": 9, 
+            "trialdata": {
+                "rt": 2844, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "xkq_lamp", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BlueLamp_3.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.3-0", 
+                "time_elapsed": 219114, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "correct": true, 
+                "trial_index": 0, 
+                "trial_index_global": 9
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698573955
+        }, 
+        {
+            "current_trial": 10, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "lamp_house", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.4-0", 
+                "time_elapsed": 221420, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 10
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698576261
+        }, 
+        {
+            "current_trial": 11, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "lamp_house", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">lamp</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.4-0", 
+                "time_elapsed": 221968, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 11
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698576809
+        }, 
+        {
+            "current_trial": 12, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "lamp_house", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">house</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.4-0", 
+                "time_elapsed": 222470, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 12
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698577311
+        }, 
+        {
+            "current_trial": 13, 
+            "trialdata": {
+                "rt": 913, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "lamp_house", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/RedLamp_3.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.4-0", 
+                "time_elapsed": 223950, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "correct": false, 
+                "trial_index": 0, 
+                "trial_index_global": 13
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698578791
+        }, 
+        {
+            "current_trial": 14, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "lamp_house", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.5-0", 
+                "time_elapsed": 226897, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 14
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698581739
+        }, 
+        {
+            "current_trial": 15, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "lamp_house", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">lamp</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.5-0", 
+                "time_elapsed": 227403, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 15
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698582244
+        }, 
+        {
+            "current_trial": 16, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "lamp_house", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">house</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.5-0", 
+                "time_elapsed": 227907, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 16
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698582748
+        }, 
+        {
+            "current_trial": 17, 
+            "trialdata": {
+                "rt": 1542, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "lamp_house", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/RedBoat_3.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.5-0", 
+                "time_elapsed": 229752, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "correct": true, 
+                "trial_index": 0, 
+                "trial_index_global": 17
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698584593
+        }, 
+        {
+            "current_trial": 18, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_boat", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.6-0", 
+                "time_elapsed": 232057, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 18
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698586898
+        }, 
+        {
+            "current_trial": 19, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_boat", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">xkq</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.6-0", 
+                "time_elapsed": 232559, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 19
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698587401
+        }, 
+        {
+            "current_trial": 20, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_boat", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">boat</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.6-0", 
+                "time_elapsed": 233106, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 20
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698587947
+        }, 
+        {
+            "current_trial": 21, 
+            "trialdata": {
+                "rt": 736, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "xkq_boat", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/RedBoat_2.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.6-0", 
+                "time_elapsed": 234230, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "correct": true, 
+                "trial_index": 0, 
+                "trial_index_global": 21
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698589071
+        }, 
+        {
+            "current_trial": 22, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "qxsw_lamp", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.7-0", 
+                "time_elapsed": 236938, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 22
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698591780
+        }, 
+        {
+            "current_trial": 23, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "qxsw_lamp", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">qxsw</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.7-0", 
+                "time_elapsed": 237442, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 23
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698592283
+        }, 
+        {
+            "current_trial": 24, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "qxsw_lamp", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">lamp</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.7-0", 
+                "time_elapsed": 237948, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 24
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698592789
+        }, 
+        {
+            "current_trial": 25, 
+            "trialdata": {
+                "rt": 895, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "qxsw_lamp", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BlueLamp_1.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.7-0", 
+                "time_elapsed": 239230, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "correct": true, 
+                "trial_index": 0, 
+                "trial_index_global": 25
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698594072
+        }, 
+        {
+            "current_trial": 26, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_boat", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.8-0", 
+                "time_elapsed": 241536, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 26
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698596377
+        }, 
+        {
+            "current_trial": 27, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_boat", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">xkq</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.8-0", 
+                "time_elapsed": 242039, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 27
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698596880
+        }, 
+        {
+            "current_trial": 28, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_boat", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">house</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.8-0", 
+                "time_elapsed": 242545, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 28
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698597386
+        }, 
+        {
+            "current_trial": 29, 
+            "trialdata": {
+                "rt": 1277, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "xkq_boat", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BlueBoat_3.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.8-0", 
+                "time_elapsed": 244192, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "correct": false, 
+                "trial_index": 0, 
+                "trial_index_global": 29
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698599033
+        }, 
+        {
+            "current_trial": 30, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "house_lamp", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.9-0", 
+                "time_elapsed": 246946, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 30
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698601787
+        }, 
+        {
+            "current_trial": 31, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "house_lamp", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">house</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.9-0", 
+                "time_elapsed": 247451, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 31
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698602292
+        }, 
+        {
+            "current_trial": 32, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "house_lamp", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">lamp</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.9-0", 
+                "time_elapsed": 247955, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 32
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698602796
+        }, 
+        {
+            "current_trial": 33, 
+            "trialdata": {
+                "rt": 1180, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "house_lamp", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/RedHouse_3.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.9-0", 
+                "time_elapsed": 249514, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "correct": true, 
+                "trial_index": 0, 
+                "trial_index_global": 33
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698604355
+        }, 
+        {
+            "current_trial": 34, 
+            "trialdata": {
+                "rt": 52392, 
+                "trial_type": "text", 
+                "internal_chunk_id": "0-0", 
+                "time_elapsed": 303345, 
+                "key_press": 32, 
+                "trial_index": 0, 
+                "trial_index_global": 34
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698658186
+        }, 
+        {
+            "current_trial": 35, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "key_heart", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.11-0", 
+                "time_elapsed": 304048, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 35
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698658889
+        }, 
+        {
+            "current_trial": 36, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "key_heart", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">key</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.11-0", 
+                "time_elapsed": 304551, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 36
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698659392
+        }, 
+        {
+            "current_trial": 37, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "key_heart", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">heart</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.11-0", 
+                "time_elapsed": 305104, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 37
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698659945
+        }, 
+        {
+            "current_trial": 38, 
+            "trialdata": {
+                "rt": 1105, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "key_heart", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BlackKey_2.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.11-0", 
+                "time_elapsed": 306502, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 38
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698661343
+        }, 
+        {
+            "current_trial": 39, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "wvcnz_lock", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.12-0", 
+                "time_elapsed": 307873, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 39
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698662714
+        }, 
+        {
+            "current_trial": 40, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "wvcnz_lock", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">wvcnz</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.12-0", 
+                "time_elapsed": 308376, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 40
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698663217
+        }, 
+        {
+            "current_trial": 41, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "wvcnz_lock", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">lock</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.12-0", 
+                "time_elapsed": 308881, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 41
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698663722
+        }, 
+        {
+            "current_trial": 42, 
+            "trialdata": {
+                "rt": 941, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "wvcnz_lock", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/GreenLock_3.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.12-0", 
+                "time_elapsed": 310175, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 42
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698665016
+        }, 
+        {
+            "current_trial": 43, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "note_lamp", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.13-0", 
+                "time_elapsed": 311267, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 43
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698666109
+        }, 
+        {
+            "current_trial": 44, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "note_lamp", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">note</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.13-0", 
+                "time_elapsed": 311772, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 44
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698666613
+        }, 
+        {
+            "current_trial": 45, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "note_lamp", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">lamp</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.13-0", 
+                "time_elapsed": 312276, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 45
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698667117
+        }, 
+        {
+            "current_trial": 46, 
+            "trialdata": {
+                "rt": 1330, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "note_lamp", 
+                    "Cond": "Match-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/RedLamp_1.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.13-0", 
+                "time_elapsed": 313908, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 46
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698668750
+        }, 
+        {
+            "current_trial": 47, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_heart", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.14-0", 
+                "time_elapsed": 314911, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 47
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698669752
+        }, 
+        {
+            "current_trial": 48, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_heart", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">xkq</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.14-0", 
+                "time_elapsed": 315415, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 48
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698670256
+        }, 
+        {
+            "current_trial": 49, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_heart", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">lamp</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.14-0", 
+                "time_elapsed": 315919, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 49
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698670760
+        }, 
+        {
+            "current_trial": 50, 
+            "trialdata": {
+                "rt": 720, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_heart", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/GreenHeart_1.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.14-0", 
+                "time_elapsed": 317004, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 50
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698671845
+        }, 
+        {
+            "current_trial": 51, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "flag_cup", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.15-0", 
+                "time_elapsed": 318510, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 51
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698673351
+        }, 
+        {
+            "current_trial": 52, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "flag_cup", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">flag</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.15-0", 
+                "time_elapsed": 319013, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 52
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698673855
+        }, 
+        {
+            "current_trial": 53, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "flag_cup", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">cup</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.15-0", 
+                "time_elapsed": 319517, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 53
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698674358
+        }, 
+        {
+            "current_trial": 54, 
+            "trialdata": {
+                "rt": 1119, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "flag_cup", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BrownPlane_2.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.15-0", 
+                "time_elapsed": 321028, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 54
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698675869
+        }, 
+        {
+            "current_trial": 55, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_key", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.16-0", 
+                "time_elapsed": 322032, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 55
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698676873
+        }, 
+        {
+            "current_trial": 56, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_key", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">xkq</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.16-0", 
+                "time_elapsed": 322537, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 56
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698677378
+        }, 
+        {
+            "current_trial": 57, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_key", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">key</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.16-0", 
+                "time_elapsed": 323043, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 57
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698677884
+        }, 
+        {
+            "current_trial": 58, 
+            "trialdata": {
+                "rt": 1022, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_key", 
+                    "Cond": "Match-Mask-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BlackKey_1.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.16-0", 
+                "time_elapsed": 324385, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 58
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698679226
+        }, 
+        {
+            "current_trial": 59, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "rjdnw_cup", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.17-0", 
+                "time_elapsed": 325387, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 59
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698680229
+        }, 
+        {
+            "current_trial": 60, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "rjdnw_cup", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">rjdnw</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.17-0", 
+                "time_elapsed": 325930, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 60
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698680771
+        }, 
+        {
+            "current_trial": 61, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "rjdnw_cup", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">shoe</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.17-0", 
+                "time_elapsed": 326436, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 61
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698681277
+        }, 
+        {
+            "current_trial": 62, 
+            "trialdata": {
+                "rt": 728, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "rjdnw_cup", 
+                    "Cond": "Mismatch-Mask-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BrownCup_3.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.17-0", 
+                "time_elapsed": 327547, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 62
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698682388
+        }, 
+        {
+            "current_trial": 63, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "boat_lock", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.18-0", 
+                "time_elapsed": 328944, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 63
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698683785
+        }, 
+        {
+            "current_trial": 64, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "boat_lock", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">boat</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.18-0", 
+                "time_elapsed": 329448, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 64
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698684289
+        }, 
+        {
+            "current_trial": 65, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "boat_lock", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">lock</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.18-0", 
+                "time_elapsed": 329951, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 65
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698684792
+        }, 
+        {
+            "current_trial": 66, 
+            "trialdata": {
+                "rt": 741, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "boat_lock", 
+                    "Cond": "Mismatch-List"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/GreenStar_2.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.18-0", 
+                "time_elapsed": 331061, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 66
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698685902
+        }, 
+        {
+            "current_trial": 67, 
+            "trialdata": {
+                "rt": 5214, 
+                "trial_type": "text", 
+                "internal_chunk_id": "0-0", 
+                "time_elapsed": 336858, 
+                "key_press": 32, 
+                "trial_index": 0, 
+                "trial_index_global": 67
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698691700
+        }, 
+        {
+            "current_trial": 68, 
+            "trialdata": {
+                "trial_type": "call-function", 
+                "time_elapsed": 337088, 
+                "internal_chunk_id": "0-0", 
+                "trial_index": 0, 
+                "trial_index_global": 68
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698691929
+        }, 
+        {
+            "current_trial": 69, 
+            "trialdata": {
+                "rt": 5758, 
+                "trial_type": "text", 
+                "internal_chunk_id": "0-0", 
+                "time_elapsed": 342949, 
+                "key_press": 71, 
+                "trial_index": 0, 
+                "trial_index_global": 69
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698697790
+        }, 
+        {
+            "current_trial": 70, 
+            "trialdata": {
+                "rt": 6237, 
+                "trial_type": "text", 
+                "internal_chunk_id": "0-0", 
+                "time_elapsed": 349498, 
+                "key_press": 89, 
+                "trial_index": 0, 
+                "trial_index_global": 70
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698704339
+        }, 
+        {
+            "current_trial": 71, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_house", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.23-0", 
+                "time_elapsed": 350731, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 71
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698705572
+        }, 
+        {
+            "current_trial": 72, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_house", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">xkq</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.23-0", 
+                "time_elapsed": 351235, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 72
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698706076
+        }, 
+        {
+            "current_trial": 73, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_house", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">house</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.23-0", 
+                "time_elapsed": 351746, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 73
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698706587
+        }, 
+        {
+            "current_trial": 74, 
+            "trialdata": {
+                "rt": 1449, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "xkq_house", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BlueHouse_2.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.23-0", 
+                "time_elapsed": 353535, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "correct": true, 
+                "trial_index": 0, 
+                "trial_index_global": 74
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698708376
+        }, 
+        {
+            "current_trial": 75, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "blue_boat", 
+                    "Cond": "Mismatch-Color"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.24-0", 
+                "time_elapsed": 356098, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 75
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698710940
+        }, 
+        {
+            "current_trial": 76, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "blue_boat", 
+                    "Cond": "Mismatch-Color"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">blue</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.24-0", 
+                "time_elapsed": 356605, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 76
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698711446
+        }, 
+        {
+            "current_trial": 77, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "blue_boat", 
+                    "Cond": "Mismatch-Color"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">boat</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.24-0", 
+                "time_elapsed": 357107, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 77
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698711949
+        }, 
+        {
+            "current_trial": 78, 
+            "trialdata": {
+                "rt": 1493, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "blue_boat", 
+                    "Cond": "Mismatch-Color"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/RedBoat_1.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.24-0", 
+                "time_elapsed": 358978, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "correct": true, 
+                "trial_index": 0, 
+                "trial_index_global": 78
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698713819
+        }, 
+        {
+            "current_trial": 79, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "blue_lamp", 
+                    "Cond": "Mismatch-Noun"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.25-0", 
+                "time_elapsed": 361476, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 79
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698716317
+        }, 
+        {
+            "current_trial": 80, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "blue_lamp", 
+                    "Cond": "Mismatch-Noun"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">blue</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.25-0", 
+                "time_elapsed": 361980, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 80
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698716821
+        }, 
+        {
+            "current_trial": 81, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "blue_lamp", 
+                    "Cond": "Mismatch-Noun"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">lamp</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.25-0", 
+                "time_elapsed": 362483, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 81
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698717324
+        }, 
+        {
+            "current_trial": 82, 
+            "trialdata": {
+                "rt": 1449, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "blue_lamp", 
+                    "Cond": "Mismatch-Noun"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BlueBoat_3.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.25-0", 
+                "time_elapsed": 364287, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "correct": true, 
+                "trial_index": 0, 
+                "trial_index_global": 82
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698719128
+        }, 
+        {
+            "current_trial": 83, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "qxsw_boat", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.26-0", 
+                "time_elapsed": 366762, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 83
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698721603
+        }, 
+        {
+            "current_trial": 84, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "qxsw_boat", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">qxsw</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.26-0", 
+                "time_elapsed": 367265, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 84
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698722106
+        }, 
+        {
+            "current_trial": 85, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "qxsw_boat", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">lamp</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.26-0", 
+                "time_elapsed": 367777, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 85
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698722618
+        }, 
+        {
+            "current_trial": 86, 
+            "trialdata": {
+                "rt": 947, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "qxsw_boat", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BlueBoat_2.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.26-0", 
+                "time_elapsed": 369131, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "correct": true, 
+                "trial_index": 0, 
+                "trial_index_global": 86
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698723972
+        }, 
+        {
+            "current_trial": 87, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "qxsw_house", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.27-0", 
+                "time_elapsed": 371436, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 87
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698726277
+        }, 
+        {
+            "current_trial": 88, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "qxsw_house", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">qxsw</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.27-0", 
+                "time_elapsed": 372027, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 88
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698726868
+        }, 
+        {
+            "current_trial": 89, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "qxsw_house", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">boat</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.27-0", 
+                "time_elapsed": 372531, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 89
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698727372
+        }, 
+        {
+            "current_trial": 90, 
+            "trialdata": {
+                "rt": 829, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "qxsw_house", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/RedHouse_3.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.27-0", 
+                "time_elapsed": 373755, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "correct": true, 
+                "trial_index": 0, 
+                "trial_index_global": 90
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698728596
+        }, 
+        {
+            "current_trial": 91, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "blue_boat", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.28-0", 
+                "time_elapsed": 376066, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 91
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698730907
+        }, 
+        {
+            "current_trial": 92, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "blue_boat", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">blue</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.28-0", 
+                "time_elapsed": 376587, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 92
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698731428
+        }, 
+        {
+            "current_trial": 93, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "blue_boat", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">boat</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.28-0", 
+                "time_elapsed": 377169, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 93
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698732010
+        }, 
+        {
+            "current_trial": 94, 
+            "trialdata": {
+                "rt": 766, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "blue_boat", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BlueBoat_3.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.28-0", 
+                "time_elapsed": 378284, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "correct": true, 
+                "trial_index": 0, 
+                "trial_index_global": 94
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698733125
+        }, 
+        {
+            "current_trial": 95, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "qxsw_boat", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.29-0", 
+                "time_elapsed": 381062, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 95
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698735903
+        }, 
+        {
+            "current_trial": 96, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "qxsw_boat", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">qxsw</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.29-0", 
+                "time_elapsed": 381579, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 96
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698736420
+        }, 
+        {
+            "current_trial": 97, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "qxsw_boat", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">boat</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.29-0", 
+                "time_elapsed": 382083, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 97
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698736924
+        }, 
+        {
+            "current_trial": 98, 
+            "trialdata": {
+                "rt": 1027, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "qxsw_boat", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/RedBoat_2.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.29-0", 
+                "time_elapsed": 383477, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "correct": true, 
+                "trial_index": 0, 
+                "trial_index_global": 98
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698738318
+        }, 
+        {
+            "current_trial": 99, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "red_lamp", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+<br>z = mismatch.  m = match.</p></div>", 
+                "Screen": "Prac-Fixation", 
+                "internal_chunk_id": "0-0.30-0", 
+                "time_elapsed": 385844, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 99
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698740685
+        }, 
+        {
+            "current_trial": 100, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "red_lamp", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">red</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.30-0", 
+                "time_elapsed": 386350, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 100
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698741191
+        }, 
+        {
+            "current_trial": 101, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "red_lamp", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">lamp</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.30-0", 
+                "time_elapsed": 387119, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 101
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698741960
+        }, 
+        {
+            "current_trial": 102, 
+            "trialdata": {
+                "rt": 897, 
+                "trial_type": "categorize", 
+                "stims": {
+                    "Item": "red_lamp", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/RedLamp_3.jpg\">", 
+                "Screen": "Prac-Response", 
+                "internal_chunk_id": "0-0.30-0", 
+                "time_elapsed": 388398, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "correct": true, 
+                "trial_index": 0, 
+                "trial_index_global": 102
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698743239
+        }, 
+        {
+            "current_trial": 103, 
+            "trialdata": {
+                "rt": 2208, 
+                "trial_type": "text", 
+                "internal_chunk_id": "0-0", 
+                "time_elapsed": 392280, 
+                "key_press": 32, 
+                "trial_index": 0, 
+                "trial_index_global": 103
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698747121
+        }, 
+        {
+            "current_trial": 104, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "brown_square", 
+                    "Cond": "Mismatch-Color"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.32-0", 
+                "time_elapsed": 392984, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 104
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698747825
+        }, 
+        {
+            "current_trial": 105, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "brown_square", 
+                    "Cond": "Mismatch-Color"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">brown</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.32-0", 
+                "time_elapsed": 393486, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 105
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698748327
+        }, 
+        {
+            "current_trial": 106, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "brown_square", 
+                    "Cond": "Mismatch-Color"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">square</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.32-0", 
+                "time_elapsed": 394060, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 106
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698748901
+        }, 
+        {
+            "current_trial": 107, 
+            "trialdata": {
+                "rt": 905, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "brown_square", 
+                    "Cond": "Mismatch-Color"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/PinkSquare_1.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.32-0", 
+                "time_elapsed": 395369, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 107
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698750210
+        }, 
+        {
+            "current_trial": 108, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "mtpv_bell", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.33-0", 
+                "time_elapsed": 396372, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 108
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698751213
+        }, 
+        {
+            "current_trial": 109, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "mtpv_bell", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">mtpv</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.33-0", 
+                "time_elapsed": 396875, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 109
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698751717
+        }, 
+        {
+            "current_trial": 110, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "mtpv_bell", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">bell</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.33-0", 
+                "time_elapsed": 397378, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 110
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698752219
+        }, 
+        {
+            "current_trial": 111, 
+            "trialdata": {
+                "rt": 1224, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "mtpv_bell", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/PinkBell_2.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.33-0", 
+                "time_elapsed": 398911, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 111
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698753752
+        }, 
+        {
+            "current_trial": 112, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "rjdnw_bone", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.34-0", 
+                "time_elapsed": 400473, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 112
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698755314
+        }, 
+        {
+            "current_trial": 113, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "rjdnw_bone", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">rjdnw</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.34-0", 
+                "time_elapsed": 400977, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 113
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698755818
+        }, 
+        {
+            "current_trial": 114, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "rjdnw_bone", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">bone</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.34-0", 
+                "time_elapsed": 401480, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 114
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698756321
+        }, 
+        {
+            "current_trial": 115, 
+            "trialdata": {
+                "rt": 1035, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "rjdnw_bone", 
+                    "Cond": "Match-Mask-Adj"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/PinkBone_3.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.34-0", 
+                "time_elapsed": 402870, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 115
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698757711
+        }, 
+        {
+            "current_trial": 116, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_cross", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.35-0", 
+                "time_elapsed": 403876, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 116
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698758717
+        }, 
+        {
+            "current_trial": 117, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_cross", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">xkq</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.35-0", 
+                "time_elapsed": 404382, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 117
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698759223
+        }, 
+        {
+            "current_trial": 118, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_cross", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">star</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.35-0", 
+                "time_elapsed": 404936, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 118
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698759777
+        }, 
+        {
+            "current_trial": 119, 
+            "trialdata": {
+                "rt": 718, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "xkq_cross", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BlackCross_3.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.35-0", 
+                "time_elapsed": 406018, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 119
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698760859
+        }, 
+        {
+            "current_trial": 120, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "brown_square", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.36-0", 
+                "time_elapsed": 407022, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 120
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698761863
+        }, 
+        {
+            "current_trial": 121, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "brown_square", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">brown</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.36-0", 
+                "time_elapsed": 407526, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 121
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698762367
+        }, 
+        {
+            "current_trial": 122, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "brown_square", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">square</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.36-0", 
+                "time_elapsed": 408193, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 122
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698763034
+        }, 
+        {
+            "current_trial": 123, 
+            "trialdata": {
+                "rt": 684, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "brown_square", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BrownSquare_3.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.36-0", 
+                "time_elapsed": 409227, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 123
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698764068
+        }, 
+        {
+            "current_trial": 124, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "mtpv_disc", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.37-0", 
+                "time_elapsed": 410391, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 124
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698765232
+        }, 
+        {
+            "current_trial": 125, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "mtpv_disc", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">mtpv</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.37-0", 
+                "time_elapsed": 410896, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 125
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698765737
+        }, 
+        {
+            "current_trial": 126, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "mtpv_disc", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">boat</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.37-0", 
+                "time_elapsed": 411399, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 126
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698766240
+        }, 
+        {
+            "current_trial": 127, 
+            "trialdata": {
+                "rt": 788, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "mtpv_disc", 
+                    "Cond": "Mismatch-Mask-Adj"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/GreenDisc_1.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.37-0", 
+                "time_elapsed": 412582, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 127
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698767423
+        }, 
+        {
+            "current_trial": 128, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "pink_key", 
+                    "Cond": "Mismatch-Noun"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.38-0", 
+                "time_elapsed": 413585, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 128
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698768426
+        }, 
+        {
+            "current_trial": 129, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "pink_key", 
+                    "Cond": "Mismatch-Noun"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">pink</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.38-0", 
+                "time_elapsed": 414087, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 129
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698768928
+        }, 
+        {
+            "current_trial": 130, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "pink_key", 
+                    "Cond": "Mismatch-Noun"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">key</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.38-0", 
+                "time_elapsed": 414596, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 130
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698769437
+        }, 
+        {
+            "current_trial": 131, 
+            "trialdata": {
+                "rt": 1573, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "pink_key", 
+                    "Cond": "Mismatch-Noun"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/PinkSquare_2.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.38-0", 
+                "time_elapsed": 416540, 
+                "key_press": 90, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 131
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698771383
+        }, 
+        {
+            "current_trial": 132, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "black_house", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\"><p class=\"center-content\">+</p></div>", 
+                "Screen": "Fixation", 
+                "internal_chunk_id": "0-0.39-0", 
+                "time_elapsed": 417549, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 132
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698772390
+        }, 
+        {
+            "current_trial": 133, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "black_house", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">black</p></div>", 
+                "Screen": "Word1", 
+                "internal_chunk_id": "0-0.39-0", 
+                "time_elapsed": 418068, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 133
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698772909
+        }, 
+        {
+            "current_trial": 134, 
+            "trialdata": {
+                "rt": -1, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "black_house", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<div class=container4><p class=\"center-content\">house</p></div>", 
+                "Screen": "Word2", 
+                "internal_chunk_id": "0-0.39-0", 
+                "time_elapsed": 418586, 
+                "key_press": -1, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 134
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698773427
+        }, 
+        {
+            "current_trial": 135, 
+            "trialdata": {
+                "rt": 1092, 
+                "trial_type": "single-stim", 
+                "stims": {
+                    "Item": "black_house", 
+                    "Cond": "Match-Adj"
+                }, 
+                "stimulus": "<img class=\"center-image\" src=\"/static/images/BlackHouse_3.jpg\">", 
+                "Screen": "Real-Response", 
+                "internal_chunk_id": "0-0.39-0", 
+                "time_elapsed": 419880, 
+                "key_press": 77, 
+                "Subj": "togt519479rata", 
+                "trial_index": 0, 
+                "trial_index_global": 135
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698774722
+        }, 
+        {
+            "current_trial": 136, 
+            "trialdata": {
+                "rt": 8746, 
+                "trial_type": "text", 
+                "internal_chunk_id": "0-0", 
+                "time_elapsed": 429285, 
+                "key_press": 32, 
+                "trial_index": 0, 
+                "trial_index_global": 136
+            }, 
+            "uniqueid": "togt519479rata:3PB5A5BD0V6LBEWHWN0BZPNX910G7J", 
+            "dateTime": 1431698784127
+        }
+    ], 
+    "currenttrial": 137, 
+    "condition": 0
+}
