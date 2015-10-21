@@ -99,7 +99,7 @@ print(catch)
 comp <- Comp_Import("./Exp3")
 
 
-comp <- subset(comp, Type %in% c("Adj3","Adj4"))
+comp <- subset(comp, Type %in% c("Adj3","Adj4", "Adv4"))
 
 
 
@@ -119,36 +119,42 @@ for (i in unique(comp$Subj)){
 
 
 # Reaction Times
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4")), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4") & Stim != "One Word"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4")), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4") & Stim != "One Word"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4"), rt, wid = .(Subj), within = .(Stim))$ANOVA
+ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4"), rt, wid = .(Subj), within = .(Stim))$ANOVA
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
+ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
+ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
 
 # Accuracy
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4")), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4") & Stim != "One Word"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4") & Stim != "Two Words"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4") & Stim != "Three Words"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4")), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "One Word"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Two Words"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Three Words"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
 
 
 
 # Prep for bar graph
-comp$DetailedType <- "Complex (Big Spotted Tree)"
+comp$DetailedType <- "Complex Adjective (Big Spotted Tree)"
 comp[comp$Type == "Adj4",]$DetailedType <- "Simple (Big Spotted Tree)"
-comp$DetailedType <- ordered(comp$DetailedType, levels = c("Simple (Big Spotted Tree)","Complex (Big Spotted Tree)"))
+comp[comp$Type == "Adv4",]$DetailedType <- "Complex Adverb (Big Spotted Tree)"
+comp$DetailedType <- ordered(comp$DetailedType, levels = c("Simple (Big Spotted Tree)","Complex Adjective (Big Spotted Tree)","Complex Adverb (Big Spotted Tree)"))
 comp$Stim <- ordered(comp$Stim, levels = c("Three Words", "Two Words","One Word"))
 
-comp.rt1 <- summaryBy(rt + rtAdj ~ Type + DetailedType + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4")), FUN = c(mean), na.rm = T , keep.names = T)
-comp.rt1$Type <- ordered(comp.rt1$Type, levels = c("Adj4", "Adj3"))
+comp.rt1 <- summaryBy(rt + rtAdj ~ Type + DetailedType + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4","Adv4")), FUN = c(mean), na.rm = T , keep.names = T)
+comp.rt1$Type <- ordered(comp.rt1$Type, levels = c("Adj4", "Adj3","Adv4"))
 comp.rt <- summaryBy(rt + rtAdj ~ Type + DetailedType  + Stim , data = comp.rt1, FUN = c(mean,sd), na.rm = T )
 print(comp.rt)
 
 comp.Acc <- summaryBy(Acc + AccAdj~  Type + DetailedType  + Stim  +Subj, , data = comp, FUN = c(mean), na.rm = T , keep.names = T)
-comp.Acc$Type <- ordered(comp.Acc$Type, levels = c("Adj4", "Adj3"))
+comp.Acc$Type <- ordered(comp.Acc$Type, levels = c("Adj4", "Adj3","Adv4"))
 comp.Acc <- summaryBy(Acc + AccAdj~  Type + DetailedType  + Stim   , data = comp.Acc, FUN = c(mean,sd), na.rm = T )
 print(comp.Acc)
 
@@ -167,9 +173,9 @@ ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Cong ==0 & St
 
 
 # Prep for line graph
-comp$DetailedType <- ordered(comp$DetailedType, levels = c("Complex (Big Spotted Tree)","Simple (Big Spotted Tree)"))
+comp$DetailedType <- ordered(comp$DetailedType, levels = c("Complex Adjective (Big Spotted Tree)","Complex Adverb (Big Spotted Tree)","Simple (Big Spotted Tree)"))
 comp$Stim <- ordered(comp$Stim, levels = c("One Word", "Two Words", "Three Words"))
-comp.rt1 <- summaryBy(rt + rtAdj ~ Type + DetailedType + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4")), FUN = c(mean), na.rm = T , keep.names = T)
+comp.rt1 <- summaryBy(rt + rtAdj ~ Type + DetailedType + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)
 ci.m <- aggregate(rt ~  Stim + DetailedType , comp.rt1, mean); ci.m
 ci.l <- aggregate(rt ~  Stim + DetailedType , comp.rt1, ci.low); ci.l
 ci.h <- aggregate(rt ~  Stim + DetailedType , comp.rt1, ci.high); ci.h
@@ -184,7 +190,7 @@ print(comp.Acc)
 # Function for plotting data
 Comp_Graph_l = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){
 theme_set(theme_bw())
-DV.se <- DV.se/(sqrt((length(unique(Subj))/2)))
+DV.se <- DV.se/(sqrt((length(unique(Subj))/3)))
 #comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)
 #comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)
 graph_data <- data.frame(Stim = IV1, Task = IV2, DV = DV.mean, SE = DV.se)
