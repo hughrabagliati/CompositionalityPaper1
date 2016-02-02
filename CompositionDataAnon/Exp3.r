@@ -144,8 +144,8 @@ ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Three Words")
 # Prep for bar graph
 comp$DetailedType <- "Complex Adjective (Big Spotted Tree)"
 comp[comp$Type == "Adj4",]$DetailedType <- "Simple (Big Spotted Tree)"
-comp[comp$Type == "Adv4",]$DetailedType <- "Complex Adverb (Big Spotted Tree)"
-comp$DetailedType <- ordered(comp$DetailedType, levels = c("Simple (Big Spotted Tree)","Complex Adjective (Big Spotted Tree)","Complex Adverb (Big Spotted Tree)"))
+comp[comp$Type == "Adv4",]$DetailedType <- "Complex Compound Adj. (Big Spotted Tree)"
+comp$DetailedType <- ordered(comp$DetailedType, levels = c("Simple (Big Spotted Tree)","Complex Adjective (Big Spotted Tree)","Complex Compound Adj. (Big Spotted Tree)"))
 comp$Stim <- ordered(comp$Stim, levels = c("Three Words", "Two Words","One Word"))
 
 comp.rt1 <- summaryBy(rt + rtAdj ~ Type + DetailedType + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4","Adv4")), FUN = c(mean), na.rm = T , keep.names = T)
@@ -173,7 +173,7 @@ ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Cong ==0 & St
 
 
 # Prep for line graph
-comp$DetailedType <- ordered(comp$DetailedType, levels = c("Complex Adjective (Big Spotted Tree)","Complex Adverb (Big Spotted Tree)","Simple (Big Spotted Tree)"))
+comp$DetailedType <- ordered(comp$DetailedType, levels = c("Complex Adjective (Big Spotted Tree)","Complex Compound Adj. (Big Spotted Tree)","Simple (Big Spotted Tree)"))
 comp$Stim <- ordered(comp$Stim, levels = c("One Word", "Two Words", "Three Words"))
 comp.rt1 <- summaryBy(rt + rtAdj ~ Type + DetailedType + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)
 ci.m <- aggregate(rt ~  Stim + DetailedType , comp.rt1, mean); ci.m
