@@ -168,8 +168,8 @@ Comp_Graph(comp.Acc$Acc.mean,comp.Acc$AccAdj.sd, comp.Acc$Stim, comp.Acc$Type, c
 comp$Cong <- 0
 comp[grep("big_big",comp$Pic, ignore.case = TRUE),]$Cong <- 1
 comp[grep("small_small",comp$Pic, ignore.case = TRUE),]$Cong <- 1
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Cong ==1 & Stim != "Boat"), rt, wid = .(Subj), within = .(Stim))$ANOVA
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Cong ==0 & Stim != "Boat"), rt, wid = .(Subj), within = .(Stim))$ANOVA
+ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Cong ==1 ), rt, wid = .(Subj), within = .(Stim))$ANOVA
+ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Cong ==0 ), rt, wid = .(Subj), within = .(Stim))$ANOVA
 
 
 # Prep for line graph
