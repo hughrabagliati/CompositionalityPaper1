@@ -82,9 +82,9 @@ Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FA
 
 
 library(lme4)
-catch <- Catch_Import("./data")
+catch <- Catch_Import("./Exp1a")
 print(catch)
-comp <- Comp_Import("./data")
+comp <- Comp_Import("./Exp1a")
 contrasts(comp$Stim) <- c(-0.5,0.5)
 contrasts(comp$Task) <- c(-0.5,0.5)
 comp <- comp[comp$rt > 300 & comp$rt <1500,]
@@ -107,6 +107,8 @@ ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task == "List"), rt, wid = .(S
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task != "List"), rt, wid = .(Subj), within = .(Stim))$ANOVA
 # Acc Analyses
 ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim,Task))$ANOVA
+# GLMER Analysis, Task removed for convergence
+summary(glmer(Acc ~ Task * Stim + (1+Stim|Subj) , data = comp, family = "binomial"))
 
 # Prepare variables for bar graph
 comp$DetailedTask <- "List (Cup,Tree)"

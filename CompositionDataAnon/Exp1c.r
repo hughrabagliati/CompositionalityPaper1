@@ -103,6 +103,9 @@ ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Color"), rt, wid = .(
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "FixedColor"), rt, wid = .(Subj), within = .(Stim))$ANOVA
 
 ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+# LMER Analyis (Type between Subj, Stim within)
+summary(glmer(Acc ~ Type * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
+
 
 # Prep for bar graph
 comp$DetailedTask <- "Matched Predictability (Pink Tree)"

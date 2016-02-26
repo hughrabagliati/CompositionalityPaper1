@@ -163,6 +163,11 @@ ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type =
 # Accuracy
 ezANOVA(comp.omni, Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
 
+# GLMER Analysis (Type between subject). Convert Stim into numeric so we don't have to deal with 3-level factor.
+comp.omni$Num.Stim <- 0
+comp.omni[comp.omni$Stim == "One Word",]$Num.Stim <- -1
+comp.omni[comp.omni$Stim == "Three Words",]$Num.Stim <- 1
+summary(glmer(Acc ~ Type * Num.Stim + (1+Num.Stim|Subj), data = comp.omni, family = "binomial"))
 
 comp.omni$rtAdj <- NA
 comp.omni$AccAdj <- NA

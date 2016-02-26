@@ -139,7 +139,11 @@ ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "One Word"), A
 ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Two Words"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
 ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Three Words"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
 
-
+# GLMER Accuracy analysis: Doesn't converge with random slope for stim (detailedType between subject)
+comp$Num.Stim <- 0
+comp[comp$Stim == "One Word",]$Num.Stim <- -1
+comp[comp$Stim == "Three Words",]$Num.Stim <- 1
+summary(glmer(Acc ~ Type * Num.Stim + (1+Num.Stim|Subj), data = comp, family = "binomial"))
 
 # Prep for bar graph
 comp$DetailedType <- "Complex Adjective (Big Spotted Tree)"

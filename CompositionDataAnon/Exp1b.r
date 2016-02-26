@@ -84,13 +84,12 @@ catch <- Catch_Import("./Exp1b")
 print(catch)
 comp <- Comp_Import("./Exp1b")
 contrasts(comp$Stim) <- c(-0.5,0.5)
-contrasts(comp$Task) <- c(-0.5,0.5)
 comp <- comp[comp$rt > 300 & comp$rt <1500,]
 comp$Acc <- 0
 comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1
 comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1
 comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])
-
+contrasts(comp$Task) <- c(-0.5,0.5)
 # Prep for w-subj SEs
 comp$rtAdj <- NA
 comp$AccAdj <- NA
@@ -104,7 +103,8 @@ ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task == "Disjunction"), rt, wi
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task != "Disjunction"), rt, wid = .(Subj), within = .(Stim))$ANOVA
 
 ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim,Task))$ANOVA
-
+#GLMER analysis (Task removed for convergence)
+summary(glmer(Acc ~ Task * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
 
 # Prep data for bar graph
 comp$DetailedTask <- "List (Pink,Tree)"
