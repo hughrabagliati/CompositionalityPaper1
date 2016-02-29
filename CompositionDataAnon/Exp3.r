@@ -177,7 +177,7 @@ ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Cong ==0 ), r
 
 
 # Prep for line graph
-comp$DetailedType <- ordered(comp$DetailedType, levels = c("Complex Adjective (Big Spotted Tree)","Complex Compound Adj. (Big Spotted Tree)","Simple (Big Spotted Tree)"))
+comp$DetailedType <- ordered(comp$DetailedType, levels = c("Complex Adjective (Big Spotted Tree)","Complex Compound Adj. (Big Spotted Tree)","Simple (Big Spotted Tree)"), labels = c("Complex Adjective [(Big-Tree) & Spotted]","Complex Compound Adj. [(Big-Spotted) & Tree]","Simple: [Big & Spotted & Tree]"))
 comp$Stim <- ordered(comp$Stim, levels = c("One Word", "Two Words", "Three Words"))
 comp.rt1 <- summaryBy(rt + rtAdj ~ Type + DetailedType + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)
 ci.m <- aggregate(rt ~  Stim + DetailedType , comp.rt1, mean); ci.m
