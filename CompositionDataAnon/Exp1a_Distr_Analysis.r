@@ -97,7 +97,7 @@ comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1
 comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1
 comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])
 
-comp<- subset(comp, rt <= 8000)
+comp<- subset(comp, rt <= 4000)
 comp$N_Task <- ifelse(comp$Task == "Phrase",-1,1)
 comp$N_Stim <- ifelse(comp$Stim == "One Word",-1,1)
 comp$N_T_S_Interact <- comp$N_Task * comp$N_Stim
@@ -107,11 +107,13 @@ ggplot(comp,aes(x=rt,..density..,col=Stim))+ geom_freqpoly(alpha=1,lwd =1.5,binw
 
 # Initial values at 1
 initf1 <- function() {
-  list(beta = c(800,rep(0,3)), beta_t = c(300,rep(0,3)),beta_s = c(150,rep(0,3)))
+  list(beta = c(500,rep(0,3)), beta_t = c(100,rep(0,3)),beta_s = c(300,rep(0,3)))
 }
 stanDat_full <- list(rt = comp$rt,factor1 = comp$N_Task,factor2 = comp$N_Stim,factor3 = comp$N_T_S_Interact, N = nrow(comp), J = nlevels(as.factor(comp$Subj)), Subj = as.integer(as.factor(comp$Subj)))
 
 eg_stan_full <- stan(file="fixEf_Interaction.stan",
                      data=stanDat_full,
                      iter=600, warmup = 250, chains = 1, init = initf1)
+
+print(eg_stan_full, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
 
