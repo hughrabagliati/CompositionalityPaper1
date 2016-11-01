@@ -1,4 +1,9 @@
+library(reshape2)
+library(ggplot2)
+library(gridExtra)
+library(grid)
 library(jsonlite)
+library(ez)
 
 # This script is used to read in all the csv files in a folder.
 
@@ -98,13 +103,46 @@ for (i in unique(comp$Subj)){
 	comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))
 	}
 
+
+comp$base_item <- as.factor(colsplit(comp$Item,"_",names = c("word1","word2"))[,2])
+contrasts(comp$Stim)[1] <- -1
+contrasts(comp$Task)[1] <- -1
+contrasts(comp$Stim)[2] <- 1
+contrasts(comp$Task)[2] <- 1
+
+# RT Analyses
+lmer(rt ~ Stim * Task + (1+Stim+Task|Subj)+ (1+Stim|base_item) , data = subset(comp, Acc ==1 & Match == "Match")) -> exp1b.full
+lmer(rt ~ Stim + Task + (1+Stim+Task|Subj)+ (1+Stim|base_item) , data = subset(comp, Acc ==1 & Match == "Match")) -> exp1b.noint
+anova(exp1b.full, exp1b.noint)
+
+lmer(rt ~ Stim  + (1+Stim|Subj)+ (1+Stim|base_item) , data = subset(comp, Acc ==1 & Match == "Match" & Task == "Phrase")) -> exp1b.full.phrase
+lmer(rt ~ 1 + (1+Stim|Subj)+ (1+Stim|base_item) , data = subset(comp, Acc ==1 & Match == "Match" & Task == "Phrase")) -> exp1b.noint.phrase
+anova(exp1b.full.phrase, exp1b.noint.phrase)
+
+lmer(rt ~ Stim  + (1+Stim|Subj)+ (1+Stim|base_item) , data = subset(comp, Acc ==1 & Match == "Match" & Task != "Phrase")) -> exp1b.full.nophrase
+lmer(rt ~ 1 + (1+Stim|Subj)+ (1+Stim|base_item) , data = subset(comp, Acc ==1 & Match == "Match" & Task != "Phrase")) -> exp1b.noint.nophrase
+anova(exp1b.full.nophrase, exp1b.noint.nophrase)
+
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" ), rt, wid = .(Subj), within = .(Stim, Task))$ANOVA
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task == "Disjunction"), rt, wid = .(Subj), within = .(Stim))$ANOVA
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task != "Disjunction"), rt, wid = .(Subj), within = .(Stim))$ANOVA
 
 ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim,Task))$ANOVA
+
 #GLMER analysis (Task removed for convergence)
-summary(glmer(Acc ~ Task * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
+glmer(Acc ~ Task * Stim + (1+Stim|Subj) + (1+Stim|base_item), data = comp, family = "binomial") -> exp1b.acc.full
+glmer(Acc ~ Task + Stim + (1+Stim|Subj) + (1+Stim|base_item), data = comp, family = "binomial") -> exp1b.acc.noint
+anova(exp1b.acc.full, exp1b.acc.noint)
+
+# Stim removed for convergence
+glmer(Acc ~ Stim + (1|Subj) + (1|base_item), data = subset(comp, Task == "Phrase"), family = "binomial") -> exp1b.acc.full.phrase
+glmer(Acc ~  1 + (1|Subj) + (1|base_item), data = subset(comp, Task == "Phrase"), family = "binomial") -> exp1b.acc.noint.phrase
+anova(exp1b.acc.full.phrase, exp1b.acc.noint.phrase)
+
+glmer(Acc ~  Stim + (1|Subj) + (1|base_item), data = subset(comp, Task != "Phrase"), family = "binomial") -> exp1b.acc.full.nophrase
+glmer(Acc ~  1 + (1|Subj) + (1|base_item), data = subset(comp, Task != "Phrase"), family = "binomial") -> exp1b.acc.noint.nophrase
+anova(exp1b.acc.full.nophrase, exp1b.acc.noint.nophrase)
+
 
 # Prep data for bar graph
 comp$DetailedTask <- "List (Pink,Tree)"

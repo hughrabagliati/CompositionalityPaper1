@@ -4,6 +4,12 @@ library(grid)
 library(ez)
 library(lme4)
 library(doBy)
+library(reshape2)
+library(ggplot2)
+library(gridExtra)
+library(grid)
+library(jsonlite)
+library(ez)
 
 library(doBy)
 ## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R
@@ -147,7 +153,51 @@ comp.omni$PicType <- as.factor(comp.omni$PicType)
 comp.omni$Type <- as.factor(comp.omni$Type)
 summary(comp.omni)
 
+comp.omni$base_item <- as.factor(colsplit(comp.omni$Item,"_",names = c("word1","word2","word3"))[,3])
+
+contrasts( comp.omni$Type) <-contrasts(C(comp.omni$Type, "contr.sum"))
+contrasts( comp.omni$Stim) <-contrasts(C(comp.omni$Stim, "contr.sum"))
+
+
 #Reaction Times
+comp.omni$Num.Stim <- 0
+comp.omni[comp.omni$Stim == "One Word",]$Num.Stim <- -1
+comp.omni[comp.omni$Stim == "Three Words",]$Num.Stim <- 1
+
+lmer(rt ~ Num.Stim * Type  + (1+Num.Stim|Subj) + (1+Num.Stim+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase")) -> omni.full
+lmer(rt ~ Num.Stim + Type  + (1+Num.Stim|Subj) + (1+Num.Stim+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase")) -> omni.noint
+anova(omni.full,omni.noint)
+
+# Effect for 2 and 3 word phrases
+lmer(rt ~ Num.Stim * Type  + (1+Num.Stim|Subj) + (1+Num.Stim+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "One Word")) -> omni.two_three
+lmer(rt ~ Num.Stim + Type  + (1+Num.Stim|Subj) + (1+Num.Stim+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "One Word")) -> omni.two_three_sub
+anova(omni.two_three,omni.two_three_sub)
+
+# Effect for 1 and 2 word phrases
+lmer(rt ~ Num.Stim * Type  + (1+Num.Stim|Subj) + (1+Num.Stim+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "Three Words")) -> omni.one_two
+lmer(rt ~ Num.Stim + Type  + (1+Num.Stim|Subj) + (1+Num.Stim+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase"& Stim != "Three Words")) -> omni.one_two_sub
+anova(omni.one_two,omni.one_two_sub)
+
+# Number of word effects for 2 and 3 word phrases for each condition
+lmer(rt ~ Num.Stim   + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type %in% c("Big") & Stim != "One Word")) -> exp2.full.two_three.big
+lmer(rt ~ 1  + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type %in% c("Big")& Stim != "One Word")) -> exp2.noint.two_three.big
+anova(exp2.full.two_three.big,exp2.noint.two_three.big)
+
+lmer(rt ~ Num.Stim   + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type %in% c("Dark") & Stim != "One Word")) -> exp2.full.two_three.dark
+lmer(rt ~ 1  + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type %in% c("Dark")& Stim != "One Word")) -> exp2.noint.two_three.dark
+anova(exp2.full.two_three.dark,exp2.noint.two_three.dark)
+
+# Number of word effects for 1 and 2 word phrases
+lmer(rt ~ Num.Stim   + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase"  & Stim != "Three Words")) -> exp2.full.one_two.length
+lmer(rt ~ 1  + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "Three Words")) -> exp2.noint.one_two.length
+anova(exp2.full.one_two.length,exp2.noint.one_two.length)
+
+# Type Effects - remove by subject for convergence
+lmer(rt ~ Type   + (1|Subj) + (1+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase"  & Stim != "Three Words")) -> exp2.full.one_two.type
+lmer(rt ~ 1  + (1|Subj) + (1+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "Three Words")) -> exp2.noint.one_two.type
+anova(exp2.full.one_two.type,exp2.noint.one_two.type)
+
+
 ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
 ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
 
@@ -167,7 +217,14 @@ ezANOVA(comp.omni, Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOV
 comp.omni$Num.Stim <- 0
 comp.omni[comp.omni$Stim == "One Word",]$Num.Stim <- -1
 comp.omni[comp.omni$Stim == "Three Words",]$Num.Stim <- 1
-summary(glmer(Acc ~ Type * Num.Stim + (1+Num.Stim|Subj), data = comp.omni, family = "binomial"))
+exp2.acc.full <- glmer(Acc ~ Type * Num.Stim + (1+Num.Stim+Type|Subj) + (1|base_item) , data = comp.omni, family = "binomial")
+exp2.acc.noint <- glmer(Acc ~ Type + Num.Stim + (1+Num.Stim+Type|Subj) + (1|base_item), data = comp.omni, family = "binomial")
+anova(exp2.acc.full,exp2.acc.noint)
+
+# Length effect
+exp2.acc.full.length <- glmer(Acc ~  Num.Stim + (1+Num.Stim|Subj) , data = comp.omni, family = "binomial")
+exp2.acc.noint.length <- glmer(Acc ~ 1 + (1+Num.Stim|Subj) , data = comp.omni, family = "binomial")
+anova(exp2.acc.full.length,exp2.acc.noint.length)
 
 comp.omni$rtAdj <- NA
 comp.omni$AccAdj <- NA

@@ -1,3 +1,4 @@
+library(reshape2)
 library(ggplot2)
 library(gridExtra)
 library(grid)
@@ -101,14 +102,36 @@ for (i in unique(comp$Subj)){
   comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))
 }
 
+comp$base_item <- as.factor(colsplit(comp$Item,"_",names = c("word1","word2"))[,2])
+contrasts(comp$Stim)[1] <- -1
+contrasts(comp$Task)[1] <- -1
+contrasts(comp$Stim)[2] <- 1
+contrasts(comp$Task)[2] <- 1
 # RT Analyses
+
+lmer(rt ~ Stim * Task + (1+Stim*Task|Subj)+ (1+Stim*Task|base_item) , data = subset(comp, Acc ==1 & Match == "Match")) -> exp1a.full
+lmer(rt ~ Stim + Task + (1+Stim*Task|Subj)+ (1+Stim*Task|base_item) , data = subset(comp, Acc ==1 & Match == "Match")) -> exp1a.noint
+anova(exp1a.full, exp1a.noint)
+
+# Stim removed for convergence
+lmer(rt ~ Stim  +  (1+Stim|Subj)+ (1|base_item) , data = subset(comp, Acc ==1 & Match == "Match" & Task == "Phrase")) -> exp1a.full.phrase
+lmer(rt ~ 1 + (1+Stim|Subj)+ (1|base_item) , data = subset(comp, Acc ==1 & Match == "Match" & Task == "Phrase")) -> exp1a.noint.phrase
+anova(exp1a.full.phrase, exp1a.noint.phrase)
+
+lmer(rt ~ Stim  + (1+Stim|Subj)+ (1|base_item) , data = subset(comp, Acc ==1 & Match == "Match" & Task != "Phrase")) -> exp1a.full.nophrase
+lmer(rt ~ 1 + (1+Stim|Subj)+ (1|base_item) , data = subset(comp, Acc ==1 & Match == "Match" & Task != "Phrase")) -> exp1a.noint.nophrase
+anova(exp1a.full.nophrase, exp1a.noint.nophrase)
+
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" ), rt, wid = .(Subj), within = .(Stim, Task))$ANOVA
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task == "List"), rt, wid = .(Subj), within = .(Stim))$ANOVA
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task != "List"), rt, wid = .(Subj), within = .(Stim))$ANOVA
 # Acc Analyses
 ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim,Task))$ANOVA
-# GLMER Analysis, Task removed for convergence
-summary(glmer(Acc ~ Task * Stim + (1+Stim|Subj) , data = comp, family = "binomial"))
+
+# GLMER Analysis, Lots of RanEf removed for convergence
+glmer(Acc ~ Stim * Task + (1+Stim + Task|Subj) , data = comp, family = "binomial") -> exp1a.acc.full
+glmer(Acc ~ Stim + Task + (1+Stim+ Task|Subj) , data = comp, family = "binomial") -> exp1a.acc.noint
+anova(exp1a.acc.full, exp1a.acc.noint)
 
 # Prepare variables for bar graph
 comp$DetailedTask <- "List (Cup,Tree)"

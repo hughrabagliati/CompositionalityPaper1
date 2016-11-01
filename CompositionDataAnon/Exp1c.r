@@ -1,6 +1,9 @@
-library(jsonlite)
+library(reshape2)
 library(ggplot2)
 library(gridExtra)
+library(grid)
+library(jsonlite)
+library(ez)
 # This script is used to read in all the csv files in a folder.
 
 library(doBy)
@@ -98,14 +101,37 @@ for (i in unique(comp$Subj)){
 	comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))
 	comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))
 	}
+	
+comp$base_item <- as.factor(colsplit(comp$Pic,"_",names = c("prop1","prop2","prop3","prop4"))[,1])
+contrasts(comp$Stim)[1] <- -1
+contrasts(comp$Type)[1] <- -1
+contrasts(comp$Stim)[2] <- 1
+contrasts(comp$Type)[2] <- 1
+
+# RT Analyses
+lmer(rt ~ Stim * Type + (1+Stim|Subj)+ (1+Stim*Type|base_item) , data = subset(comp, Acc ==1 & Match == "Match")) -> exp1c.full
+lmer(rt ~ Stim + Type + (1+Stim|Subj)+ (1+Stim*Type|base_item) , data = subset(comp, Acc ==1 & Match == "Match")) -> exp1c.noint
+anova(exp1c.full, exp1c.noint)
+
+lmer(rt ~ Stim  + (1+Stim|Subj)+ (1+Stim|base_item) , data = subset(comp, Acc ==1 & Match == "Match" & Type == "Color")) -> exp1c.full.color
+lmer(rt ~ 1 + (1+Stim|Subj)+ (1+Stim|base_item) , data = subset(comp, Acc ==1 & Match == "Match" & Type == "Color")) -> exp1c.noint.color
+anova(exp1c.full.color, exp1c.noint.color)
+
+lmer(rt ~ Stim  + (1+Stim|Subj)+ (1+Stim|base_item) , data = subset(comp, Acc ==1 & Match == "Match" & Type != "Color")) -> exp1c.full.nocolor
+lmer(rt ~ 1 + (1+Stim|Subj)+ (1+Stim|base_item) , data = subset(comp, Acc ==1 & Match == "Match" & Type != "Color")) -> exp1c.noint.nocolor
+anova(exp1c.full.nocolor, exp1c.noint.nocolor)
+
+
 ezANOVA(subset(comp, Acc ==1 & Match == "Match"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Color"), rt, wid = .(Subj), within = .(Stim))$ANOVA
 ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "FixedColor"), rt, wid = .(Subj), within = .(Stim))$ANOVA
 
 ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
-# LMER Analyis (Type between Subj, Stim within)
-summary(glmer(Acc ~ Type * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
 
+# LMER Analyis (Type between Subj, Stim within)
+glmer(Acc ~ Type * Stim + (1+Stim|Subj) + (1+Type|base_item), data = comp, family = "binomial") -> exp1c.acc.full
+glmer(Acc ~ Type + Stim + (1+Stim|Subj) + (1+Type|base_item), data = comp, family = "binomial") -> exp1c.acc.noint
+anova(exp1c.acc.full, exp1c.acc.noint)
 
 # Prep for bar graph
 comp$DetailedTask <- "Matched Predictability (Pink Tree)"
@@ -129,6 +155,11 @@ comp$DetailedTask <- ordered(comp$DetailedTask, levels = c("Matched Predictabili
 comp$Stim <- ordered(comp$Stim, levels = c("One Word", "Two Words"))
 
 comp.rt <- summaryBy(rt + rtAdj ~ PicType + DetailedTask + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)
+
+# Show subject means
+ggplot(comp.rt,aes(x = Stim, y = rt, color = Subj, group = Subj)) + facet_wrap(~DetailedTask)+
+  geom_path()+guides(color = FALSE, group = FALSE)+ ylab("Reaction Time (ms)")+xlab("Stimulus Length")
+  
 ci.m <- aggregate(rt ~  Stim + DetailedTask , comp.rt, mean); ci.m
 ci.l <- aggregate(rt ~  Stim + DetailedTask , comp.rt, ci.low); ci.l
 ci.h <- aggregate(rt ~  Stim + DetailedTask , comp.rt, ci.high); ci.h

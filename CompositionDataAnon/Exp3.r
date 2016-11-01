@@ -2,6 +2,12 @@ library(ggplot2)
 library(gridExtra)
 library(grid)
 library(jsonlite)
+library(reshape2)
+library(ggplot2)
+library(gridExtra)
+library(grid)
+library(jsonlite)
+library(ez)
 
 # This script is used to read in all the csv files in a folder.
 
@@ -116,34 +122,91 @@ for (i in unique(comp$Subj)){
 	comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))
 	comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))
 	}
+	
+comp$base_item <- as.factor(colsplit(comp$Pic,"_",names = c("prop1","prop2","prop3","prop4"))[,1])
+contrasts( comp$Type) <-contrasts(C(comp$Type, "contr.sum"))
+contrasts( comp$Stim) <-contrasts(C(comp$Stim, "contr.sum"))
+
+comp$Num.Stim <- 0
+comp[comp$Stim == "One Word",]$Num.Stim <- -1
+comp[comp$Stim == "Three Words",]$Num.Stim <- 1
 
 
-# Reaction Times
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4")), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4") & Stim != "One Word"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+# Reaction Times (remove num.stim as RanEf of Item as doesn't converge)
+lmer(rt ~ Num.Stim * Type  + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4"))) -> exp3.full
+lmer(rt ~ Num.Stim + Type  + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4"))) -> exp3.noint
+anova(exp3.full,exp3.noint)
 
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4"), rt, wid = .(Subj), within = .(Stim))$ANOVA
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4"), rt, wid = .(Subj), within = .(Stim))$ANOVA
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
+lmer(rt ~ Num.Stim * Type  + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4")& Stim != "One Word")) -> exp3.full.two_three
+lmer(rt ~ Num.Stim + Type  + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4")& Stim != "One Word")) -> exp3.noint.two_three
+anova(exp3.full.two_three,exp3.noint.two_three)
+
+lmer(rt ~ Num.Stim * Type  + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4")& Stim != "Three Words")) -> exp3.full.one_two
+lmer(rt ~ Num.Stim + Type  + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4")& Stim != "Three Words")) -> exp3.noint.one_two
+anova(exp3.full.one_two,exp3.noint.one_two)
+
+
+# Overall Number of Stim effect for 2 and 1 word phrases
+lmer(rt ~ Num.Stim   + (1+Num.Stim|Subj) + (1|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4")& Stim != "Three Words")) -> exp3.nowords.one_two
+lmer(rt ~ 1  + (1+Num.Stim|Subj) + (1|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4")& Stim != "Three Words")) -> exp3.nowords_sub.one_two
+anova(exp3.nowords.one_two,exp3.nowords_sub.one_two)
+
+# Number of word effects for 2 and 3 word phrases for each condition
+lmer(rt ~ Num.Stim   + (1+Num.Stim|Subj) + (1|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3")& Stim != "One Word")) -> exp3.full.two_three.adj3
+lmer(rt ~ 1  + (1+Num.Stim|Subj) + (1|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3")& Stim != "One Word")) -> exp3.noint.two_three.adj3
+anova(exp3.full.two_three.adj3,exp3.noint.two_three.adj3)
+
+lmer(rt ~ Num.Stim   + (1+Num.Stim|Subj) + (1|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adv4")& Stim != "One Word")) -> exp3.full.two_three.adv4
+lmer(rt ~ 1  + (1+Num.Stim|Subj) + (1|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adv4")& Stim != "One Word")) -> exp3.noint.two_three.adv4
+anova(exp3.full.two_three.adv4,exp3.noint.two_three.adv4)
+
+lmer(rt ~ Num.Stim   + (1+Num.Stim|Subj) + (1|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj4")& Stim != "One Word")) -> exp3.full.two_three.adj4
+lmer(rt ~ 1  + (1+Num.Stim|Subj) + (1|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj4")& Stim != "One Word")) -> exp3.noint.two_three.adj4
+anova(exp3.full.two_three.adj4,exp3.noint.two_three.adj4)
+
+# Effect of composition type for 1 and 2 word
+lmer(rt ~  Type  + (1|Subj) + (1|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4")& Stim != "Three Words")) -> exp3.full.one_two.type
+lmer(rt ~ 1+ (1|Subj) + (1|base_item), data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4")& Stim != "Three Words")) -> exp3.noint.one_two.type
+anova(exp3.full.one_two.type,exp3.noint.one_two.type)
+
+
+# Overall Number of Stim effect for 2 and 1 word phrases
+l
+
+
+
+#ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4")), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+#ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4") & Stim != "One Word"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+#ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+
+#ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
+#ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4"), rt, wid = .(Subj), within = .(Stim))$ANOVA
+#ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4"), rt, wid = .(Subj), within = .(Stim))$ANOVA
+#ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
+#ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
+#ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
+#ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
+#ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
+#ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA
 
 # Accuracy
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4")), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "One Word"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Two Words"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Three Words"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+#ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4")), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+#ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "One Word"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+#ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Two Words"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
+#ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Three Words"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
 
 # GLMER Accuracy analysis: Doesn't converge with random slope for stim (detailedType between subject)
 comp$Num.Stim <- 0
 comp[comp$Stim == "One Word",]$Num.Stim <- -1
 comp[comp$Stim == "Three Words",]$Num.Stim <- 1
-summary(glmer(Acc ~ Type * Num.Stim + (1+Num.Stim|Subj), data = comp, family = "binomial"))
+exp3.acc.full <- glmer(Acc ~ Type * Num.Stim + (1|Subj) +  (1|base_item), data = comp, family = "binomial")
+exp3.acc.noint <- glmer(Acc ~ Type + Num.Stim + (1|Subj) +  (1|base_item), data = comp, family = "binomial")
+anova(exp3.acc.full,exp3.acc.noint)
+
+exp3.acc.full.num <- glmer(Acc ~  Num.Stim + (1|Subj) +  (1|base_item), data = comp, family = "binomial")
+exp3.acc.noint.num <- glmer(Acc ~ 1 + (1|Subj) +  (1|base_item), data = comp, family = "binomial")
+anova(exp3.acc.full.num,exp3.acc.noint.num)
+
 
 # Prep for bar graph
 comp$DetailedType <- "Complex Adjective (Big Spotted Tree)"

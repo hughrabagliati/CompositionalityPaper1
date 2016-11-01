@@ -1,3 +1,306 @@
+OneSample <- q#
+LargeSample <- matrix(NA, nrow = 10000, ncol = 1)#
+#
+perm = list(OneSample = OneSample,LargeSample = LargeSample)#
+#
+for (j in seq(1:10)){#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+#
+perm$LargeSample[j] <- i#
+}
+perm$LargeSample[1:20]
+OneSample <- q#
+LargeSample <- matrix(NA, nrow = 10000, ncol = 1)#
+#
+perm = list(OneSample = OneSample,LargeSample = LargeSample)#
+#
+for (j in seq(1:10)){#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+#
+perm$LargeSample[j] <- i#
+}
+perm$LargeSample[1:20]
+OneSample <- q#
+LargeSample <- matrix(NA, nrow = 10000, ncol = 1)#
+#
+perm = list(OneSample = OneSample,LargeSample = LargeSample)#
+#
+for (j in seq(1:10000)){#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+#
+perm$LargeSample[j] <- i#
+}
+hist(perm$LargeSample)
+hist(perm$SmallSample)
+hist(perm$OneSample)
+hist(perm$LargeSample)
+hist(perm$LargeSample[perm$LargeSample < 5])
+while(y <5){ print( y<-y+1) }
+y
+?control
+?Control
+y = 1
+while(y <5){ print( y<-y+1) }
+?t.test
+Marginal <- matrix(NA, nrow = 10000, ncol = 1)#
+perm = list(OneSample = OneSample,LargeSample = LargeSample, Marginal = Marginal)
+h = 1#
+while (h < 11){#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+if (t.test(a[,1],a[,2])$statistic < 1.96 & a[,1],a[,2])$statistic > 1.4) {#
+h <- h + 1#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+}#
+perm$Marginal[h] <- i#
+}
+h = 1#
+while (h < 11){#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+if (t.test(a[,1],a[,2])$statistic < 1.96 & t.test(a[,1],a[,2])$statistic > 1.4) {#
+h <- h + 1#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+}#
+perm$Marginal[h] <- i#
+}
+perm$Marginal[1:13]
+h = 1#
+while (h < 11){#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+if (t.test(a[,1],a[,2])$statistic < 1.96 & t.test(a[,1],a[,2])$statistic > 1.4) {#
+h <- h + 1#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+#
+perm$Marginal[h] <- i#
+}#
+}
+perm$Marginal[1:13]
+h = 1#
+while (h < 11){print("j")#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+if (t.test(a[,1],a[,2])$statistic < 1.96 & t.test(a[,1],a[,2])$statistic > 1.4) {#
+h <- h + 1#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+#
+perm$Marginal[h] <- i#
+}#
+}
+h = 1#
+while (h < 10001){#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+if (t.test(a[,1],a[,2])$statistic < 1.96 & t.test(a[,1],a[,2])$statistic > 1.4) {#
+h <- h + 1#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+#
+perm$Marginal[h] <- i#
+}#
+}
+seq(1,3,1)
+seq(100,10000,100)
+h = 1#
+while (h < 10001){#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+if (t.test(a[,1],a[,2])$statistic < 1.96 & t.test(a[,1],a[,2])$statistic > 1.4) {#
+h <- h + 1#
+if ( h %in% seq(100,10000,100)){print(h)}#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+#
+perm$Marginal[h] <- i#
+}#
+}
+ls()
+hist(perm)
+summary(perm)
+hist(perm$Marginal)
+h = 1#
+while (h < 10001){#
+a <- cbind(matrix(rnorm(48,0,2),24,2),1)#
+if (t.test(a[,1],a[,2])$statistic < 1.96 & t.test(a[,1],a[,2])$statistic > 1.4) {#
+h <- h + 1#
+if ( h %in% seq(100,10000,100)){print(h)}#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(48,0,2),24,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+#
+perm$Marginal[h] <- i#
+}#
+}
+hist(perm$Marginal)
+h = 1#
+while (h < 10001){#
+a <- cbind(matrix(rnorm(100,0,2),50,2),1)#
+if (t.test(a[,1],a[,2])$statistic < 1.96 & t.test(a[,1],a[,2])$statistic > 1.4) {#
+h <- h + 1#
+if ( h %in% seq(100,10000,100)){print(h)}#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(100,0,2),50,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+#
+perm$Marginal[h] <- i#
+}#
+}
+hist(perm$Marginal)
+lines(density(perm$Marginal), col = "red", lwd = 2)
+density(perm$Marginal)[1:10]
+hist(perm$Marginal) -> k
+summary(k)
+line(k$breaks, k$counts)
+line(k$breaks -1, k$counts)
+line(k$breaks[1:19], k$counts)
+k$counts[1:10]
+lines(k$breaks[1:19], k$counts)
+hist(perm$Marginal, xlim = c(1:20)) -> k
+?hist
+hist(perm$Marginal, xlim = c(0:20)) -> k
+hist(perm$Marginal, xlim = c(20))
+hist(perm$Marginal, xlim = c(0,20))
+hist(perm$Marginal, xlim = c(1,20))
+hist(perm$Marginal, xlim = c(1,20), bty = "t")
+hist(perm$Marginal, xlim = c(1,20), bty = "o")
+hist(perm$Marginal, xlim = c(1,20), bty = "n")
+?barplot
+?plot
+hist(perm$Marginal, xlim = c(1,20), bty = "y")
+hist(perm$Marginal, xlim = c(1,20), bty = "]")
+plot(perm$Marginal, xlim = c(1,20), bty = "]")
+lines(k$breaks[1:19], k$counts)
+hist(perm$Marginal, xlim = c(1,20), bty = "]", border = NA)
+plot(1:20, k$counts)
+plot(1:19, k$counts)
+hist(perm$Marginal, xlim = c(1,20), breaks = 20,bty = "]", border = NA)
+hist(perm$Marginal, xlim = c(1,20), breaks = 20,bty = "]")
+summary(perm$Marginal)
+table(perm$Marginal)
+plot(table(perm$Marginal))
+lines(table(perm$Marginal))
+lines(1:20,table(perm$Marginal))
+plot(1:20,table(perm$Marginal))
+?plot
+plot(1:20,table(perm$Marginal), type = "n")
+plot(1:20,table(perm$Marginal))
+plot(table(perm$Marginal), type = "n")
+a = data.frame(c("a","b","c"),2,2)
+a
+a = data.frame(rep(c("a","b","c",2),2,3)
+a
+a = data.frame(rep(c("a","b","c",2),2,3))
+a
+a = matrix(rep(c("a","b","c",2),2,3))
+a
+?matrix
+a = matrix(rep(c("a","b","c"),2),2,3)
+a
+a = matrix(rep(c("a","b","c"),2),3,2)
+a
+a = matrix(rep(c("a","b","c","a","b"),2),5,2)
+a
+a[a[1,] == a,]
+a[a[1,] == a]
+a[,a[1,] == a]
+a[,a[,1] == a]
+a[a[,1] == a,]
+a[,1] == a
+?Data.frame
+?data.frame
+a = data.frame(a)
+a
+a[a$X1 == "a",]
+a[a$X1 == "a",1]
+a[a$X1 == "b",1]
+a = data.frame(rep(c("a","b","c","a","b"),2),5,2)
+a
+a = data.frame(matrix(rep(c("a","b","c","a","b"),2),5,2))
+a
+a$Test = 0
+a[a$X1 == "b",1]
+a
+a[a$X1 == "b",]
+a[a$X1 == "b",1]
+a[a$X1 == "b",1]$Test
+a[a$X1 == "b",][1,]
+print(a)
+a[a$X1 == "b",][1,]$Test
+a[a$X1 == "b",][1,]$Test <- a[a$X1 == "b",][1,]$X2
+a
+a[a$X1 == "b",][1,]$Test <- as.character(a[a$X1 == "b",][1,]$X2)
+a
+library(pwer)
+library(pwr)
+pwr.t.test(d = 0.3, sig.level = 0.01, power = 0.8)
+pwr.t.test(d = 0.3, sig.level = 0.05, power = 0.8)
+pwr.t.test(d = 0.5, sig.level = 0.05, power = 0.8)
+5.357543e+300
+2^999
+a = data.frame(c(a,b,a,a))
+a = data.frame(c(1,2,1,1))
+a
 a = data.frame(d1 = c(1,2,1),d2 = c(2,1,1),d3 = c(1,1,1))
 a
 which(a==2)
@@ -2419,2581 +2722,6 @@ grep(a,"b")
 grep("b",a)
 grep("b",a) -1
 a[(grep("b",a) -1)]
-library(plyr)#
-library(lme4)#
-library(doBy)#
-library(ggplot2)#
-#
-read_data <- function(path_name){#
-list.files(path = path_name,full.names = T, pattern = ".csv") -> file_list#
-comp = c()#
-for (x in file_list){#
-	data <- read.csv(x,header = T)#
-	if ("perceptual.rating.reactiontime" %in% colnames(data)){ #
-		data <- subset(data, select = -perceptual.rating.reactiontime)#
-		}#
-		if ("X" %in% colnames(data)){ #
-		data <- subset(data, select = -X)#
-		data$rt <- as.character(data$rt)#
-		}#
-	comp <- rbind(comp, data)#
-	}#
-	return(comp)#
-}#
-#
-sense.pop <- read_data("./data/")#
-#
-# Make RTs numeric [need to remove timeout "none" responses to 8s]#
-sense.pop <- subset(sense.pop, rt != "None")#
-sense.pop$rt <- as.numeric(sense.pop$rt)#
-sense.pop$Length <- nchar(as.character(sense.pop$prime),allowNA = T)#
-sense.pop$Condition <- as.character(sense.pop$prime_semantics)#
-sense.pop[sense.pop$prime_semantics %in% c("Sklar_control_A","Sklar_control_B"),]$Condition <- "Sklar_control"#
-sense.pop$Condition <- as.factor(sense.pop$Condition)#
-# Note that this analysis includes all of the inclusion criteria discussed by Sklar et al. #
-#
-###########################################################################################################################
-##
-# Let's first analyze for the Sklar trials#
-sense.pop.sklar <- subset(sense.pop, Condition %in% c("Sklar_control", "Sklar_violation")) #
-#
-# Remove outlier subjects by Accuracy and RT (mean acc must be > 0.9, mean rt must be < 3sd above group mean)#
-Acc <- summaryBy(match. + rt ~ SubjNo, data = subset(sense.pop.sklar), keep.names = T)#
-sense.pop.sklar <- subset(sense.pop.sklar, SubjNo %in% Acc[Acc$match. > 0.9,]$SubjNo)#
-#
-sense.pop.sklar <- subset(sense.pop.sklar, SubjNo %in% Acc[Acc$rt < (mean(Acc$rt) + (3*sd(Acc$rt))),]$SubjNo)#
-#
-# Remove incorrect trials#
-sense.pop.sklar <- subset(sense.pop.sklar, match. == 1)#
-#
-# Remove outliers by subject (less than 3sd from participant mean -- note that this is not a symmetric exclusion criterion)#
-sense.pop.sklar <- ddply(sense.pop.sklar, .(SubjNo), function(d){ #
-	by_subj_include <- mean(d$rt, na.rm = T) + 3*c(-1,1)*sd(d$rt,na.rm = T)#
-	d = subset(d, rt < by_subj_include[2])#
-	})#
-# [for Expt 1 only] Remove outliers by condition (less than 3sd from condition mean -- note that this is not a symmetric exclusion criterion)#
-sense.pop.sklar <- ddply(sense.pop.sklar, .(Condition), function(d){ #
-	by_subj_include <- mean(d$rt, na.rm = T) + 3*c(-1,1)*sd(d$rt,na.rm = T)#
-	d = subset(d, rt < by_subj_include[2])#
-	})#
-#
-# Remove RTs < 200ms#
-sense.pop.sklar <- subset(sense.pop.sklar, rt > 0.2)#
-#
-# T test (Sklar style)#
-sense.pop.sklar.summary <- summaryBy(rt ~ SubjNo + Condition, data = subset(sense.pop.sklar,  Condition %in% c("Sklar_violation", "Sklar_control")), keep.names = T)#
-t.test(rt ~ Condition, data = sense.pop.sklar.summary, paired = T)#
-t.test(log(rt) ~ Condition, data = sense.pop.sklar.summary, paired = T)#
-#
-# Bayes factor -- minimum effect of 0.01, maximum of 0.06, our effect = -0.03519684 and our SE = -0.03/-1.7874=  0.01678416#
-#
-# lmer (Rabag style)#
-sense.pop.sklar.raw <- summary(lmer(rt ~ Condition + (1+Condition|SubjNo)+ (1|prime), data = subset(sense.pop.sklar,  Condition %in% c("Sklar_violation", "Sklar_control"))))#
-print(sense.pop.sklar.raw)#
-print(paste("p value = ", 2*pnorm(-abs(coef(sense.pop.sklar.raw)[,3]))))#
-#
-sense.pop.sklar.log <- summary(lmer(log(rt) ~ Condition + (1+Condition|SubjNo)+ (1|prime), data = subset(sense.pop.sklar,  Condition %in% c("Sklar_violation", "Sklar_control"))))#
-print(sense.pop.sklar.log)#
-print(paste("p value = ", 2*pnorm(-abs(coef(sense.pop.sklar.log)[,3]))))
-library(permute)
-?sample
-subj.list <- unique(sense.pop.sklar$SubjNo)
-t.test(rt ~ Condition, data = subset(sense.pop.sklar.summary, SubjNo %in% sample(subj.list,31)), paired = T)
-t.test(rt ~ Condition, data = subset(sense.pop.sklar.summary, SubjNo %in% sample(subj.list,31)), paired = T) -> a
-summary(a)
-a$p.value
-t.test(rt ~ Condition, data = subset(sense.pop.sklar.summary, SubjNo %in% sample(subj.list,31)), paired = T)$p.value
-a = rep(NA, 1000)#
-subj.list <- unique(sense.pop.sklar$SubjNo)#
-for (i in 1:1000){#
-a[i] <- t.test(rt ~ Condition, data = subset(sense.pop.sklar.summary, SubjNo %in% sample(subj.list,31)), paired = T)$p.value#
-}
-hist(a)
-a = rep(NA, 1000)#
-subj.list <- unique(sense.pop.sklar$SubjNo)#
-for (i in 1:1000){#
-a[i] <- t.test(rt ~ Condition, data = subset(sense.pop.sklar.summary, SubjNo %in% sample(subj.list,20)), paired = T)$p.value#
-}
-?hist
-hist(a, add = T)
-hist(a, add = T, col = "grey")
-b = rep(NA, 1000)#
-subj.list <- unique(sense.pop.sklar$SubjNo)#
-for (i in 1:1000){#
-b[i] <- t.test(rt ~ Condition, data = subset(sense.pop.sklar.summary, SubjNo %in% sample(subj.list,31)), paired = T)$p.value#
-}
-hist(a, col=rgb(0.1,0.1,0.1,0.5),xlim=c(0,10), ylim=c(0,200), main=”Overlapping Histogram”)#
-hist(b, col=rgb(0.8,0.8,0.8,0.5), add=T)#
-box()
-hist(a, col=rgb(0.1,0.1,0.1,0.5), main=”Overlapping Histogram”)#
-hist(b, col=rgb(0.8,0.8,0.8,0.5), add=T)#
-box()
-summary(a)
-hist(a, col=rgb(0.1,0.1,0.1,0.5))#
-hist(b, col=rgb(0.8,0.8,0.8,0.5), add=T)#
-box()
-hist(a, col=rgb(0.1,0.1,0.1,0.5),xlim=c(0,1), ylim=c(0,200))#
-hist(b, col=rgb(0.8,0.8,0.8,0.5), add=T)#
-box()
-hist(a, col=rgb(0.1,0.1,0.1,0.5),xlim=c(0,1), ylim=c(0,400))#
-hist(b, col=rgb(0.8,0.8,0.8,0.5), add=T)#
-box()
-hist(a, col=rgb(0.1,0.1,0.1,0.5),xlim=c(0,1), ylim=c(0,400))
-hist(b, col=rgb(0.8,0.8,0.8,0.5), add=T)
-summary(sense)
-summary(sense.pop.sklar)
-?read.csv
-library(plyr)#
-library(lme4)#
-library(doBy)#
-library(ggplot2)#
-#
-read_data <- function(path_name){#
-list.files(path = path_name,full.names = T, pattern = ".csv") -> file_list#
-comp = c()#
-for (x in file_list){#
-	data <- read.csv(x,header = T, nrows = 120)#
-	if ("perceptual.rating.reactiontime" %in% colnames(data)){ #
-		data <- subset(data, select = -perceptual.rating.reactiontime)#
-		}#
-		if ("X" %in% colnames(data)){ #
-		data <- subset(data, select = -X)#
-		data$rt <- as.character(data$rt)#
-		}#
-	comp <- rbind(comp, data)#
-	}#
-	return(comp)#
-}#
-#
-sense.pop <- read_data("./data/")#
-#
-# Make RTs numeric [need to remove timeout "none" responses to 8s]#
-sense.pop <- subset(sense.pop, rt != "None")#
-sense.pop$rt <- as.numeric(sense.pop$rt)#
-sense.pop$Length <- nchar(as.character(sense.pop$prime),allowNA = T)#
-sense.pop$Condition <- as.character(sense.pop$prime_semantics)#
-sense.pop[sense.pop$prime_semantics %in% c("Sklar_control_A","Sklar_control_B"),]$Condition <- "Sklar_control"#
-sense.pop$Condition <- as.factor(sense.pop$Condition)#
-# Note that this analysis includes all of the inclusion criteria discussed by Sklar et al.
-###########################################################################################################################
-##
-# Let's first analyze for the Sklar trials#
-sense.pop.sklar <- subset(sense.pop, Condition %in% c("Sklar_control", "Sklar_violation")) #
-#
-# Remove outlier subjects by Accuracy and RT (mean acc must be > 0.9, mean rt must be < 3sd above group mean)#
-Acc <- summaryBy(match. + rt ~ SubjNo, data = subset(sense.pop.sklar), keep.names = T)#
-sense.pop.sklar <- subset(sense.pop.sklar, SubjNo %in% Acc[Acc$match. > 0.9,]$SubjNo)#
-#
-sense.pop.sklar <- subset(sense.pop.sklar, SubjNo %in% Acc[Acc$rt < (mean(Acc$rt) + (3*sd(Acc$rt))),]$SubjNo)#
-#
-# Remove incorrect trials#
-sense.pop.sklar <- subset(sense.pop.sklar, match. == 1)#
-#
-# Remove outliers by subject (less than 3sd from participant mean -- note that this is not a symmetric exclusion criterion)#
-sense.pop.sklar <- ddply(sense.pop.sklar, .(SubjNo), function(d){ #
-	by_subj_include <- mean(d$rt, na.rm = T) + 3*c(-1,1)*sd(d$rt,na.rm = T)#
-	d = subset(d, rt < by_subj_include[2])#
-	})#
-# [for Expt 1 only] Remove outliers by condition (less than 3sd from condition mean -- note that this is not a symmetric exclusion criterion)#
-sense.pop.sklar <- ddply(sense.pop.sklar, .(Condition), function(d){ #
-	by_subj_include <- mean(d$rt, na.rm = T) + 3*c(-1,1)*sd(d$rt,na.rm = T)#
-	d = subset(d, rt < by_subj_include[2])#
-	})#
-#
-# Remove RTs < 200ms#
-sense.pop.sklar <- subset(sense.pop.sklar, rt > 0.2)#
-#
-# T test (Sklar style)#
-sense.pop.sklar.summary <- summaryBy(rt ~ SubjNo + Condition, data = subset(sense.pop.sklar,  Condition %in% c("Sklar_violation", "Sklar_control")), keep.names = T)#
-t.test(rt ~ Condition, data = sense.pop.sklar.summary, paired = T)#
-t.test(log(rt) ~ Condition, data = sense.pop.sklar.summary, paired = T)
-library(plyr)#
-library(lme4)#
-library(doBy)#
-library(ggplot2)#
-#
-read_data <- function(path_name){#
-list.files(path = path_name,full.names = T, pattern = ".csv") -> file_list#
-comp = c()#
-for (x in file_list){#
-	data <- read.csv(x,header = T, nrows = 240)#
-	if ("perceptual.rating.reactiontime" %in% colnames(data)){ #
-		data <- subset(data, select = -perceptual.rating.reactiontime)#
-		}#
-		if ("X" %in% colnames(data)){ #
-		data <- subset(data, select = -X)#
-		data$rt <- as.character(data$rt)#
-		}#
-	comp <- rbind(comp, data)#
-	}#
-	return(comp)#
-}#
-#
-sense.pop <- read_data("./data/")#
-#
-# Make RTs numeric [need to remove timeout "none" responses to 8s]#
-sense.pop <- subset(sense.pop, rt != "None")#
-sense.pop$rt <- as.numeric(sense.pop$rt)#
-sense.pop$Length <- nchar(as.character(sense.pop$prime),allowNA = T)#
-sense.pop$Condition <- as.character(sense.pop$prime_semantics)#
-sense.pop[sense.pop$prime_semantics %in% c("Sklar_control_A","Sklar_control_B"),]$Condition <- "Sklar_control"#
-sense.pop$Condition <- as.factor(sense.pop$Condition)#
-# Note that this analysis includes all of the inclusion criteria discussed by Sklar et al.
-###########################################################################################################################
-##
-# Let's first analyze for the Sklar trials#
-sense.pop.sklar <- subset(sense.pop, Condition %in% c("Sklar_control", "Sklar_violation")) #
-#
-# Remove outlier subjects by Accuracy and RT (mean acc must be > 0.9, mean rt must be < 3sd above group mean)#
-Acc <- summaryBy(match. + rt ~ SubjNo, data = subset(sense.pop.sklar), keep.names = T)#
-sense.pop.sklar <- subset(sense.pop.sklar, SubjNo %in% Acc[Acc$match. > 0.9,]$SubjNo)#
-#
-sense.pop.sklar <- subset(sense.pop.sklar, SubjNo %in% Acc[Acc$rt < (mean(Acc$rt) + (3*sd(Acc$rt))),]$SubjNo)#
-#
-# Remove incorrect trials#
-sense.pop.sklar <- subset(sense.pop.sklar, match. == 1)#
-#
-# Remove outliers by subject (less than 3sd from participant mean -- note that this is not a symmetric exclusion criterion)#
-sense.pop.sklar <- ddply(sense.pop.sklar, .(SubjNo), function(d){ #
-	by_subj_include <- mean(d$rt, na.rm = T) + 3*c(-1,1)*sd(d$rt,na.rm = T)#
-	d = subset(d, rt < by_subj_include[2])#
-	})#
-# [for Expt 1 only] Remove outliers by condition (less than 3sd from condition mean -- note that this is not a symmetric exclusion criterion)#
-sense.pop.sklar <- ddply(sense.pop.sklar, .(Condition), function(d){ #
-	by_subj_include <- mean(d$rt, na.rm = T) + 3*c(-1,1)*sd(d$rt,na.rm = T)#
-	d = subset(d, rt < by_subj_include[2])#
-	})#
-#
-# Remove RTs < 200ms#
-sense.pop.sklar <- subset(sense.pop.sklar, rt > 0.2)#
-#
-# T test (Sklar style)#
-sense.pop.sklar.summary <- summaryBy(rt ~ SubjNo + Condition, data = subset(sense.pop.sklar,  Condition %in% c("Sklar_violation", "Sklar_control")), keep.names = T)#
-t.test(rt ~ Condition, data = sense.pop.sklar.summary, paired = T)#
-t.test(log(rt) ~ Condition, data = sense.pop.sklar.summary, paired = T)
-library(plyr)#
-library(lme4)#
-library(doBy)#
-library(ggplot2)#
-#
-read_data <- function(path_name){#
-list.files(path = path_name,full.names = T, pattern = ".csv") -> file_list#
-comp = c()#
-for (x in file_list){#
-	data <- read.csv(x,header = T, nrows = 100)#
-	if ("perceptual.rating.reactiontime" %in% colnames(data)){ #
-		data <- subset(data, select = -perceptual.rating.reactiontime)#
-		}#
-		if ("X" %in% colnames(data)){ #
-		data <- subset(data, select = -X)#
-		data$rt <- as.character(data$rt)#
-		}#
-	comp <- rbind(comp, data)#
-	}#
-	return(comp)#
-}#
-#
-sense.pop <- read_data("./data/")#
-#
-# Make RTs numeric [need to remove timeout "none" responses to 8s]#
-sense.pop <- subset(sense.pop, rt != "None")#
-sense.pop$rt <- as.numeric(sense.pop$rt)#
-sense.pop$Length <- nchar(as.character(sense.pop$prime),allowNA = T)#
-sense.pop$Condition <- as.character(sense.pop$prime_semantics)#
-sense.pop[sense.pop$prime_semantics %in% c("Sklar_control_A","Sklar_control_B"),]$Condition <- "Sklar_control"#
-sense.pop$Condition <- as.factor(sense.pop$Condition)#
-# Note that this analysis includes all of the inclusion criteria discussed by Sklar et al.
-###########################################################################################################################
-##
-# Let's first analyze for the Sklar trials#
-sense.pop.sklar <- subset(sense.pop, Condition %in% c("Sklar_control", "Sklar_violation")) #
-#
-# Remove outlier subjects by Accuracy and RT (mean acc must be > 0.9, mean rt must be < 3sd above group mean)#
-Acc <- summaryBy(match. + rt ~ SubjNo, data = subset(sense.pop.sklar), keep.names = T)#
-sense.pop.sklar <- subset(sense.pop.sklar, SubjNo %in% Acc[Acc$match. > 0.9,]$SubjNo)#
-#
-sense.pop.sklar <- subset(sense.pop.sklar, SubjNo %in% Acc[Acc$rt < (mean(Acc$rt) + (3*sd(Acc$rt))),]$SubjNo)#
-#
-# Remove incorrect trials#
-sense.pop.sklar <- subset(sense.pop.sklar, match. == 1)#
-#
-# Remove outliers by subject (less than 3sd from participant mean -- note that this is not a symmetric exclusion criterion)#
-sense.pop.sklar <- ddply(sense.pop.sklar, .(SubjNo), function(d){ #
-	by_subj_include <- mean(d$rt, na.rm = T) + 3*c(-1,1)*sd(d$rt,na.rm = T)#
-	d = subset(d, rt < by_subj_include[2])#
-	})#
-# [for Expt 1 only] Remove outliers by condition (less than 3sd from condition mean -- note that this is not a symmetric exclusion criterion)#
-sense.pop.sklar <- ddply(sense.pop.sklar, .(Condition), function(d){ #
-	by_subj_include <- mean(d$rt, na.rm = T) + 3*c(-1,1)*sd(d$rt,na.rm = T)#
-	d = subset(d, rt < by_subj_include[2])#
-	})#
-#
-# Remove RTs < 200ms#
-sense.pop.sklar <- subset(sense.pop.sklar, rt > 0.2)#
-#
-# T test (Sklar style)#
-sense.pop.sklar.summary <- summaryBy(rt ~ SubjNo + Condition, data = subset(sense.pop.sklar,  Condition %in% c("Sklar_violation", "Sklar_control")), keep.names = T)#
-t.test(rt ~ Condition, data = sense.pop.sklar.summary, paired = T)#
-t.test(log(rt) ~ Condition, data = sense.pop.sklar.summary, paired = T)
-summary(sense.pop)
-summary(lmer(rt~ Condition + (1+Condition|SubjNo), data = sense.pop))
-library(plyr)#
-library(lme4)#
-library(doBy)#
-library(ggplot2)#
-#
-read_data <- function(path_name){#
-list.files(path = path_name,full.names = T, pattern = ".csv") -> file_list#
-comp = c()#
-for (x in file_list){#
-	data <- read.csv(x,header = T)#
-	if ("perceptual.rating.reactiontime" %in% colnames(data)){ #
-		data <- subset(data, select = -perceptual.rating.reactiontime)#
-		}#
-		if ("X" %in% colnames(data)){ #
-		data <- subset(data, select = -X)#
-		data$rt <- as.character(data$rt)#
-		}#
-	comp <- rbind(comp, data)#
-	}#
-	return(comp)#
-}#
-#
-sense.pop <- read_data("./data/")#
-#
-# Make RTs numeric [need to remove timeout "none" responses to 8s]#
-sense.pop <- subset(sense.pop, rt != "None")#
-sense.pop$rt <- as.numeric(sense.pop$rt)#
-sense.pop$Length <- nchar(as.character(sense.pop$prime),allowNA = T)#
-sense.pop$Condition <- as.character(sense.pop$prime_semantics)#
-sense.pop[sense.pop$prime_semantics %in% c("Sklar_control_A","Sklar_control_B"),]$Condition <- "Sklar_control"#
-sense.pop$Condition <- as.factor(sense.pop$Condition)#
-# Note that this analysis includes all of the inclusion criteria discussed by Sklar et al.
-summaryBy(perceptual.rating ~ Condition, data = sense.pop)
-summary(lmer(perceptual.rating ~ Condition + (1+Condition|SubjNo), data = subset(sense.pop, Condition %in% c("Sklar_filler","Sklar_violation"))))
-qqplot(sense.pop$rt, sense.pop$rt)
-?qqplot
-qqnorm(sense.pop$rt)
-hist(sense.pop$rt)
-qqnorm(sense.pop$rt)
-qqnorm(log(sense.pop$rt))
-qqnorm(sqrt(sense.pop$rt))
-qqnorm(exp(sense.pop$rt))
-t.test(rt ~ Condition, data = sense.pop.sklar.summary, paired = T)#
-t.test(log(rt) ~ Condition, data = sense.pop.sklar.summary, paired = T)
-library(plyr)#
-library(lme4)#
-library(doBy)#
-library(ggplot2)#
-#
-read_data <- function(path_name){#
-list.files(path = path_name,full.names = T, pattern = ".csv") -> file_list#
-comp = c()#
-for (x in file_list){#
-	data <- read.csv(x,header = T)#
-	if ("perceptual.rating.reactiontime" %in% colnames(data)){ #
-		data <- subset(data, select = -perceptual.rating.reactiontime)#
-		}#
-		if ("X" %in% colnames(data)){ #
-		data <- subset(data, select = -X)#
-		data$rt <- as.character(data$rt)#
-		}#
-	comp <- rbind(comp, data)#
-	}#
-	return(comp)#
-}#
-#
-sense.pop <- read_data("./data/")#
-#
-# Make RTs numeric [need to remove timeout "none" responses to 8s]#
-sense.pop <- subset(sense.pop, rt != "None")#
-sense.pop$rt <- as.numeric(sense.pop$rt)#
-sense.pop$Length <- nchar(as.character(sense.pop$prime),allowNA = T)#
-sense.pop$Condition <- as.character(sense.pop$prime_semantics)#
-sense.pop[sense.pop$prime_semantics %in% c("Sklar_control_A","Sklar_control_B"),]$Condition <- "Sklar_control"#
-sense.pop$Condition <- as.factor(sense.pop$Condition)#
-# Note that this analysis includes all of the inclusion criteria discussed by Sklar et al. #
-#
-###########################################################################################################################
-##
-# Let's first analyze for the Sklar trials#
-sense.pop.sklar <- subset(sense.pop, Condition %in% c("Sklar_control", "Sklar_violation")) #
-#
-# Remove outlier subjects by Accuracy and RT (mean acc must be > 0.9, mean rt must be < 3sd above group mean)#
-Acc <- summaryBy(match. + rt ~ SubjNo, data = subset(sense.pop.sklar), keep.names = T)#
-sense.pop.sklar <- subset(sense.pop.sklar, SubjNo %in% Acc[Acc$match. > 0.9,]$SubjNo)#
-#
-sense.pop.sklar <- subset(sense.pop.sklar, SubjNo %in% Acc[Acc$rt < (mean(Acc$rt) + (3*sd(Acc$rt))),]$SubjNo)#
-#
-# Remove incorrect trials#
-sense.pop.sklar <- subset(sense.pop.sklar, match. == 1)#
-#
-# Remove outliers by subject (less than 3sd from participant mean -- note that this is not a symmetric exclusion criterion)#
-sense.pop.sklar <- ddply(sense.pop.sklar, .(SubjNo), function(d){ #
-	by_subj_include <- mean(d$rt, na.rm = T) + 3*c(-1,1)*sd(d$rt,na.rm = T)#
-	d = subset(d, rt < by_subj_include[2])#
-	})#
-# [for Expt 1 only] Remove outliers by condition (less than 3sd from condition mean -- note that this is not a symmetric exclusion criterion)#
-sense.pop.sklar <- ddply(sense.pop.sklar, .(Condition), function(d){ #
-	by_subj_include <- mean(d$rt, na.rm = T) + 3*c(-1,1)*sd(d$rt,na.rm = T)#
-	d = subset(d, rt < by_subj_include[2])#
-	})#
-#
-# Remove RTs < 200ms#
-sense.pop.sklar <- subset(sense.pop.sklar, rt > 0.2)
-t.test(rt ~ Condition, data = sense.pop.sklar.summary, paired = T)#
-t.test(log(rt) ~ Condition, data = sense.pop.sklar.summary, paired = T)
-# T test (Sklar style)#
-sense.pop.sklar.summary <- summaryBy(rt ~ SubjNo + Condition, data = subset(sense.pop.sklar,  Condition %in% c("Sklar_violation", "Sklar_control")), keep.names = T)#
-t.test(rt ~ Condition, data = sense.pop.sklar.summary, paired = T)#
-t.test(log(rt) ~ Condition, data = sense.pop.sklar.summary, paired = T)
-t.test(exp(rt) ~ Condition, data = sense.pop.sklar.summary, paired = T)
-t.test(sqrt(rt) ~ Condition, data = sense.pop.sklar.summary, paired = T)
-sense.pop.new <- subset(sense.pop, Condition %in% c("Sensible", "Non-sensible")) #
-#
-# Remove outlier subjects by Accuracy and RT (mean acc must be > 0.9, mean rt must be < (!!, see by trial exclusion below) 3sd from group mean)#
-Acc <- summaryBy(match. + rt ~ SubjNo, data = subset(sense.pop.new), keep.names = T)#
-sense.pop.new <- subset(sense.pop.new, SubjNo %in% Acc[Acc$match. > 0.9,]$SubjNo)#
-sense.pop.new <- subset(sense.pop.new, SubjNo %in% Acc[Acc$rt < (mean(Acc$rt) + (3*sd(Acc$rt))),]$SubjNo)#
-#
-# Remove incorrect trials#
-sense.pop.new <- subset(sense.pop.new, match. == 1)#
-#
-# Remove outliers by subject (less than 3sd from participant mean -- note that this is not a symmetric exclusion criterion)#
-sense.pop.new <- ddply(sense.pop.new, .(SubjNo), function(d){ #
-	by_subj_include <- mean(d$rt, na.rm = T) + 3*c(-1,1)*sd(d$rt,na.rm = T)#
-	d = subset(d, rt < by_subj_include[2])#
-	})#
-# [for Expt 1 only] Remove outliers by condition (less than 3sd from condition mean -- note that this is not a symmetric exclusion criterion)#
-sense.pop.new <- ddply(sense.pop.new, .(Condition), function(d){ #
-	by_subj_include <- mean(d$rt, na.rm = T) + 3*c(-1,1)*sd(d$rt,na.rm = T)#
-	d = subset(d, rt < by_subj_include[2])#
-	})#
-# Remove RTs < 200ms#
-sense.pop.new <- subset(sense.pop.new, rt > 0.2)#
-#
-# T test (Sklar style)#
-sense.pop.new.summary <- summaryBy(rt ~ SubjNo + Condition, data = subset(sense.pop.new,  Condition %in% c("Non-sensible","Sensible")), keep.names = T)#
-t.test(rt ~ Condition, data = sense.pop.new.summary, paired = T)#
-t.test(log(rt) ~ Condition, data = sense.pop.new.summary, paired = T)
-t.test(exp(rt) ~ Condition, data = sense.pop.new.summary, paired = T)
-library(ggplot2)#
-library(gridExtra)#
-library(grid)#
-library(jsonlite)#
-library(ez)#
-# This script is used to read in all the csv files in a folder.#
-#
-library(doBy)#
-## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
-library(bootstrap)#
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
-ci.low <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
-ci.high <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
-#
-Catch_Import= function(path_name){#
-  library(jsonlite)#
-  list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-  comp = c()#
-  for (x in file_list){#
-    file_name = x#
-    df <- fromJSON(file_name)#
-    d <- df$data$trialdata[1:2,]   ##df$data[4]$trialdata$key_press %in% c(71,32),]#
-    d$Subj <- unique(df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]$Subj)[2]#
-    output <- cbind(key = d$key_press,Subj = d$Subj)#
-    comp = rbind(comp,output)#
-    print(x)#
-  }#
-  return(comp)#
-}#
-Comp_Import = function(path_name){#
-  library(jsonlite)#
-  list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-  comp = c()#
-  for (x in file_list){#
-    file_name = x#
-    df <- fromJSON(file_name)#
-    d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-    d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj"),]#
-    #d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-    d$Cond <- as.factor(d$stims$Cond)#
-    d$Item <- as.factor(d$stims$Item)#
-    d$Task <- "List"#
-    d[d$Cond %in% c("Match-Adj", "Match-Mask-Adj","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ),]$Task <- "Phrase"#
-    d$Task <- as.factor(d$Task)#
-    d$Stim <- "One Word"#
-    d[d$Cond %in% c("Match-Adj", "Match-List","Mismatch-List","Mismatch-Color", "Mismatch-Noun"),]$Stim <- "Two Words"#
-    d$Stim <- ordered(d$Stim, levels = c("One Word", "Two Words"))#
-    d$Match <- "Match"#
-    d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun"),]$Match <- "MisMatch"#
-    d$Match <- as.factor(d$Match)#
-    output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Match = d$Match)#
-    output$rt <- as.numeric(as.character(output$rt))#
-    comp = rbind(comp,output)#
-    print(x)#
-  }#
-  return(comp)#
-}#
-#
-# Function for plotting data using bar plots#
-Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-  DV.se <- DV.se/(sqrt( (length(unique(Subj))) ))#
-  comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-  comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-  if (leg == TRUE){#
-    x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nCup, Tree"),  col = c("gray47"), density = c(40,100), args.legend = list(bty = "n", x = 5), tck = -0.01)#
-  } else{#
-    x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nCup Tree"),   col = c("gray47"), density = c(40,100), tick = FALSE, axes = FALSE)#
-    axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
-  }#
-  arrows(x, (c(comp.graph.mean) + c(comp.graph.se)+0.01), x, (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-}#
-library(lme4)#
-catch <- Catch_Import("./data")#
-print(catch)#
-comp <- Comp_Import("./data")#
-contrasts(comp$Stim) <- c(-0.5,0.5)#
-contrasts(comp$Task) <- c(-0.5,0.5)#
-comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-comp$Acc <- 0#
-comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-#
-# Calcs for within subj SEs#
-comp$rtAdj <- NA#
-comp$AccAdj <- NA#
-for (i in unique(comp$Subj)){#
-  comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-  comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-}#
-#
-# RT Analyses#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" ), rt, wid = .(Subj), within = .(Stim, Task))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task == "List"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task != "List"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-# Acc Analyses#
-ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim,Task))$ANOVA#
-#
-# Prepare variables for bar graph#
-comp$DetailedTask <- "List (Cup,Tree)"#
-comp[comp$Task == "Phrase",]$DetailedTask <- "Phrase (Pink Tree)"#
-comp$DetailedTask <- ordered(comp$DetailedTask, levels = c("Phrase (Pink Tree)", "List (Cup,Tree)"))#
-comp$Stim <- ordered(comp$Stim, levels = c("Two Words", "One Word"))#
-#
-comp.rt <- summaryBy(rt + rtAdj ~ DetailedTask + Stim  + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
-comp.rt <- summaryBy(rt + rtAdj ~ DetailedTask + Stim  , data = comp.rt, FUN = c(mean,sd), na.rm = T )#
-print(comp.rt)#
-#
-comp.Acc <- summaryBy(Acc + AccAdj~  DetailedTask + Stim  +Subj, , data = comp, FUN = c(mean), na.rm = T , keep.names = T)#
-comp.Acc <- summaryBy(Acc + AccAdj~  DetailedTask + Stim   , data = comp, FUN = c(mean,sd), na.rm = T )#
-print(comp.Acc)#
-#
-par(fig = c(0,1,0.35,1),mar = c(3,4,2,2))#
-Comp_Graph(comp.rt$rt.mean,comp.rt$rtAdj.sd, comp.rt$Stim, comp.rt$DetailedTask, comp$Subj, paste("Two Words", "Reaction Time", sep = " "), c(700,1000),"Reaction Time (ms)",leg = TRUE)#
-par(fig = c(0,1,0,0.35),mar = c(3,4,2,2), new = TRUE)#
-Comp_Graph(comp.Acc$Acc.mean,comp.Acc$AccAdj.sd, comp.Acc$Stim, comp.Acc$DetailedTask, comp$Subj, paste("Two Words", "Accuracy", sep = " "), c(0.5,1),"Accuracy")#
-#
-# Prepare variables for bar graph#
-comp$DetailedTask <- ordered(comp$DetailedTask, levels = c("Phrase (Pink Tree)","List (Cup,Tree)"))#
-comp$Stim <- ordered(comp$Stim, levels = c("One Word", "Two Words"))#
-#
-comp.rt <- summaryBy(rt + rtAdj ~ DetailedTask + Stim  + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
-# Print RT means and c.i.s#
-ci.m <- aggregate(rt ~  Stim + DetailedTask , comp.rt, mean); ci.m#
-ci.l <- aggregate(rt ~  Stim + DetailedTask , comp.rt, ci.low); ci.l#
-ci.h <- aggregate(rt ~  Stim + DetailedTask , comp.rt, ci.high); ci.h#
-#
-comp.rt <- summaryBy(rt + rtAdj ~ DetailedTask + Stim  , data = comp.rt, FUN = c(mean,sd), na.rm = T )#
-comp.Acc <- summaryBy(Acc + AccAdj~  DetailedTask + Stim  +Subj, , data = comp, FUN = c(mean), na.rm = T , keep.names = T)#
-comp.Acc <- summaryBy(Acc + AccAdj~  DetailedTask + Stim   , data = comp, FUN = c(mean,sd), na.rm = T )#
-#
-# Function for plotting data as a ling graph#
-Comp_Graph_l = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-  theme_set(theme_bw())#
-  DV.se <- DV.se/(sqrt(length(unique(Subj))))#
-  #comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-  #comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-  graph_data <- data.frame(Stim = IV1, Task = IV2, DV = DV.mean, SE = DV.se)#
-  print((graph_data))#
-  if (leg == TRUE){#
-    #x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nCup, Tree"),  col = c("gray47"), density = c(40,100), args.legend = list(bty = "n", x = 2.8), tck = -0.01)#
-    # PRetty ggplot2 code drawn from https://github.com/langcog/KTE/blob/master/full%20analysis%20all%20experiments.R#
-    #		#
-    x <- ggplot(graph_data, aes(x=Stim, y=DV,group = Task, linetype = Task)) + #
-      ylim(ylimit) +#
-      ylab(ylab) +#
-      geom_line(aes(group = Task, linetype = Task),position=position_dodge(width=.1),stat="identity") + #
-      geom_linerange(aes(ymin=DV - SE, ymax=DV + SE), position=position_dodge(width=.1))+ #
-      guides(colour=guide_legend()) +#
-      theme(strip.background = element_rect(fill="#FFFFFF"), #
-            strip.text = element_text(size=12), #
-            axis.text = element_text(size=12),#
-            axis.title = element_text(size=14),#
-            legend.text = element_text(size=12),#
-            legend.key = element_blank(),#
-            legend.title=element_blank(),#
-            title = element_text(size=16),#
-            panel.grid = element_blank(),#
-            axis.title.x=element_blank(),#
-            legend.position=c(0.3,0.8))#
-  } else{#
-    x <- ggplot(graph_data, aes(x=Stim, y=DV,group = Task, linetype = Task)) + #
-      ylim(ylimit) +#
-      ylab(ylab) +#
-      geom_line(aes(group = Task, linetype = Task),position=position_dodge(width=.1),stat="identity") + #
-      geom_linerange(aes(ymin=DV - SE, ymax=DV + SE), position=position_dodge(width=.1))+#
-      theme(strip.background = element_rect(fill="#FFFFFF"), #
-            strip.text = element_text(size=12), #
-            axis.text = element_text(size=12),#
-            axis.title = element_text(size=14),#
-            title = element_text(size=16),#
-            panel.grid = element_blank(),#
-            axis.text.x=element_blank(),#
-            axis.title.x=element_blank(),#
-            legend.position= "none")}#
-  #arrows(x, (c(comp.graph.mean) + c(comp.graph.se)+0.01), x, (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-  return(x)#
-}#
-RT <- Comp_Graph_l(comp.rt$rt.mean,comp.rt$rtAdj.sd, comp.rt$Stim, comp.rt$DetailedTask, comp$Subj, paste("Two Words", "Reaction Time", sep = " "), c(700,1000),"Reaction Time (ms)",leg = TRUE)#
-par(fig = c(0,1,0,0.35),mar = c(3,4,2,2), new = TRUE)#
-Acc <- Comp_Graph_l(comp.Acc$Acc.mean,comp.Acc$AccAdj.sd, comp.Acc$Stim, comp.Acc$DetailedTask, comp$Subj, paste("Two Words", "Accuracy", sep = " "), c(0.7,1.03),"Accuracy")#
-#
-# Get the gtables#
-gRT <- ggplotGrob(RT)#
-gAcc <- ggplotGrob(Acc)#
-#
-# Set the widths#
-gAcc$widths <- gRT$widths#
-#
-# Arrange the two charts.#
-# The legend boxes are centered#
-grid.newpage()#
-grid.arrange(gAcc,gRT, nrow = 2, heights = c(1,2))
-library(ggplot2)#
-library(gridExtra)#
-library(grid)#
-library(jsonlite)#
-library(ez)#
-# This script is used to read in all the csv files in a folder.#
-#
-library(doBy)#
-## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
-library(bootstrap)#
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
-ci.low <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
-ci.high <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
-#
-Catch_Import= function(path_name){#
-  library(jsonlite)#
-  list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-  comp = c()#
-  for (x in file_list){#
-    file_name = x#
-    df <- fromJSON(file_name)#
-    d <- df$data$trialdata[1:2,]   ##df$data[4]$trialdata$key_press %in% c(71,32),]#
-    d$Subj <- unique(df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]$Subj)[2]#
-    output <- cbind(key = d$key_press,Subj = d$Subj)#
-    comp = rbind(comp,output)#
-    print(x)#
-  }#
-  return(comp)#
-}#
-Comp_Import = function(path_name){#
-  library(jsonlite)#
-  list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-  comp = c()#
-  for (x in file_list){#
-    file_name = x#
-    df <- fromJSON(file_name)#
-    d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-    d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj"),]#
-    #d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-    d$Cond <- as.factor(d$stims$Cond)#
-    d$Item <- as.factor(d$stims$Item)#
-    d$Task <- "List"#
-    d[d$Cond %in% c("Match-Adj", "Match-Mask-Adj","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ),]$Task <- "Phrase"#
-    d$Task <- as.factor(d$Task)#
-    d$Stim <- "One Word"#
-    d[d$Cond %in% c("Match-Adj", "Match-List","Mismatch-List","Mismatch-Color", "Mismatch-Noun"),]$Stim <- "Two Words"#
-    d$Stim <- ordered(d$Stim, levels = c("One Word", "Two Words"))#
-    d$Match <- "Match"#
-    d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun"),]$Match <- "MisMatch"#
-    d$Match <- as.factor(d$Match)#
-    output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Match = d$Match)#
-    output$rt <- as.numeric(as.character(output$rt))#
-    comp = rbind(comp,output)#
-    print(x)#
-  }#
-  return(comp)#
-}#
-#
-# Function for plotting data using bar plots#
-Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-  DV.se <- DV.se/(sqrt( (length(unique(Subj))) ))#
-  comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-  comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-  if (leg == TRUE){#
-    x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nCup, Tree"),  col = c("gray47"), density = c(40,100), args.legend = list(bty = "n", x = 5), tck = -0.01)#
-  } else{#
-    x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nCup Tree"),   col = c("gray47"), density = c(40,100), tick = FALSE, axes = FALSE)#
-    axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
-  }#
-  arrows(x, (c(comp.graph.mean) + c(comp.graph.se)+0.01), x, (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-}#
-library(lme4)#
-catch <- Catch_Import("./Exp1a")#
-print(catch)#
-comp <- Comp_Import("./Exp1a")#
-contrasts(comp$Stim) <- c(-0.5,0.5)#
-contrasts(comp$Task) <- c(-0.5,0.5)#
-comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-comp$Acc <- 0#
-comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-#
-# Calcs for within subj SEs#
-comp$rtAdj <- NA#
-comp$AccAdj <- NA#
-for (i in unique(comp$Subj)){#
-  comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-  comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-}#
-#
-# RT Analyses#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" ), rt, wid = .(Subj), within = .(Stim, Task))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task == "List"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task != "List"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-# Acc Analyses#
-ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim,Task))$ANOVA#
-#
-# Prepare variables for bar graph#
-comp$DetailedTask <- "List (Cup,Tree)"#
-comp[comp$Task == "Phrase",]$DetailedTask <- "Phrase (Pink Tree)"#
-comp$DetailedTask <- ordered(comp$DetailedTask, levels = c("Phrase (Pink Tree)", "List (Cup,Tree)"))#
-comp$Stim <- ordered(comp$Stim, levels = c("Two Words", "One Word"))#
-#
-comp.rt <- summaryBy(rt + rtAdj ~ DetailedTask + Stim  + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
-comp.rt <- summaryBy(rt + rtAdj ~ DetailedTask + Stim  , data = comp.rt, FUN = c(mean,sd), na.rm = T )#
-print(comp.rt)#
-#
-comp.Acc <- summaryBy(Acc + AccAdj~  DetailedTask + Stim  +Subj, , data = comp, FUN = c(mean), na.rm = T , keep.names = T)#
-comp.Acc <- summaryBy(Acc + AccAdj~  DetailedTask + Stim   , data = comp, FUN = c(mean,sd), na.rm = T )#
-print(comp.Acc)#
-#
-par(fig = c(0,1,0.35,1),mar = c(3,4,2,2))#
-Comp_Graph(comp.rt$rt.mean,comp.rt$rtAdj.sd, comp.rt$Stim, comp.rt$DetailedTask, comp$Subj, paste("Two Words", "Reaction Time", sep = " "), c(700,1000),"Reaction Time (ms)",leg = TRUE)#
-par(fig = c(0,1,0,0.35),mar = c(3,4,2,2), new = TRUE)#
-Comp_Graph(comp.Acc$Acc.mean,comp.Acc$AccAdj.sd, comp.Acc$Stim, comp.Acc$DetailedTask, comp$Subj, paste("Two Words", "Accuracy", sep = " "), c(0.5,1),"Accuracy")#
-#
-# Prepare variables for bar graph#
-comp$DetailedTask <- ordered(comp$DetailedTask, levels = c("Phrase (Pink Tree)","List (Cup,Tree)"))#
-comp$Stim <- ordered(comp$Stim, levels = c("One Word", "Two Words"))#
-#
-comp.rt <- summaryBy(rt + rtAdj ~ DetailedTask + Stim  + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
-# Print RT means and c.i.s#
-ci.m <- aggregate(rt ~  Stim + DetailedTask , comp.rt, mean); ci.m#
-ci.l <- aggregate(rt ~  Stim + DetailedTask , comp.rt, ci.low); ci.l#
-ci.h <- aggregate(rt ~  Stim + DetailedTask , comp.rt, ci.high); ci.h#
-#
-comp.rt <- summaryBy(rt + rtAdj ~ DetailedTask + Stim  , data = comp.rt, FUN = c(mean,sd), na.rm = T )#
-comp.Acc <- summaryBy(Acc + AccAdj~  DetailedTask + Stim  +Subj, , data = comp, FUN = c(mean), na.rm = T , keep.names = T)#
-comp.Acc <- summaryBy(Acc + AccAdj~  DetailedTask + Stim   , data = comp, FUN = c(mean,sd), na.rm = T )#
-#
-# Function for plotting data as a ling graph#
-Comp_Graph_l = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-  theme_set(theme_bw())#
-  DV.se <- DV.se/(sqrt(length(unique(Subj))))#
-  #comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-  #comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-  graph_data <- data.frame(Stim = IV1, Task = IV2, DV = DV.mean, SE = DV.se)#
-  print((graph_data))#
-  if (leg == TRUE){#
-    #x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nCup, Tree"),  col = c("gray47"), density = c(40,100), args.legend = list(bty = "n", x = 2.8), tck = -0.01)#
-    # PRetty ggplot2 code drawn from https://github.com/langcog/KTE/blob/master/full%20analysis%20all%20experiments.R#
-    #		#
-    x <- ggplot(graph_data, aes(x=Stim, y=DV,group = Task, linetype = Task)) + #
-      ylim(ylimit) +#
-      ylab(ylab) +#
-      geom_line(aes(group = Task, linetype = Task),position=position_dodge(width=.1),stat="identity") + #
-      geom_linerange(aes(ymin=DV - SE, ymax=DV + SE), position=position_dodge(width=.1))+ #
-      guides(colour=guide_legend()) +#
-      theme(strip.background = element_rect(fill="#FFFFFF"), #
-            strip.text = element_text(size=12), #
-            axis.text = element_text(size=12),#
-            axis.title = element_text(size=14),#
-            legend.text = element_text(size=12),#
-            legend.key = element_blank(),#
-            legend.title=element_blank(),#
-            title = element_text(size=16),#
-            panel.grid = element_blank(),#
-            axis.title.x=element_blank(),#
-            legend.position=c(0.3,0.8))#
-  } else{#
-    x <- ggplot(graph_data, aes(x=Stim, y=DV,group = Task, linetype = Task)) + #
-      ylim(ylimit) +#
-      ylab(ylab) +#
-      geom_line(aes(group = Task, linetype = Task),position=position_dodge(width=.1),stat="identity") + #
-      geom_linerange(aes(ymin=DV - SE, ymax=DV + SE), position=position_dodge(width=.1))+#
-      theme(strip.background = element_rect(fill="#FFFFFF"), #
-            strip.text = element_text(size=12), #
-            axis.text = element_text(size=12),#
-            axis.title = element_text(size=14),#
-            title = element_text(size=16),#
-            panel.grid = element_blank(),#
-            axis.text.x=element_blank(),#
-            axis.title.x=element_blank(),#
-            legend.position= "none")}#
-  #arrows(x, (c(comp.graph.mean) + c(comp.graph.se)+0.01), x, (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-  return(x)#
-}#
-RT <- Comp_Graph_l(comp.rt$rt.mean,comp.rt$rtAdj.sd, comp.rt$Stim, comp.rt$DetailedTask, comp$Subj, paste("Two Words", "Reaction Time", sep = " "), c(700,1000),"Reaction Time (ms)",leg = TRUE)#
-par(fig = c(0,1,0,0.35),mar = c(3,4,2,2), new = TRUE)#
-Acc <- Comp_Graph_l(comp.Acc$Acc.mean,comp.Acc$AccAdj.sd, comp.Acc$Stim, comp.Acc$DetailedTask, comp$Subj, paste("Two Words", "Accuracy", sep = " "), c(0.7,1.03),"Accuracy")#
-#
-# Get the gtables#
-gRT <- ggplotGrob(RT)#
-gAcc <- ggplotGrob(Acc)#
-#
-# Set the widths#
-gAcc$widths <- gRT$widths#
-#
-# Arrange the two charts.#
-# The legend boxes are centered#
-grid.newpage()#
-grid.arrange(gAcc,gRT, nrow = 2, heights = c(1,2))
-summary(glmer(Acc ~ DetailedTask * Stim + (1+DetailedTask*Stim|SubjNo), data = comp))
-summary(glmer(Acc ~ DetailedTask * Stim + (1+DetailedTask*Stim|SubjNo), data = comp, family = "binomial"))
-summary(comp)
-summary(glmer(Acc ~ DetailedTask * Stim + (1+DetailedTask*Stim|Subj), data = comp, family = "binomial"))
-summary(lmer(rt ~ DetailedTask * Stim + (1+DetailedTask*Stim|Subj), data = comp))
-summary(glmer(Acc ~ DetailedTask * Stim + (1+DetailedTask|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ DetailedTask * Stim + (1*Stim|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ DetailedTask * Stim + (1+DetailedTask*Stim|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ DetailedTask * Stim + (1+DetailedTask+Stim|Subj), data = comp, family = "binomial"))
-library(jsonlite)#
-#
-# This script is used to read in all the csv files in a folder.#
-#
-library(doBy)#
-## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
-library(bootstrap)#
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
-ci.low <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
-ci.high <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
-#
-Catch_Import= function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data[4]$trialdata[1:2,]   ##df$data[4]$trialdata$key_press %in% c(71,32),]#
-	d$Subj <- unique(df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]$Subj)[2]#
-	output <- cbind(key = d$key_press,Subj = d$Subj)#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-Comp_Import = function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-	d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-Disjunc","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
-	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-	d$Cond <- as.factor(d$stims$Cond)#
-	d$Item <- as.factor(d$stims$Item)#
-	d$Task <- "Disjunction"#
-	#print(summary(d))#
-	d[d$Cond %in% c("Match-Adj", "Match-Mask-Adj","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ),]$Task <- "Phrase"#
-	d$Task <- as.factor(d$Task)#
-	d$Stim <- "One Word"#
-	d[d$Cond %in% c("Match-Adj", "Match-Noun","Match-Color","Mismatch-Disjunc","Mismatch-Color", "Mismatch-Noun"),]$Stim <- "Two Words"#
-	d$Stim <- ordered(d$Stim, levels = c("One Word", "Two Words"))#
-	d$Match <- "Match"#
-	d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-Disjunc","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun","Mismatch-Disjunc"),]$Match <- "MisMatch"#
-	d$Match <- as.factor(d$Match)#
-	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Match = d$Match)#
-	output$rt <- as.numeric(as.character(output$rt))#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-#
-# Function for plotting data#
-# Function for plotting data#
-Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-DV.se <- DV.se/(sqrt(length(unique(Subj))))#
-comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-if (leg == TRUE){#
-x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nPink, Tree"),  col = c("gray47"), density = c(40,100), args.legend = list(bty = "n", x = 2.2), tck = -0.01)#
-} else{#
-x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nPink, Tree"),   col = c("gray47"), density = c(40,100), tick = FALSE, axes = FALSE)#
-axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
-}#
-arrows(x, (c(comp.graph.mean) + c(comp.graph.se)+0.01), x, (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-}#
-library(lme4)#
-catch <- Catch_Import("./Exp1b")#
-print(catch)#
-comp <- Comp_Import("./Exp1b")#
-contrasts(comp$Stim) <- c(-0.5,0.5)#
-contrasts(comp$Task) <- c(-0.5,0.5)#
-comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-comp$Acc <- 0#
-comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-#
-# Prep for w-subj SEs#
-comp$rtAdj <- NA#
-comp$AccAdj <- NA#
-for (i in unique(comp$Subj)){#
-	comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-	comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-	}#
-#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" ), rt, wid = .(Subj), within = .(Stim, Task))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task == "Disjunction"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task != "Disjunction"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-#
-ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim,Task))$ANOVA#
-# Prep data for bar graph#
-comp$DetailedTask <- "List (Pink,Tree)"#
-comp[comp$Task == "Phrase",]$DetailedTask <- "Phrase (Pink Tree)"#
-comp$DetailedTask <- ordered(comp$DetailedTask, levels = c("Phrase (Pink Tree)", "List (Pink,Tree)"))#
-comp$Stim <- ordered(comp$Stim, levels = c("Two Words", "One Word"))#
-comp.rt <- summaryBy(rt + rtAdj ~ Task +DetailedTask + Stim  + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
-comp.rt <- summaryBy(rt + rtAdj ~ Task +DetailedTask+ Stim  , , data = comp.rt, FUN = c(mean,sd), na.rm = T )#
-print(comp.rt)#
-#
-comp.Acc <- summaryBy(Acc + AccAdj~  Task +DetailedTask + Stim  +Subj, , data = comp, FUN = c(mean), na.rm = T , keep.names = T)#
-comp.Acc <- summaryBy(Acc + AccAdj~  Task +DetailedTask + Stim  , , data = comp, FUN = c(mean,sd), na.rm = T )#
-print(comp.Acc)#
-#
-par(fig = c(0,1,0.35,1),mar = c(3,4,2,2))#
-Comp_Graph(comp.rt$rt.mean,comp.rt$rtAdj.sd, comp.rt$Stim, comp.rt$DetailedTask, comp$Subj, paste("Two Words", "Reaction Time", sep = " "), c(650,900),"Reaction Time (ms)",leg = TRUE)#
-par(fig = c(0,1,0,0.35),mar = c(3,4,2,2), new = TRUE)#
-Comp_Graph(comp.Acc$Acc.mean,comp.Acc$AccAdj.sd, comp.Acc$Stim, comp.Acc$DetailedTask, comp$Subj, paste("Two Words", "Accuracy", sep = " "), c(0.5,1),"Accuracy")#
-# Prep data for line graph#
-comp$DetailedTask <- ordered(comp$DetailedTask, levels = c("Phrase (Pink Tree)", "List (Pink,Tree)"))#
-comp$Stim <- ordered(comp$Stim, levels = c("One Word", "Two Words"))#
-#
-comp.rt <- summaryBy(rt + rtAdj ~ Task +DetailedTask + Stim  + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
-# Print means and cis#
-ci.m <- aggregate(rt ~  Stim + DetailedTask , comp.rt, mean); ci.m#
-ci.l <- aggregate(rt ~  Stim + DetailedTask , comp.rt, ci.low); ci.l#
-ci.h <- aggregate(rt ~  Stim + DetailedTask , comp.rt, ci.high); ci.h#
-comp.rt <- summaryBy(rt + rtAdj ~ Task +DetailedTask+ Stim  , , data = comp.rt, FUN = c(mean,sd), na.rm = T )#
-comp.Acc <- summaryBy(Acc + AccAdj~  Task +DetailedTask + Stim  +Subj, , data = comp, FUN = c(mean), na.rm = T , keep.names = T)#
-comp.Acc <- summaryBy(Acc + AccAdj~  Task +DetailedTask + Stim  , , data = comp, FUN = c(mean,sd), na.rm = T )#
-#
-# Function for plotting data in line graph#
-Comp_Graph_l = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-theme_set(theme_bw())#
-DV.se <- DV.se/(sqrt(length(unique(Subj))))#
-#
-graph_data <- data.frame(Stim = IV1, Task = IV2, DV = DV.mean, SE = DV.se)#
-print((graph_data))#
-if (leg == TRUE){#
-# PRetty ggplot2 code drawn from https://github.com/langcog/KTE/blob/master/full%20analysis%20all%20experiments.R#
-x <- ggplot(graph_data, aes(x=Stim, y=DV,group = Task, linetype = Task)) + #
-		ylim(ylimit) +#
-		ylab(ylab) +#
-		geom_line(aes(group = Task, linetype = Task),position=position_dodge(width=.1),stat="identity") + #
-		geom_linerange(aes(ymin=DV - SE, ymax=DV + SE), position=position_dodge(width=.1))+ #
-#
-		guides(colour=guide_legend()) +#
-		theme(strip.background = element_rect(fill="#FFFFFF"), #
-        strip.text = element_text(size=12), #
-        axis.text = element_text(size=12),#
-        axis.title = element_text(size=14),#
-        legend.text = element_text(size=12),#
-        legend.key = element_blank(),#
-       legend.title=element_blank(),#
-        title = element_text(size=16),#
-        panel.grid = element_blank(),#
-         axis.title.x=element_blank(),#
-        legend.position=c(0.3,0.8))#
-} else{#
-x <- ggplot(graph_data, aes(x=Stim, y=DV,group = Task, linetype = Task)) + #
-		ylim(ylimit) +#
-		ylab(ylab) +#
-		geom_line(aes(group = Task, linetype = Task),position=position_dodge(width=.1),stat="identity") + #
-		geom_linerange(aes(ymin=DV - SE, ymax=DV + SE), position=position_dodge(width=.1))+#
-		theme(strip.background = element_rect(fill="#FFFFFF"), #
-        strip.text = element_text(size=12), #
-        axis.text = element_text(size=12),#
-        axis.title = element_text(size=14),#
-        title = element_text(size=16),#
-        panel.grid = element_blank(),#
-        axis.text.x=element_blank(),#
-       axis.title.x=element_blank(),#
-  	   	legend.position= "none")}#
-return(x)#
-}#
-RT <- Comp_Graph_l(comp.rt$rt.mean,comp.rt$rtAdj.sd, comp.rt$Stim, comp.rt$DetailedTask, comp$Subj, paste("Two Words", "Reaction Time", sep = " "), c(650,1000),"Reaction Time (ms)",leg = TRUE)#
-par(fig = c(0,1,0,0.35),mar = c(3,4,2,2), new = TRUE)#
-Acc <- Comp_Graph_l(comp.Acc$Acc.mean,comp.Acc$AccAdj.sd, comp.Acc$Stim, comp.Acc$DetailedTask, comp$Subj, paste("Two Words", "Accuracy", sep = " "), c(0.7,1.03),"Accuracy")#
-#
-# Get the gtables#
-gRT <- ggplotGrob(RT)#
-gAcc <- ggplotGrob(Acc)#
-#
-# Set the widths#
-gAcc$widths <- gRT$widths#
-#
-# Arrange the two charts.#
-# The legend boxes are centered#
-grid.newpage()#
-grid.arrange(gAcc,gRT, nrow = 2, heights = c(1,2))
-summary(glmer(Acc ~ DetailedTask * Stim + (1+DetailedTask+Stim|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ DetailedTask * Stim + (1+DetailedTask*Stim|Subj), data = comp, family = "binomial"))
-library(jsonlite)#
-library(ggplot2)#
-library(gridExtra)#
-# This script is used to read in all the csv files in a folder.#
-#
-library(doBy)#
-## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
-library(bootstrap)#
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
-ci.low <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
-ci.high <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
-Catch_Import= function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[1:2,]   ##df$data$trialdata$key_press %in% c(71,32),]#
-	d$Subj <- unique(df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]$Subj)[2]#
-	output <- cbind(key = d$key_press,Subj = d$Subj)#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-Comp_Import = function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-	d <- d[ grep("match",d$stims$Cond, ignore.case = TRUE),]#
-	#d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
-	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-	d$Cond <- as.factor(d$stims$Cond)#
-	d$Type <- as.factor(d$stims$Type)#
-	d$Phrase <- as.factor(d$stims$Phrase)#
-	d$Length <- as.factor(d$stims$Length)#
-	d$Task <- "Phrase"#
-	d$Task <- as.factor(d$Task)#
-	d$Stim <- "Two Words"#
-	d[d$Length == "1",]$Stim <- "One Word"#
-	d$Stim <- ordered(d$Stim, levels = c("Two Words", "One Word"))#
-	d$PicType <- ifelse(d$Type == "Color", "Variable Colors (as Experiment 1)","Fixed Colors")#
-	d$PicType <- ordered(d$PicType, levels = c("Variable Colors (as Experiment 1)", "Fixed Colors"))#
-	d$Match <- "Match"#
-	d[grep("mismatch",d$Cond, ignore.case = TRUE),]$Match <- "MisMatch"#
-	d$Block <- rep(c(1,2), each = 100)#
-	d$Match <- as.factor(d$Match)#
-	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Cond = d$Cond, Type = d$Type, Task = d$Task, Stim = d$Stim, Pic = d$stims$Pic, Phrase = d$Phrase, Match = d$Match, PicType = d$PicType, Length = d$Length, Block = d$Block)#
-	#print(summary(d))#
-	output$rt <- as.numeric(as.character(output$rt))#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-#
-# Function for plotting data#
-Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-DV.se <- DV.se/(sqrt( (length(unique(Subj))/2) ))#
-comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-if (leg == TRUE){#
-x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Mismatched Predictability\nPink Tree","Matched Predictability\nPink Tree"),  col = c("gray47"), density = c(40,100), args.legend = list(bty = "n", x = 5), tck = -0.01)#
-} else{#
-x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Mismatched Predictability\nPink Tree","Matched Predictability\nPink Tree"),   col = c("gray47"), density = c(40,100), tick = FALSE, axes = FALSE)#
-axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
-}#
-arrows(x, (c(comp.graph.mean) + c(comp.graph.se)+0.01), x, (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-}#
-library(lme4)#
-library(ez)#
-catch <- Catch_Import("./Exp1c")#
-print(catch)#
-comp <- Comp_Import("./Exp1c")#
-comp$Acc <- 0#
-comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-comp$rtAdj <- NA#
-comp$AccAdj <- NA#
-for (i in unique(comp$Subj)){#
-	comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-	comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-	}#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Color"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "FixedColor"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-#
-ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-#
-# Prep for bar graph#
-comp$DetailedTask <- "Matched Predictability (Pink Tree)"#
-comp[comp$Type == "Color",]$DetailedTask <- "Mismatched Predictability (Pink Tree)"#
-comp$DetailedTask <- ordered(comp$DetailedTask, levels = c("Mismatched Predictability (Pink Tree)","Matched Predictability (Pink Tree)"))#
-#
-comp.rt <- summaryBy(rt + rtAdj ~ PicType + DetailedTask + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
-comp.rt <- summaryBy(rt + rtAdj ~ PicType + DetailedTask + Stim , data = comp.rt, FUN = c(mean,sd), na.rm = T )#
-print(comp.rt)#
-comp.Acc <- summaryBy(Acc + AccAdj~  PicType + DetailedTask + Stim  +Subj, , data = comp, FUN = c(mean), na.rm = T , keep.names = T)#
-comp.Acc <- summaryBy(Acc + AccAdj~  PicType + DetailedTask + Stim   , data = comp.Acc, FUN = c(mean,sd), na.rm = T )#
-print(comp.Acc)#
-#
-par(fig = c(0,1,0.35,1),mar = c(3,4,2,2))#
-Comp_Graph(comp.rt$rt.mean,comp.rt$rtAdj.sd, comp.rt$Stim, comp.rt$DetailedTask, comp$Subj, paste("Two Words", "Reaction Time", sep = " "), c(650,900),"Reaction Time (ms)",leg = TRUE)#
-par(fig = c(0,1,0,0.35),mar = c(3,4,2,2), new = TRUE)#
-Comp_Graph(comp.Acc$Acc.mean,comp.Acc$AccAdj.sd, comp.Acc$Stim, comp.Acc$DetailedTask, comp$Subj, paste("Two Words", "Accuracy", sep = " "), c(0.5,1),"Accuracy")#
-#
-# Prep for line graph#
-comp$DetailedTask <- ordered(comp$DetailedTask, levels = c("Matched Predictability (Pink Tree)","Mismatched Predictability (Pink Tree)"))#
-comp$Stim <- ordered(comp$Stim, levels = c("One Word", "Two Words"))#
-#
-comp.rt <- summaryBy(rt + rtAdj ~ PicType + DetailedTask + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
-ci.m <- aggregate(rt ~  Stim + DetailedTask , comp.rt, mean); ci.m#
-ci.l <- aggregate(rt ~  Stim + DetailedTask , comp.rt, ci.low); ci.l#
-ci.h <- aggregate(rt ~  Stim + DetailedTask , comp.rt, ci.high); ci.h#
-comp.rt <- summaryBy(rt + rtAdj ~ PicType + DetailedTask + Stim , data = comp.rt, FUN = c(mean,sd), na.rm = T )#
-comp.Acc <- summaryBy(Acc + AccAdj~  PicType + DetailedTask + Stim  +Subj, , data = comp, FUN = c(mean), na.rm = T , keep.names = T)#
-comp.Acc <- summaryBy(Acc + AccAdj~  PicType + DetailedTask + Stim   , data = comp.Acc, FUN = c(mean,sd), na.rm = T )#
-#
-# Function for plotting data#
-Comp_Graph_l = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-theme_set(theme_bw())#
-S <- length(unique(Subj))/2#
-DV.se <- DV.se/(sqrt(S))#
-#comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-#comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-graph_data <- data.frame(Stim = IV1, Task = IV2, DV = DV.mean, SE = DV.se)#
-print((S))#
-if (leg == TRUE){#
-#x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nCup, Tree"),  col = c("gray47"), density = c(40,100), args.legend = list(bty = "n", x = 2.8), tck = -0.01)#
-# PRetty ggplot2 code drawn from https://github.com/langcog/KTE/blob/master/full%20analysis%20all%20experiments.R#
-#
-#		#
-x <- ggplot(graph_data, aes(x=Stim, y=DV,group = Task, linetype = Task)) + #
-		ylim(ylimit) +#
-		ylab(ylab) +#
-		geom_line(aes(group = Task, linetype = Task),position=position_dodge(width=.1),stat="identity") + #
-		geom_linerange(aes(ymin=DV - SE, ymax=DV + SE), position=position_dodge(width=.1))+ #
-#
-		guides(colour=guide_legend()) +#
-		theme(strip.background = element_rect(fill="#FFFFFF"), #
-        strip.text = element_text(size=12), #
-        axis.text = element_text(size=12),#
-        axis.title = element_text(size=14),#
-        legend.text = element_text(size=12),#
-        legend.key = element_blank(),#
-       legend.title=element_blank(),#
-        title = element_text(size=16),#
-        panel.grid = element_blank(),#
-         axis.title.x=element_blank(),#
-        legend.position=c(0.43,0.8))#
-} else{#
-x <- ggplot(graph_data, aes(x=Stim, y=DV,group = Task, linetype = Task)) + #
-		ylim(ylimit) +#
-		ylab(ylab) +#
-		geom_line(aes(group = Task, linetype = Task),position=position_dodge(width=.1),stat="identity") + #
-		geom_linerange(aes(ymin=DV - SE, ymax=DV + SE), position=position_dodge(width=.1))+#
-		theme(strip.background = element_rect(fill="#FFFFFF"), #
-        strip.text = element_text(size=12), #
-        axis.text = element_text(size=12),#
-        axis.title = element_text(size=14),#
-        title = element_text(size=16),#
-        panel.grid = element_blank(),#
-        axis.text.x=element_blank(),#
-       axis.title.x=element_blank(),#
-  	   	legend.position= "none")}#
-#arrows(x, (c(comp.graph.mean) + c(comp.graph.se)+0.01), x, (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-return(x)#
-}#
-RT <- Comp_Graph_l(comp.rt$rt.mean,comp.rt$rtAdj.sd, comp.rt$Stim, comp.rt$DetailedTask, comp$Subj, paste("Two Words", "Reaction Time", sep = " "), c(650,1000),"Reaction Time (ms)",leg = TRUE)#
-par(fig = c(0,1,0,0.35),mar = c(3,4,2,2), new = TRUE)#
-Acc <- Comp_Graph_l(comp.Acc$Acc.mean,comp.Acc$AccAdj.sd, comp.Acc$Stim, comp.Acc$DetailedTask, comp$Subj, paste("Two Words", "Accuracy", sep = " "), c(0.7,1.05),"Accuracy")#
-#
-# Get the gtables#
-gRT <- ggplotGrob(RT)#
-gAcc <- ggplotGrob(Acc)#
-#
-# Set the widths#
-gAcc$widths <- gRT$widths#
-#
-# Arrange the two charts.#
-# The legend boxes are centered#
-grid.newpage()#
-grid.arrange(gAcc,gRT, nrow = 2, heights = c(1,2))
-summary(glmer(Acc ~ DetailedTask * Stim + (1+DetailedTask*Stim|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ DetailedTask * Stim + (1+DetailedTask+Stim|Subj), data = comp, family = "binomial"))
-library(ggplot2)#
-library(gridExtra)#
-library(grid)#
-library(ez)#
-library(lme4)#
-library(doBy)#
-#
-library(doBy)#
-## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
-library(bootstrap)#
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
-ci.low <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
-ci.high <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
-Comp_Import_light= function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-	d <- d[ grep("match",d$stims$Cond, ignore.case = TRUE),]#
-	#d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
-	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-	d$Cond <- as.factor(d$stims$Cond)#
-	d$Item <- as.factor(d$stims$Item)#
-	d$Task <- "Phrase"#
-	if (length(d[grep("list",d$Cond, ignore.case = TRUE),]$Task) > 0){#
-		d[grep("list",d$Cond, ignore.case = TRUE),]$Task <- "List"#
-		}#
-	d$Task <- as.factor(d$Task)#
-	d$Stim <- "Two Words"#
-	d[grep("full-mask",d$Cond, ignore.case = TRUE),]$Stim <- "One Word"#
-	d[grep("no-mask",d$Cond, ignore.case = TRUE),]$Stim <- "Three Words"#
-	d$Stim <- ordered(d$Stim, levels = c("Three Words", "Two Words", "One Word"))#
-	d$PicType <- "Dark"#
-	d[grep("light_",d$Item, ignore.case = TRUE),]$PicType <- "Light"#
-	d$Match <- "Match"#
-	d[grep("mismatch",d$Cond, ignore.case = TRUE),]$Match <- "MisMatch"#
-	d$Match <- as.factor(d$Match)#
-	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Pic = d$stimulus, Match = d$Match, PicType = d$PicType)#
-	output$rt <- as.numeric(as.character(output$rt))#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-Comp_Import_Big = function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-	d <- d[ grep("match",d$stims$Cond, ignore.case = TRUE),]#
-	#d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
-	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-	d$Cond <- as.factor(d$stims$Cond)#
-	d$Item <- as.factor(d$stims$Item)#
-	d$Task <- "Phrase"#
-	if (length(d[grep("list",d$Cond, ignore.case = TRUE),]$Task) > 0){#
-		d[grep("list",d$Cond, ignore.case = TRUE),]$Task <- "List"#
-		}#
-	d$Task <- as.factor(d$Task)#
-	d$Stim <- "Two Words"#
-	d[grep("full-mask",d$Cond, ignore.case = TRUE),]$Stim <- "One Word"#
-	d[grep("no-mask",d$Cond, ignore.case = TRUE),]$Stim <- "Three Words"#
-	d$Stim <- ordered(d$Stim, levels = c("One Word", "Two Words", "Three Words"))#
-	d$PicType <- "Big"#
-	d[grep("small_",d$Item, ignore.case = TRUE),]$PicType <- "Small"#
-	d$Match <- "Match"#
-	d[grep("mismatch",d$Cond, ignore.case = TRUE),]$Match <- "MisMatch"#
-	d$Match <- as.factor(d$Match)#
-	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Pic = d$stimulus, Match = d$Match, PicType = d$PicType)#
-	output$rt <- as.numeric(as.character(output$rt))#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-#
-comp_process = function(comp){#
-		#contrasts(comp$Stim) <- c(-0.5,0.5)#
-		#contrasts(comp$Task) <- c(-0.5,0.5)#
-		comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-		comp$Acc <- 0#
-		comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-		comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-		comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-		comp$rtAdj <- NA#
-		comp$AccAdj <- NA#
-		for (i in unique(comp$Subj)){#
-			comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-			comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-			}#
-	return(comp)#
-	}#
-# Function for plotting data#
-# Function for plotting data#
-Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-DV.se <- DV.se/(sqrt(length(unique(Subj))))#
-comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-if (leg == TRUE){#
-barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Unstructured Composition\nBig Pink Tree","Structured Composition\nDark Pink Tree"),  col = c("gray47"), density = c(40,65,100), args.legend = list(bty = "n", x = 3.2), tck = -0.01)#
-} else{#
-barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Unstructured Composition\nBig Pink Tree","Structured Composition\nDark Pink Tree"),   col = c("gray47"), density = c(40,65,100), tick = FALSE, axes = FALSE)#
-axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
-}#
-arrows(c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) + c(comp.graph.se)+0.01), c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-}#
-comp.1 <- comp_process(Comp_Import_Big("./Exp2/Exp2Big/data"))#
-comp.1$Type <- "Big"#
-comp.2 <- comp_process(Comp_Import_light("./Exp2/Exp2Dark/data"))#
-comp.2$Type <- "Dark"#
-#
-comp.omni <- rbind(comp.1,comp.2)#
-comp.omni$PicType = NA#
-for (colors in c("big", "small","dark","light")){#
-	comp.omni[grep(colors,comp.omni$Pic, ignore.case = TRUE),]$PicType <- colors#
-	}#
-comp.omni$PicType <- as.factor(comp.omni$PicType)#
-#
-comp.omni$Type <- as.factor(comp.omni$Type)#
-summary(comp.omni)#
-#
-#Reaction Times#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Big"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Dark"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Big" & Stim != "One Word"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Dark" & Stim != "One Word"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Big" & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Dark" & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-# Accuracy#
-ezANOVA(comp.omni, Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-comp.omni$rtAdj <- NA#
-comp.omni$AccAdj <- NA#
-for (i in unique(comp.omni$Subj)){#
-	comp.omni[comp.omni$Subj == i,]$rtAdj <- ((comp.omni[comp.omni$Subj == i,]$rt - mean(comp.omni[comp.omni$Subj == i,]$rt, na.rm = T)) + mean(comp.omni$rt, na.rm = T))#
-	comp.omni[comp.omni$Subj == i,]$AccAdj <- ((comp.omni[comp.omni$Subj == i,]$Acc - mean(comp.omni[comp.omni$Subj == i,]$Acc, na.rm = T)) + mean(comp.omni$Acc, na.rm = T))#
-	}#
-#
-# Prep for bar graph#
-comp.omni$DetailedType <- "Complex (Dark Pink Tree)"#
-comp.omni[comp.omni$Type == "Big",]$DetailedType <- "Simple (Big Pink Tree)"#
-comp.omni$DetailedType <- ordered(comp.omni$DetailedType, levels = c("Simple (Big Pink Tree)", "Complex (Dark Pink Tree)"))#
-comp.omni$Stim <- ordered(comp.omni$Stim, levels = c( "One Word","Two Words","Three Words"))#
-#
-comp.omni.rt <- summaryBy(rt + rtAdj ~ Type+ DetailedType + Stim + Subj, , data = subset(comp.omni, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
-comp.omni.rt <- summaryBy(rt + rtAdj ~ Type+ DetailedType + Stim , , data = comp.omni.rt, FUN = c(mean,sd), na.rm = T )#
-print(comp.omni.rt)#
-#
-comp.omni.Acc <- summaryBy(Acc + AccAdj~  Type + DetailedType+ Stim  +Subj, , data = comp.omni, FUN = c(mean), na.rm = T , keep.names = T)#
-comp.omni.Acc <- summaryBy(Acc + AccAdj~  Type + DetailedType+ Stim  , , data = comp.omni.Acc, FUN = c(mean,sd), na.rm = T )#
-print(comp.omni.Acc)#
-#
-par(fig = c(0,1,0.35,1),mar = c(3,4,2,2))#
-Comp_Graph(comp.omni.rt$rt.mean,comp.omni.rt$rtAdj.sd, comp.omni.rt$Stim, comp.omni.rt$Type, comp.omni$Subj, paste("Three Words", "Reaction Time", sep = " "), c(650,900),"Reaction Time (ms)",leg = TRUE)#
-par(fig = c(0,1,0,0.35),mar = c(3,4,2,2), new = TRUE)#
-Comp_Graph(comp.omni.Acc$Acc.mean,comp.omni.Acc$AccAdj.sd, comp.omni.Acc$Stim, comp.omni.Acc$Type, comp.omni$Subj, paste("Three Words", "Accuracy", sep = " "), c(0.5,1),"Accuracy")#
-# Prep for line graph#
-comp.omni$Stim <- ordered(comp.omni$Stim,  levels = c("One Word", "Two Words", "Three Words"))#
-comp.omni$DetailedType <- ordered(comp.omni$DetailedType, levels = c("Complex (Dark Pink Tree)","Simple (Big Pink Tree)"))#
-comp.omni.rt <- summaryBy(rt + rtAdj ~ Type+ DetailedType + Stim + Subj, , data = subset(comp.omni, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
-ci.m <- aggregate(rt ~  Stim + DetailedType , comp.omni.rt, mean); ci.m#
-ci.l <- aggregate(rt ~  Stim + DetailedType , comp.omni.rt, ci.low); ci.l#
-ci.h <- aggregate(rt ~  Stim + DetailedType , comp.omni.rt, ci.high); ci.h#
-#
-comp.omni.rt <- summaryBy(rt + rtAdj ~ Type+ DetailedType + Stim , , data = comp.omni.rt, FUN = c(mean,sd), na.rm = T )#
-#
-comp.omni.Acc <- summaryBy(Acc + AccAdj~  Type + DetailedType+ Stim  +Subj, , data = comp.omni, FUN = c(mean), na.rm = T , keep.names = T)#
-comp.omni.Acc <- summaryBy(Acc + AccAdj~  Type + DetailedType+ Stim  , , data = comp.omni.Acc, FUN = c(mean,sd), na.rm = T )#
-#
-# Function for plotting data#
-Comp_Graph_l = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-theme_set(theme_bw())#
-DV.se <- DV.se/(sqrt((length(unique(Subj))/2)))#
-graph_data <- data.frame(Stim = IV1, Task = IV2, DV = DV.mean, SE = DV.se)#
-print((graph_data))#
-if (leg == TRUE){#
-# PRetty ggplot2 code drawn from https://github.com/langcog/KTE/blob/master/full%20analysis%20all%20experiments.R#
-#
-#		#
-x <- ggplot(graph_data, aes(x=Stim, y=DV,group = Task, linetype = Task)) + #
-		ylim(ylimit) +#
-		ylab(ylab) +#
-		geom_line(aes(group = Task, linetype = Task),position=position_dodge(width=.1),stat="identity") + #
-		geom_linerange(aes(ymin=DV - SE, ymax=DV + SE), position=position_dodge(width=.1))+ #
-#
-		guides(colour=guide_legend()) +#
-		theme(strip.background = element_rect(fill="#FFFFFF"), #
-        strip.text = element_text(size=12), #
-        axis.text = element_text(size=12),#
-        axis.title = element_text(size=14),#
-        legend.text = element_text(size=12),#
-        legend.key = element_blank(),#
-       legend.title=element_blank(),#
-        title = element_text(size=16),#
-        panel.grid = element_blank(),#
-         axis.title.x=element_blank(),#
-        legend.position=c(0.2,0.8))#
-} else{#
-x <- ggplot(graph_data, aes(x=Stim, y=DV,group = Task, linetype = Task)) + #
-		ylim(ylimit) +#
-		ylab(ylab) +#
-		geom_line(aes(group = Task, linetype = Task),position=position_dodge(width=.1),stat="identity") + #
-		geom_linerange(aes(ymin=DV - SE, ymax=DV + SE), position=position_dodge(width=.1))+#
-		theme(strip.background = element_rect(fill="#FFFFFF"), #
-        strip.text = element_text(size=12), #
-        axis.text = element_text(size=12),#
-        axis.title = element_text(size=14),#
-        title = element_text(size=16),#
-        panel.grid = element_blank(),#
-        axis.text.x=element_blank(),#
-       axis.title.x=element_blank(),#
-  	   	legend.position= "none")}#
-return(x)#
-}#
-RT <- Comp_Graph_l(comp.omni.rt$rt.mean,comp.omni.rt$rtAdj.sd, comp.omni.rt$Stim, comp.omni.rt$DetailedType, comp.omni$Subj, paste("Three Words", "Reaction Time", sep = " "), c(650,800),"Reaction Time (ms)",leg = TRUE)#
-par(fig = c(0,1,0,0.35),mar = c(3,4,2,2), new = TRUE)#
-Acc <- Comp_Graph_l(comp.omni.Acc$Acc.mean,comp.omni.Acc$AccAdj.sd, comp.omni.Acc$Stim, comp.omni.Acc$DetailedType, comp.omni$Subj, paste("Three Words", "Accuracy", sep = " "), c(0.7,1),"Accuracy")#
-# Get the gtables#
-gRT <- ggplotGrob(RT)#
-gAcc <- ggplotGrob(Acc)#
-#
-# Set the widths#
-gAcc$widths <- gRT$widths#
-#
-# Arrange the two charts.#
-# The legend boxes are centered#
-grid.newpage()#
-grid.arrange(gAcc, gRT, nrow = 2, heights = c(1,2))
-summary(glmer(Acc ~ DetailedTask * Stim + (1+DetailedTask+Stim|Subj), data = comp, family = "binomial"))
-summary(comp)
-summary(glmer(Acc ~ DetailedTask * Stim + (1+DetailedTask+Stim|Subj), data = comp.omni, family = "binomial"))
-summary(comp.omni)
-summary(glmer(Acc ~ DetailedType * Stim + (1+DetailedType+Stim|Subj), data = comp.omni, family = "binomial"))
-summary(glmer(Acc ~ DetailedType * Stim + (1+DetailedType*Stim|Subj), data = comp.omni, family = "binomial"))
-summary(glmer(Acc ~ DetailedType * Stim + (1+Stim|Subj), data = comp.omni, family = "binomial"))
-contrasts(comp.omni$DetailedType)
-contrasts(comp.omni$Stim)
-library(ggplot2)#
-library(gridExtra)#
-library(grid)#
-library(jsonlite)#
-#
-# This script is used to read in all the csv files in a folder.#
-#
-library(doBy)#
-## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
-library(bootstrap)#
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
-ci.low <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
-ci.high <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
-Catch_Import= function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[1:2,]   ##df$data[4]$trialdata$key_press %in% c(71,32),]#
-	d$Subj <- unique(df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]$Subj)[2]#
-	output <- cbind(key = d$key_press,Subj = d$Subj)#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-Comp_Import = function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-	d <- d[ grep("match",d$stims$Cond, ignore.case = TRUE),]#
-	d$Cond <- as.factor(d$stims$Cond)#
-	d$Type <- as.factor(d$stims$Type)#
-	d$Phrase <- as.factor(d$stims$Phrase)#
-	d$Length <- as.factor(d$stims$Length)#
-	d$Task <- "Phrase"#
-	d$Task <- as.factor(d$Task)#
-	d$Stim <- "Two Words"#
-	d[d$Length == "1",]$Stim <- "One Word"#
-	d[d$Length == "3",]$Stim <- "Three Words"#
-	d$Stim <- ordered(d$Stim, levels = c("One Word", "Two Words", "Three Words"))#
-	d$PicType <- "Striped"#
-	d[grep("spotted",d$stims$Pic, ignore.case = TRUE),]$PicType <- "Spotted"#
-	d$Match <- "Match"#
-	d[grep("mismatch",d$Cond, ignore.case = TRUE),]$Match <- "MisMatch"#
-	d$Block = rep(c(1,2), each = 150)#
-	d$Match <- as.factor(d$Match)#
-	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Cond = d$Cond, Type = d$Type, Task = d$Task, Stim = d$Stim, Pic = d$stims$Pic, Phrase = d$Phrase, Match = d$Match, PicType = d$PicType, Block = d$Block, File = d$stimulus)#
-	#print(summary(d))#
-	output$rt <- as.numeric(as.character(output$rt))#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-#
-# Function for plotting data#
-Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-DV.se <- DV.se/(sqrt(length(unique(Subj))))#
-comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-if (leg == TRUE){#
-barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Simple Structure\nBig Striped Tree","Complex Structure\nBig Striped Tree"),  col = c("gray47"), density = c(40,65,100), args.legend = list(bty = "n", x = 3.5), tck = -0.01)#
-} else{#
-barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Simple Structure\nBig Striped Tree","Complex Structure\nBig Striped Tree"),   col = c("gray47"), density = c(40,65,100), tick = FALSE, axes = FALSE)#
-axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
-}#
-arrows(c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) + c(comp.graph.se)+0.01), c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-}#
-library(lme4)#
-library(ez)#
-catch <- Catch_Import("./Exp3")#
-print(catch)#
-comp <- Comp_Import("./Exp3")#
-comp <- subset(comp, Type %in% c("Adj3","Adj4", "Adv4"))#
-comp$Acc <- 0#
-comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-comp$rtAdj <- NA#
-comp$AccAdj <- NA#
-for (i in unique(comp$Subj)){#
-	comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-	comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-	}#
-# Reaction Times#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4")), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4") & Stim != "One Word"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-#
-# Accuracy#
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4")), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "One Word"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Two Words"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Three Words"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-# Prep for bar graph#
-comp$DetailedType <- "Complex Adjective (Big Spotted Tree)"#
-comp[comp$Type == "Adj4",]$DetailedType <- "Simple (Big Spotted Tree)"#
-comp[comp$Type == "Adv4",]$DetailedType <- "Complex Compound Adj. (Big Spotted Tree)"#
-comp$DetailedType <- ordered(comp$DetailedType, levels = c("Simple (Big Spotted Tree)","Complex Adjective (Big Spotted Tree)","Complex Compound Adj. (Big Spotted Tree)"))#
-comp$Stim <- ordered(comp$Stim, levels = c("Three Words", "Two Words","One Word"))#
-#
-comp.rt1 <- summaryBy(rt + rtAdj ~ Type + DetailedType + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4","Adv4")), FUN = c(mean), na.rm = T , keep.names = T)#
-comp.rt1$Type <- ordered(comp.rt1$Type, levels = c("Adj4", "Adj3","Adv4"))#
-comp.rt <- summaryBy(rt + rtAdj ~ Type + DetailedType  + Stim , data = comp.rt1, FUN = c(mean,sd), na.rm = T )#
-print(comp.rt)#
-#
-comp.Acc <- summaryBy(Acc + AccAdj~  Type + DetailedType  + Stim  +Subj, , data = comp, FUN = c(mean), na.rm = T , keep.names = T)#
-comp.Acc$Type <- ordered(comp.Acc$Type, levels = c("Adj4", "Adj3","Adv4"))#
-comp.Acc <- summaryBy(Acc + AccAdj~  Type + DetailedType  + Stim   , data = comp.Acc, FUN = c(mean,sd), na.rm = T )#
-print(comp.Acc)#
-par(fig = c(0,1,0.35,1),mar = c(3,4,2,2))#
-Comp_Graph(comp.rt$rt.mean,comp.rt$rtAdj.sd, comp.rt$Stim, comp.rt$Type, comp$Subj, paste("Three Words", "Reaction Time", sep = " "), c(750,1050),"Reaction Time (ms)",leg = TRUE)#
-par(fig = c(0,1,0,0.35),mar = c(3,4,2,2), new = TRUE)#
-Comp_Graph(comp.Acc$Acc.mean,comp.Acc$AccAdj.sd, comp.Acc$Stim, comp.Acc$Type, comp$Subj, paste("Three Words", "Accuracy", sep = " "), c(0.5,1),"Accuracy")#
-#
-# Quick analysis on whether the effect differs depending on whether the size of the image and the size of the texture are congruent#
-comp$Cong <- 0#
-comp[grep("big_big",comp$Pic, ignore.case = TRUE),]$Cong <- 1#
-comp[grep("small_small",comp$Pic, ignore.case = TRUE),]$Cong <- 1#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Cong ==1 ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Cong ==0 ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-# Prep for line graph#
-comp$DetailedType <- ordered(comp$DetailedType, levels = c("Complex Adjective (Big Spotted Tree)","Complex Compound Adj. (Big Spotted Tree)","Simple (Big Spotted Tree)"))#
-comp$Stim <- ordered(comp$Stim, levels = c("One Word", "Two Words", "Three Words"))#
-comp.rt1 <- summaryBy(rt + rtAdj ~ Type + DetailedType + Stim + Subj, , data = subset(comp, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
-ci.m <- aggregate(rt ~  Stim + DetailedType , comp.rt1, mean); ci.m#
-ci.l <- aggregate(rt ~  Stim + DetailedType , comp.rt1, ci.low); ci.l#
-ci.h <- aggregate(rt ~  Stim + DetailedType , comp.rt1, ci.high); ci.h#
-comp.rt1$Type <- ordered(comp.rt1$Type, levels = c("Adj4", "Adj3"))#
-comp.rt <- summaryBy(rt + rtAdj ~ Type + DetailedType  + Stim , data = comp.rt1, FUN = c(mean,sd), na.rm = T )#
-print(comp.rt)#
-#
-comp.Acc <- summaryBy(Acc + AccAdj~  Type + DetailedType  + Stim  +Subj, , data = comp, FUN = c(mean), na.rm = T , keep.names = T)#
-comp.Acc$Type <- ordered(comp.Acc$Type, levels = c("Adj4", "Adj3"))#
-comp.Acc <- summaryBy(Acc + AccAdj~  Type + DetailedType  + Stim   , data = comp.Acc, FUN = c(mean,sd), na.rm = T )#
-print(comp.Acc)#
-# Function for plotting data#
-Comp_Graph_l = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-theme_set(theme_bw())#
-DV.se <- DV.se/(sqrt((length(unique(Subj))/3)))#
-#comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-#comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-graph_data <- data.frame(Stim = IV1, Task = IV2, DV = DV.mean, SE = DV.se)#
-print((graph_data))#
-if (leg == TRUE){#
-#x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nCup, Tree"),  col = c("gray47"), density = c(40,100), args.legend = list(bty = "n", x = 2.8), tck = -0.01)#
-# PRetty ggplot2 code drawn from https://github.com/langcog/KTE/blob/master/full%20analysis%20all%20experiments.R#
-#
-#		#
-x <- ggplot(graph_data, aes(x=Stim, y=DV,group = Task, linetype = Task)) + #
-		ylim(ylimit) +#
-		ylab(ylab) +#
-		geom_line(aes(group = Task, linetype = Task),position=position_dodge(width=.1),stat="identity") + #
-		geom_linerange(aes(ymin=DV - SE, ymax=DV + SE), position=position_dodge(width=.1))+ #
-#
-		guides(colour=guide_legend()) +#
-		theme(strip.background = element_rect(fill="#FFFFFF"), #
-        strip.text = element_text(size=12), #
-        axis.text = element_text(size=12),#
-        axis.title = element_text(size=14),#
-        legend.text = element_text(size=12),#
-        legend.key = element_blank(),#
-       legend.title=element_blank(),#
-        title = element_text(size=16),#
-        panel.grid = element_blank(),#
-         axis.title.x=element_blank(),#
-        legend.position=c(0.35,0.8))#
-} else{#
-x <- ggplot(graph_data, aes(x=Stim, y=DV,group = Task, linetype = Task)) + #
-		ylim(ylimit) +#
-		ylab(ylab) +#
-		geom_line(aes(group = Task, linetype = Task),position=position_dodge(width=.1),stat="identity") + #
-		geom_linerange(aes(ymin=DV - SE, ymax=DV + SE), position=position_dodge(width=.1))+#
-		theme(strip.background = element_rect(fill="#FFFFFF"), #
-        strip.text = element_text(size=12), #
-        axis.text = element_text(size=12),#
-        axis.title = element_text(size=14),#
-        title = element_text(size=16),#
-        panel.grid = element_blank(),#
-        axis.text.x=element_blank(),#
-       axis.title.x=element_blank(),#
-  	   	legend.position= "none")}#
-#arrows(x, (c(comp.graph.mean) + c(comp.graph.se)+0.01), x, (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-return(x)#
-}#
-RT <- Comp_Graph_l(comp.rt$rt.mean,comp.rt$rtAdj.sd, comp.rt$Stim, comp.rt$DetailedType, comp$Subj, paste("Three Words", "Reaction Time", sep = " "), c(700,1050),"Reaction Time (ms)",leg = TRUE)#
-par(fig = c(0,1,0,0.35),mar = c(3,4,2,2), new = TRUE)#
-Acc <- Comp_Graph_l(comp.Acc$Acc.mean,comp.Acc$AccAdj.sd, comp.Acc$Stim, comp.Acc$DetailedType, comp$Subj, paste("Three Words", "Accuracy", sep = " "), c(0.7,1),"Accuracy")#
-# Get the gtables#
-gRT <- ggplotGrob(RT)#
-gAcc <- ggplotGrob(Acc)#
-#
-# Set the widths#
-gAcc$widths <- gRT$widths#
-#
-# Arrange the two charts.#
-# The legend boxes are centered#
-grid.newpage()#
-grid.arrange(gAcc, gRT, nrow = 2, heights = c(1,2))
-summary(glmer(Acc ~ DetailedType * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ DetailedType * Stim + (1|Subj), data = comp, family = "binomial"))
-library(ggplot2)#
-library(gridExtra)#
-library(grid)#
-library(ez)#
-library(lme4)#
-library(doBy)#
-#
-library(doBy)#
-## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
-library(bootstrap)#
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
-ci.low <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
-ci.high <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
-Comp_Import_light= function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-	d <- d[ grep("match",d$stims$Cond, ignore.case = TRUE),]#
-	#d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
-	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-	d$Cond <- as.factor(d$stims$Cond)#
-	d$Item <- as.factor(d$stims$Item)#
-	d$Task <- "Phrase"#
-	if (length(d[grep("list",d$Cond, ignore.case = TRUE),]$Task) > 0){#
-		d[grep("list",d$Cond, ignore.case = TRUE),]$Task <- "List"#
-		}#
-	d$Task <- as.factor(d$Task)#
-	d$Stim <- "Two Words"#
-	d[grep("full-mask",d$Cond, ignore.case = TRUE),]$Stim <- "One Word"#
-	d[grep("no-mask",d$Cond, ignore.case = TRUE),]$Stim <- "Three Words"#
-	d$Stim <- ordered(d$Stim, levels = c("Three Words", "Two Words", "One Word"))#
-	d$PicType <- "Dark"#
-	d[grep("light_",d$Item, ignore.case = TRUE),]$PicType <- "Light"#
-	d$Match <- "Match"#
-	d[grep("mismatch",d$Cond, ignore.case = TRUE),]$Match <- "MisMatch"#
-	d$Match <- as.factor(d$Match)#
-	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Pic = d$stimulus, Match = d$Match, PicType = d$PicType)#
-	output$rt <- as.numeric(as.character(output$rt))#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-Comp_Import_Big = function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-	d <- d[ grep("match",d$stims$Cond, ignore.case = TRUE),]#
-	#d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
-	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-	d$Cond <- as.factor(d$stims$Cond)#
-	d$Item <- as.factor(d$stims$Item)#
-	d$Task <- "Phrase"#
-	if (length(d[grep("list",d$Cond, ignore.case = TRUE),]$Task) > 0){#
-		d[grep("list",d$Cond, ignore.case = TRUE),]$Task <- "List"#
-		}#
-	d$Task <- as.factor(d$Task)#
-	d$Stim <- "Two Words"#
-	d[grep("full-mask",d$Cond, ignore.case = TRUE),]$Stim <- "One Word"#
-	d[grep("no-mask",d$Cond, ignore.case = TRUE),]$Stim <- "Three Words"#
-	d$Stim <- ordered(d$Stim, levels = c("One Word", "Two Words", "Three Words"))#
-	d$PicType <- "Big"#
-	d[grep("small_",d$Item, ignore.case = TRUE),]$PicType <- "Small"#
-	d$Match <- "Match"#
-	d[grep("mismatch",d$Cond, ignore.case = TRUE),]$Match <- "MisMatch"#
-	d$Match <- as.factor(d$Match)#
-	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Pic = d$stimulus, Match = d$Match, PicType = d$PicType)#
-	output$rt <- as.numeric(as.character(output$rt))#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-#
-comp_process = function(comp){#
-		#contrasts(comp$Stim) <- c(-0.5,0.5)#
-		#contrasts(comp$Task) <- c(-0.5,0.5)#
-		comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-		comp$Acc <- 0#
-		comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-		comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-		comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-		comp$rtAdj <- NA#
-		comp$AccAdj <- NA#
-		for (i in unique(comp$Subj)){#
-			comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-			comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-			}#
-	return(comp)#
-	}#
-# Function for plotting data#
-# Function for plotting data#
-Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-DV.se <- DV.se/(sqrt(length(unique(Subj))))#
-comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-if (leg == TRUE){#
-barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Unstructured Composition\nBig Pink Tree","Structured Composition\nDark Pink Tree"),  col = c("gray47"), density = c(40,65,100), args.legend = list(bty = "n", x = 3.2), tck = -0.01)#
-} else{#
-barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Unstructured Composition\nBig Pink Tree","Structured Composition\nDark Pink Tree"),   col = c("gray47"), density = c(40,65,100), tick = FALSE, axes = FALSE)#
-axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
-}#
-arrows(c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) + c(comp.graph.se)+0.01), c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-}#
-comp.1 <- comp_process(Comp_Import_Big("./Exp2/Exp2Big/data"))#
-comp.1$Type <- "Big"#
-comp.2 <- comp_process(Comp_Import_light("./Exp2/Exp2Dark/data"))#
-comp.2$Type <- "Dark"#
-#
-comp.omni <- rbind(comp.1,comp.2)#
-comp.omni$PicType = NA#
-for (colors in c("big", "small","dark","light")){#
-	comp.omni[grep(colors,comp.omni$Pic, ignore.case = TRUE),]$PicType <- colors#
-	}#
-comp.omni$PicType <- as.factor(comp.omni$PicType)#
-#
-comp.omni$Type <- as.factor(comp.omni$Type)#
-summary(comp.omni)#
-#
-#Reaction Times#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Big"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Dark"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Big" & Stim != "One Word"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Dark" & Stim != "One Word"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Big" & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Dark" & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-# Accuracy#
-ezANOVA(comp.omni, Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
-summary(glmer(Acc ~ DetailedType * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ DetailedType * Stim + (1+Stim|Subj), data = comp.omni, family = "binomial"))
-summary(comp.omni)
-summary(glmer(Acc ~ Type * Stim + (1+Stim|Subj), data = comp.omni, family = "binomial"))
-summary(glmer(Acc ~ Type * Stim + (1|Subj), data = comp.omni, family = "binomial"))
-library(jsonlite)#
-library(ggplot2)#
-library(gridExtra)#
-# This script is used to read in all the csv files in a folder.#
-#
-library(doBy)#
-## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
-library(bootstrap)#
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
-ci.low <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
-ci.high <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
-Catch_Import= function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[1:2,]   ##df$data$trialdata$key_press %in% c(71,32),]#
-	d$Subj <- unique(df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]$Subj)[2]#
-	output <- cbind(key = d$key_press,Subj = d$Subj)#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-Comp_Import = function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-	d <- d[ grep("match",d$stims$Cond, ignore.case = TRUE),]#
-	#d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
-	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-	d$Cond <- as.factor(d$stims$Cond)#
-	d$Type <- as.factor(d$stims$Type)#
-	d$Phrase <- as.factor(d$stims$Phrase)#
-	d$Length <- as.factor(d$stims$Length)#
-	d$Task <- "Phrase"#
-	d$Task <- as.factor(d$Task)#
-	d$Stim <- "Two Words"#
-	d[d$Length == "1",]$Stim <- "One Word"#
-	d$Stim <- ordered(d$Stim, levels = c("Two Words", "One Word"))#
-	d$PicType <- ifelse(d$Type == "Color", "Variable Colors (as Experiment 1)","Fixed Colors")#
-	d$PicType <- ordered(d$PicType, levels = c("Variable Colors (as Experiment 1)", "Fixed Colors"))#
-	d$Match <- "Match"#
-	d[grep("mismatch",d$Cond, ignore.case = TRUE),]$Match <- "MisMatch"#
-	d$Block <- rep(c(1,2), each = 100)#
-	d$Match <- as.factor(d$Match)#
-	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Cond = d$Cond, Type = d$Type, Task = d$Task, Stim = d$Stim, Pic = d$stims$Pic, Phrase = d$Phrase, Match = d$Match, PicType = d$PicType, Length = d$Length, Block = d$Block)#
-	#print(summary(d))#
-	output$rt <- as.numeric(as.character(output$rt))#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-#
-# Function for plotting data#
-Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-DV.se <- DV.se/(sqrt( (length(unique(Subj))/2) ))#
-comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-if (leg == TRUE){#
-x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Mismatched Predictability\nPink Tree","Matched Predictability\nPink Tree"),  col = c("gray47"), density = c(40,100), args.legend = list(bty = "n", x = 5), tck = -0.01)#
-} else{#
-x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Mismatched Predictability\nPink Tree","Matched Predictability\nPink Tree"),   col = c("gray47"), density = c(40,100), tick = FALSE, axes = FALSE)#
-axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
-}#
-arrows(x, (c(comp.graph.mean) + c(comp.graph.se)+0.01), x, (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-}#
-library(lme4)#
-library(ez)#
-catch <- Catch_Import("./Exp1c")#
-print(catch)#
-comp <- Comp_Import("./Exp1c")#
-comp$Acc <- 0#
-comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-comp$rtAdj <- NA#
-comp$AccAdj <- NA#
-for (i in unique(comp$Subj)){#
-	comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-	comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-	}#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Color"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "FixedColor"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-#
-ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA
-summary(glmer(Acc ~ Task * Stim + (1+Task|Subj), data = comp, family = "binomial"))
-summary(comp)
-summary(glmer(Acc ~ Type * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
-library(jsonlite)#
-#
-# This script is used to read in all the csv files in a folder.#
-#
-library(doBy)#
-## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
-library(bootstrap)#
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
-ci.low <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
-ci.high <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
-#
-Catch_Import= function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data[4]$trialdata[1:2,]   ##df$data[4]$trialdata$key_press %in% c(71,32),]#
-	d$Subj <- unique(df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]$Subj)[2]#
-	output <- cbind(key = d$key_press,Subj = d$Subj)#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-Comp_Import = function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-	d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-Disjunc","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
-	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-	d$Cond <- as.factor(d$stims$Cond)#
-	d$Item <- as.factor(d$stims$Item)#
-	d$Task <- "Disjunction"#
-	#print(summary(d))#
-	d[d$Cond %in% c("Match-Adj", "Match-Mask-Adj","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ),]$Task <- "Phrase"#
-	d$Task <- as.factor(d$Task)#
-	d$Stim <- "One Word"#
-	d[d$Cond %in% c("Match-Adj", "Match-Noun","Match-Color","Mismatch-Disjunc","Mismatch-Color", "Mismatch-Noun"),]$Stim <- "Two Words"#
-	d$Stim <- ordered(d$Stim, levels = c("One Word", "Two Words"))#
-	d$Match <- "Match"#
-	d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-Disjunc","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun","Mismatch-Disjunc"),]$Match <- "MisMatch"#
-	d$Match <- as.factor(d$Match)#
-	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Match = d$Match)#
-	output$rt <- as.numeric(as.character(output$rt))#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-#
-# Function for plotting data#
-# Function for plotting data#
-Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-DV.se <- DV.se/(sqrt(length(unique(Subj))))#
-comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-if (leg == TRUE){#
-x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nPink, Tree"),  col = c("gray47"), density = c(40,100), args.legend = list(bty = "n", x = 2.2), tck = -0.01)#
-} else{#
-x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nPink, Tree"),   col = c("gray47"), density = c(40,100), tick = FALSE, axes = FALSE)#
-axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
-}#
-arrows(x, (c(comp.graph.mean) + c(comp.graph.se)+0.01), x, (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-}#
-library(lme4)#
-catch <- Catch_Import("./Exp1b")#
-print(catch)#
-comp <- Comp_Import("./Exp1b")#
-contrasts(comp$Stim) <- c(-0.5,0.5)#
-contrasts(comp$Task) <- c(-0.5,0.5)#
-comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-comp$Acc <- 0#
-comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-#
-# Prep for w-subj SEs#
-comp$rtAdj <- NA#
-comp$AccAdj <- NA#
-for (i in unique(comp$Subj)){#
-	comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-	comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-	}#
-#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" ), rt, wid = .(Subj), within = .(Stim, Task))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task == "Disjunction"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task != "Disjunction"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-#
-ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim,Task))$ANOVA
-summary(glmer(Acc ~ Type * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ Task * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ Type * Stim + (1+Stim*Task|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ Task * Stim + (1+Stim*Task|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ Task * Stim + (1+Stim+Task|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ Task * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
-library(ggplot2)#
-library(gridExtra)#
-library(grid)#
-library(jsonlite)#
-library(ez)#
-# This script is used to read in all the csv files in a folder.#
-#
-library(doBy)#
-## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
-library(bootstrap)#
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
-ci.low <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
-ci.high <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
-#
-Catch_Import= function(path_name){#
-  library(jsonlite)#
-  list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-  comp = c()#
-  for (x in file_list){#
-    file_name = x#
-    df <- fromJSON(file_name)#
-    d <- df$data$trialdata[1:2,]   ##df$data[4]$trialdata$key_press %in% c(71,32),]#
-    d$Subj <- unique(df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]$Subj)[2]#
-    output <- cbind(key = d$key_press,Subj = d$Subj)#
-    comp = rbind(comp,output)#
-    print(x)#
-  }#
-  return(comp)#
-}#
-Comp_Import = function(path_name){#
-  library(jsonlite)#
-  list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-  comp = c()#
-  for (x in file_list){#
-    file_name = x#
-    df <- fromJSON(file_name)#
-    d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-    d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj"),]#
-    #d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-    d$Cond <- as.factor(d$stims$Cond)#
-    d$Item <- as.factor(d$stims$Item)#
-    d$Task <- "List"#
-    d[d$Cond %in% c("Match-Adj", "Match-Mask-Adj","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ),]$Task <- "Phrase"#
-    d$Task <- as.factor(d$Task)#
-    d$Stim <- "One Word"#
-    d[d$Cond %in% c("Match-Adj", "Match-List","Mismatch-List","Mismatch-Color", "Mismatch-Noun"),]$Stim <- "Two Words"#
-    d$Stim <- ordered(d$Stim, levels = c("One Word", "Two Words"))#
-    d$Match <- "Match"#
-    d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun"),]$Match <- "MisMatch"#
-    d$Match <- as.factor(d$Match)#
-    output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Match = d$Match)#
-    output$rt <- as.numeric(as.character(output$rt))#
-    comp = rbind(comp,output)#
-    print(x)#
-  }#
-  return(comp)#
-}#
-#
-# Function for plotting data using bar plots#
-Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-  DV.se <- DV.se/(sqrt( (length(unique(Subj))) ))#
-  comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-  comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-  if (leg == TRUE){#
-    x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nCup, Tree"),  col = c("gray47"), density = c(40,100), args.legend = list(bty = "n", x = 5), tck = -0.01)#
-  } else{#
-    x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nCup Tree"),   col = c("gray47"), density = c(40,100), tick = FALSE, axes = FALSE)#
-    axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
-  }#
-  arrows(x, (c(comp.graph.mean) + c(comp.graph.se)+0.01), x, (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-}#
-library(lme4)#
-catch <- Catch_Import("./Exp1a")#
-print(catch)#
-comp <- Comp_Import("./Exp1a")#
-contrasts(comp$Stim) <- c(-0.5,0.5)#
-contrasts(comp$Task) <- c(-0.5,0.5)#
-comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-comp$Acc <- 0#
-comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-#
-# Calcs for within subj SEs#
-comp$rtAdj <- NA#
-comp$AccAdj <- NA#
-for (i in unique(comp$Subj)){#
-  comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-  comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-}#
-#
-# RT Analyses#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" ), rt, wid = .(Subj), within = .(Stim, Task))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task == "List"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task != "List"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-# Acc Analyses#
-ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim,Task))$ANOVA
-summary(glmer(Acc ~ Task * Stim + (1+Stim*Task|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ Task * Stim + (1+Stim+Task|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ Task * Stim + (1+Task|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ Task * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
-contrasts(comp$Stim)
-contrasts(comp$Task)
-contrasts(comp$Task)[1] <- -0.5
-contrasts(comp$Task)[2] <- 0.5
-summary(glmer(Acc ~ Task * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ Task * Stim + (1+Stim+Task|Subj), data = comp, family = "binomial"))
-summary(glmer(Acc ~ Task * Stim + (1+Stim+Task||Subj) , data = comp, family = "binomial"))
-summary(glmer(Acc ~ Task * Stim + (1+Stim||Subj) , data = comp, family = "binomial"))
-summaryBy(Acc ~ Task + Stim, data = comp)
-summary(glmer(Acc ~ Task * Stim + (1+Stim|Subj) , data = comp, family = "binomial"))
-summary(glmer(Acc ~ Task * Stim + (1|Subj) , data = comp, family = "binomial"))
-summary(glmer(Acc ~ Task * Stim + (1+Task|Subj) , data = comp, family = "binomial"))
-summary(glmer(Acc ~ Task * Stim + (1+Stim|Subj) , data = comp, family = "binomial"))
-library(jsonlite)#
-#
-# This script is used to read in all the csv files in a folder.#
-#
-library(doBy)#
-## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
-library(bootstrap)#
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
-ci.low <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
-ci.high <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
-#
-Catch_Import= function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data[4]$trialdata[1:2,]   ##df$data[4]$trialdata$key_press %in% c(71,32),]#
-	d$Subj <- unique(df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]$Subj)[2]#
-	output <- cbind(key = d$key_press,Subj = d$Subj)#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-Comp_Import = function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-	d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-Disjunc","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
-	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-	d$Cond <- as.factor(d$stims$Cond)#
-	d$Item <- as.factor(d$stims$Item)#
-	d$Task <- "Disjunction"#
-	#print(summary(d))#
-	d[d$Cond %in% c("Match-Adj", "Match-Mask-Adj","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ),]$Task <- "Phrase"#
-	d$Task <- as.factor(d$Task)#
-	d$Stim <- "One Word"#
-	d[d$Cond %in% c("Match-Adj", "Match-Noun","Match-Color","Mismatch-Disjunc","Mismatch-Color", "Mismatch-Noun"),]$Stim <- "Two Words"#
-	d$Stim <- ordered(d$Stim, levels = c("One Word", "Two Words"))#
-	d$Match <- "Match"#
-	d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-Disjunc","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun","Mismatch-Disjunc"),]$Match <- "MisMatch"#
-	d$Match <- as.factor(d$Match)#
-	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Match = d$Match)#
-	output$rt <- as.numeric(as.character(output$rt))#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-#
-# Function for plotting data#
-# Function for plotting data#
-Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-DV.se <- DV.se/(sqrt(length(unique(Subj))))#
-comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-if (leg == TRUE){#
-x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nPink, Tree"),  col = c("gray47"), density = c(40,100), args.legend = list(bty = "n", x = 2.2), tck = -0.01)#
-} else{#
-x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Composition Task\nPink Tree","List Task\nPink, Tree"),   col = c("gray47"), density = c(40,100), tick = FALSE, axes = FALSE)#
-axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
-}#
-arrows(x, (c(comp.graph.mean) + c(comp.graph.se)+0.01), x, (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-}#
-library(lme4)#
-catch <- Catch_Import("./Exp1b")#
-print(catch)#
-comp <- Comp_Import("./Exp1b")#
-contrasts(comp$Stim) <- c(-0.5,0.5)#
-contrasts(comp$Task) <- c(-0.5,0.5)#
-comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-comp$Acc <- 0#
-comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-#
-# Prep for w-subj SEs#
-comp$rtAdj <- NA#
-comp$AccAdj <- NA#
-for (i in unique(comp$Subj)){#
-	comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-	comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-	}#
-#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" ), rt, wid = .(Subj), within = .(Stim, Task))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task == "Disjunction"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Task != "Disjunction"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-#
-ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim,Task))$ANOVA#
-#GLMER analysis (Task removed for convergence)#
-summary(glmer(Acc ~ Task * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
-contrasts(comp$Stim)
-contrasts(comp$Task)
-library(lme4)#
-catch <- Catch_Import("./Exp1b")#
-print(catch)#
-comp <- Comp_Import("./Exp1b")#
-contrasts(comp$Stim) <- c(-0.5,0.5)#
-comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-comp$Acc <- 0#
-comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-contrasts(comp$Task) <- c(-0.5,0.5)#
-# Prep for w-subj SEs#
-comp$rtAdj <- NA#
-comp$AccAdj <- NA#
-for (i in unique(comp$Subj)){#
-	comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-	comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-	}
-summary(glmer(Acc ~ Task * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
-library(jsonlite)#
-library(ggplot2)#
-library(gridExtra)#
-# This script is used to read in all the csv files in a folder.#
-#
-library(doBy)#
-## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
-library(bootstrap)#
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
-ci.low <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
-ci.high <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
-Catch_Import= function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[1:2,]   ##df$data$trialdata$key_press %in% c(71,32),]#
-	d$Subj <- unique(df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]$Subj)[2]#
-	output <- cbind(key = d$key_press,Subj = d$Subj)#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-Comp_Import = function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-	d <- d[ grep("match",d$stims$Cond, ignore.case = TRUE),]#
-	#d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
-	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-	d$Cond <- as.factor(d$stims$Cond)#
-	d$Type <- as.factor(d$stims$Type)#
-	d$Phrase <- as.factor(d$stims$Phrase)#
-	d$Length <- as.factor(d$stims$Length)#
-	d$Task <- "Phrase"#
-	d$Task <- as.factor(d$Task)#
-	d$Stim <- "Two Words"#
-	d[d$Length == "1",]$Stim <- "One Word"#
-	d$Stim <- ordered(d$Stim, levels = c("Two Words", "One Word"))#
-	d$PicType <- ifelse(d$Type == "Color", "Variable Colors (as Experiment 1)","Fixed Colors")#
-	d$PicType <- ordered(d$PicType, levels = c("Variable Colors (as Experiment 1)", "Fixed Colors"))#
-	d$Match <- "Match"#
-	d[grep("mismatch",d$Cond, ignore.case = TRUE),]$Match <- "MisMatch"#
-	d$Block <- rep(c(1,2), each = 100)#
-	d$Match <- as.factor(d$Match)#
-	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Cond = d$Cond, Type = d$Type, Task = d$Task, Stim = d$Stim, Pic = d$stims$Pic, Phrase = d$Phrase, Match = d$Match, PicType = d$PicType, Length = d$Length, Block = d$Block)#
-	#print(summary(d))#
-	output$rt <- as.numeric(as.character(output$rt))#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-#
-# Function for plotting data#
-Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-DV.se <- DV.se/(sqrt( (length(unique(Subj))/2) ))#
-comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-if (leg == TRUE){#
-x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Mismatched Predictability\nPink Tree","Matched Predictability\nPink Tree"),  col = c("gray47"), density = c(40,100), args.legend = list(bty = "n", x = 5), tck = -0.01)#
-} else{#
-x <- barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Mismatched Predictability\nPink Tree","Matched Predictability\nPink Tree"),   col = c("gray47"), density = c(40,100), tick = FALSE, axes = FALSE)#
-axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
-}#
-arrows(x, (c(comp.graph.mean) + c(comp.graph.se)+0.01), x, (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-}#
-library(lme4)#
-library(ez)#
-catch <- Catch_Import("./Exp1c")#
-print(catch)#
-comp <- Comp_Import("./Exp1c")#
-comp$Acc <- 0#
-comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-comp$rtAdj <- NA#
-comp$AccAdj <- NA#
-for (i in unique(comp$Subj)){#
-	comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-	comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-	}#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Color"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "FixedColor"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-#
-ezANOVA(comp, Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-# LMER Analyis (Type between Subj, Stim within)#
-summary(glmer(Acc ~ Type * Stim + (1+Stim|Subj), data = comp, family = "binomial"))
-library(ggplot2)#
-library(gridExtra)#
-library(grid)#
-library(ez)#
-library(lme4)#
-library(doBy)#
-#
-library(doBy)#
-## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
-library(bootstrap)#
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
-ci.low <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
-ci.high <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
-Comp_Import_light= function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-	d <- d[ grep("match",d$stims$Cond, ignore.case = TRUE),]#
-	#d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
-	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-	d$Cond <- as.factor(d$stims$Cond)#
-	d$Item <- as.factor(d$stims$Item)#
-	d$Task <- "Phrase"#
-	if (length(d[grep("list",d$Cond, ignore.case = TRUE),]$Task) > 0){#
-		d[grep("list",d$Cond, ignore.case = TRUE),]$Task <- "List"#
-		}#
-	d$Task <- as.factor(d$Task)#
-	d$Stim <- "Two Words"#
-	d[grep("full-mask",d$Cond, ignore.case = TRUE),]$Stim <- "One Word"#
-	d[grep("no-mask",d$Cond, ignore.case = TRUE),]$Stim <- "Three Words"#
-	d$Stim <- ordered(d$Stim, levels = c("Three Words", "Two Words", "One Word"))#
-	d$PicType <- "Dark"#
-	d[grep("light_",d$Item, ignore.case = TRUE),]$PicType <- "Light"#
-	d$Match <- "Match"#
-	d[grep("mismatch",d$Cond, ignore.case = TRUE),]$Match <- "MisMatch"#
-	d$Match <- as.factor(d$Match)#
-	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Pic = d$stimulus, Match = d$Match, PicType = d$PicType)#
-	output$rt <- as.numeric(as.character(output$rt))#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-Comp_Import_Big = function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-	d <- d[ grep("match",d$stims$Cond, ignore.case = TRUE),]#
-	#d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
-	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
-	d$Cond <- as.factor(d$stims$Cond)#
-	d$Item <- as.factor(d$stims$Item)#
-	d$Task <- "Phrase"#
-	if (length(d[grep("list",d$Cond, ignore.case = TRUE),]$Task) > 0){#
-		d[grep("list",d$Cond, ignore.case = TRUE),]$Task <- "List"#
-		}#
-	d$Task <- as.factor(d$Task)#
-	d$Stim <- "Two Words"#
-	d[grep("full-mask",d$Cond, ignore.case = TRUE),]$Stim <- "One Word"#
-	d[grep("no-mask",d$Cond, ignore.case = TRUE),]$Stim <- "Three Words"#
-	d$Stim <- ordered(d$Stim, levels = c("One Word", "Two Words", "Three Words"))#
-	d$PicType <- "Big"#
-	d[grep("small_",d$Item, ignore.case = TRUE),]$PicType <- "Small"#
-	d$Match <- "Match"#
-	d[grep("mismatch",d$Cond, ignore.case = TRUE),]$Match <- "MisMatch"#
-	d$Match <- as.factor(d$Match)#
-	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Pic = d$stimulus, Match = d$Match, PicType = d$PicType)#
-	output$rt <- as.numeric(as.character(output$rt))#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-#
-comp_process = function(comp){#
-		#contrasts(comp$Stim) <- c(-0.5,0.5)#
-		#contrasts(comp$Task) <- c(-0.5,0.5)#
-		comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-		comp$Acc <- 0#
-		comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-		comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-		comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-		comp$rtAdj <- NA#
-		comp$AccAdj <- NA#
-		for (i in unique(comp$Subj)){#
-			comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-			comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-			}#
-	return(comp)#
-	}#
-# Function for plotting data#
-# Function for plotting data#
-Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-DV.se <- DV.se/(sqrt(length(unique(Subj))))#
-comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-if (leg == TRUE){#
-barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Unstructured Composition\nBig Pink Tree","Structured Composition\nDark Pink Tree"),  col = c("gray47"), density = c(40,65,100), args.legend = list(bty = "n", x = 3.2), tck = -0.01)#
-} else{#
-barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Unstructured Composition\nBig Pink Tree","Structured Composition\nDark Pink Tree"),   col = c("gray47"), density = c(40,65,100), tick = FALSE, axes = FALSE)#
-axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
-}#
-arrows(c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) + c(comp.graph.se)+0.01), c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-}#
-comp.1 <- comp_process(Comp_Import_Big("./Exp2/Exp2Big/data"))#
-comp.1$Type <- "Big"#
-comp.2 <- comp_process(Comp_Import_light("./Exp2/Exp2Dark/data"))#
-comp.2$Type <- "Dark"#
-#
-comp.omni <- rbind(comp.1,comp.2)#
-comp.omni$PicType = NA#
-for (colors in c("big", "small","dark","light")){#
-	comp.omni[grep(colors,comp.omni$Pic, ignore.case = TRUE),]$PicType <- colors#
-	}#
-comp.omni$PicType <- as.factor(comp.omni$PicType)#
-#
-comp.omni$Type <- as.factor(comp.omni$Type)#
-summary(comp.omni)#
-#
-#Reaction Times#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Big"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Dark"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Big" & Stim != "One Word"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Dark" & Stim != "One Word"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Big" & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Dark" & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-# Accuracy#
-ezANOVA(comp.omni, Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-#
-# GLMER Analysis (Type between subject, stim removed for model convergence)#
-summary(glmer(Acc ~ Type * Stim + (1|Subj), data = comp.omni, family = "binomial"))
-comp.omni$Num.Stim <- 0#
-comp.omni[comp.omni$Stim == "One Word",]$Num.Stim <- -1#
-comp.omni[comp.omni$Stim == "Three Words",]$Num.Stim <- 1#
-#
-# GLMER Analysis (Type between subject, stim removed for model convergence)#
-summary(glmer(Acc ~ Type * Num.Stim + (1|Subj), data = comp.omni, family = "binomial"))
-comp.omni$Num.Stim <- 0#
-comp.omni[comp.omni$Stim == "One Word",]$Num.Stim <- -1#
-comp.omni[comp.omni$Stim == "Three Words",]$Num.Stim <- 1#
-#
-# GLMER Analysis (Type between subject, stim removed for model convergence)#
-summary(glmer(Acc ~ Type * Num.Stim + (1+Num.Stim|Subj), data = comp.omni, family = "binomial"))
-comp$Num.Stim <- 0#
-comp[comp$Stim == "One Word",]$Num.Stim <- -1#
-comp[comp$Stim == "Three Words",]$Num.Stim <- 1#
-summary(glmer(Acc ~ Type * Num.Stim + (1|Subj), data = comp, family = "binomial"))
-summary(comp)
 library(ggplot2)#
 library(gridExtra)#
 library(grid)#
@@ -5115,5 +2843,154 @@ ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Three Words")
 comp$Num.Stim <- 0#
 comp[comp$Stim == "One Word",]$Num.Stim <- -1#
 comp[comp$Stim == "Three Words",]$Num.Stim <- 1#
-summary(glmer(Acc ~ Type * Num.Stim + (1|Subj), data = comp, family = "binomial"))
 summary(glmer(Acc ~ Type * Num.Stim + (1+Num.Stim|Subj), data = comp, family = "binomial"))
+library(ggplot2)#
+library(gridExtra)#
+library(grid)#
+library(ez)#
+library(lme4)#
+library(doBy)#
+#
+library(doBy)#
+## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
+library(bootstrap)#
+theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
+ci.low <- function(x,na.rm=T) {#
+  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
+ci.high <- function(x,na.rm=T) {#
+  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
+Comp_Import_light= function(path_name){#
+library(jsonlite)#
+#
+list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
+comp = c()#
+for (x in file_list){#
+	file_name = x#
+	df <- fromJSON(file_name)#
+	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
+	d <- d[ grep("match",d$stims$Cond, ignore.case = TRUE),]#
+	#d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
+	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
+	d$Cond <- as.factor(d$stims$Cond)#
+	d$Item <- as.factor(d$stims$Item)#
+	d$Task <- "Phrase"#
+	if (length(d[grep("list",d$Cond, ignore.case = TRUE),]$Task) > 0){#
+		d[grep("list",d$Cond, ignore.case = TRUE),]$Task <- "List"#
+		}#
+	d$Task <- as.factor(d$Task)#
+	d$Stim <- "Two Words"#
+	d[grep("full-mask",d$Cond, ignore.case = TRUE),]$Stim <- "One Word"#
+	d[grep("no-mask",d$Cond, ignore.case = TRUE),]$Stim <- "Three Words"#
+	d$Stim <- ordered(d$Stim, levels = c("Three Words", "Two Words", "One Word"))#
+	d$PicType <- "Dark"#
+	d[grep("light_",d$Item, ignore.case = TRUE),]$PicType <- "Light"#
+	d$Match <- "Match"#
+	d[grep("mismatch",d$Cond, ignore.case = TRUE),]$Match <- "MisMatch"#
+	d$Match <- as.factor(d$Match)#
+	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Pic = d$stimulus, Match = d$Match, PicType = d$PicType)#
+	output$rt <- as.numeric(as.character(output$rt))#
+	comp = rbind(comp,output)#
+	print(x)#
+	}#
+	return(comp)#
+}#
+Comp_Import_Big = function(path_name){#
+library(jsonlite)#
+#
+list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
+comp = c()#
+for (x in file_list){#
+	file_name = x#
+	df <- fromJSON(file_name)#
+	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
+	d <- d[ grep("match",d$stims$Cond, ignore.case = TRUE),]#
+	#d <- d[d$stims$Cond %in% c("Mismatch-Mask-List","Mismatch-List","Mismatch-Mask-Adj", "Mismatch-Color", "Mismatch-Noun" ,"Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj", "Mismatch-Disjunc", "Match-Noun", "Match-Color"),]#
+	#d <- d[d$stims$Cond %in% c("Match-Mask-List","Match-List","Match-Mask-Adj", "Match-Adj" ),]#
+	d$Cond <- as.factor(d$stims$Cond)#
+	d$Item <- as.factor(d$stims$Item)#
+	d$Task <- "Phrase"#
+	if (length(d[grep("list",d$Cond, ignore.case = TRUE),]$Task) > 0){#
+		d[grep("list",d$Cond, ignore.case = TRUE),]$Task <- "List"#
+		}#
+	d$Task <- as.factor(d$Task)#
+	d$Stim <- "Two Words"#
+	d[grep("full-mask",d$Cond, ignore.case = TRUE),]$Stim <- "One Word"#
+	d[grep("no-mask",d$Cond, ignore.case = TRUE),]$Stim <- "Three Words"#
+	d$Stim <- ordered(d$Stim, levels = c("One Word", "Two Words", "Three Words"))#
+	d$PicType <- "Big"#
+	d[grep("small_",d$Item, ignore.case = TRUE),]$PicType <- "Small"#
+	d$Match <- "Match"#
+	d[grep("mismatch",d$Cond, ignore.case = TRUE),]$Match <- "MisMatch"#
+	d$Match <- as.factor(d$Match)#
+	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Item = d$Item, Cond = d$Cond, Task = d$Task, Stim = d$Stim, Pic = d$stimulus, Match = d$Match, PicType = d$PicType)#
+	output$rt <- as.numeric(as.character(output$rt))#
+	comp = rbind(comp,output)#
+	print(x)#
+	}#
+	return(comp)#
+}#
+#
+comp_process = function(comp){#
+		#contrasts(comp$Stim) <- c(-0.5,0.5)#
+		#contrasts(comp$Task) <- c(-0.5,0.5)#
+		comp <- comp[comp$rt > 300 & comp$rt <1500,]#
+		comp$Acc <- 0#
+		comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
+		comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
+		comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
+		comp$rtAdj <- NA#
+		comp$AccAdj <- NA#
+		for (i in unique(comp$Subj)){#
+			comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
+			comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
+			}#
+	return(comp)#
+	}#
+# Function for plotting data#
+# Function for plotting data#
+Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
+DV.se <- DV.se/(sqrt(length(unique(Subj))))#
+comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
+comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
+if (leg == TRUE){#
+barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Unstructured Composition\nBig Pink Tree","Structured Composition\nDark Pink Tree"),  col = c("gray47"), density = c(40,65,100), args.legend = list(bty = "n", x = 3.2), tck = -0.01)#
+} else{#
+barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Unstructured Composition\nBig Pink Tree","Structured Composition\nDark Pink Tree"),   col = c("gray47"), density = c(40,65,100), tick = FALSE, axes = FALSE)#
+axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
+}#
+arrows(c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) + c(comp.graph.se)+0.01), c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
+}#
+comp.1 <- comp_process(Comp_Import_Big("./Exp2/Exp2Big/data"))#
+comp.1$Type <- "Big"#
+comp.2 <- comp_process(Comp_Import_light("./Exp2/Exp2Dark/data"))#
+comp.2$Type <- "Dark"#
+#
+comp.omni <- rbind(comp.1,comp.2)#
+comp.omni$PicType = NA#
+for (colors in c("big", "small","dark","light")){#
+	comp.omni[grep(colors,comp.omni$Pic, ignore.case = TRUE),]$PicType <- colors#
+	}#
+comp.omni$PicType <- as.factor(comp.omni$PicType)#
+#
+comp.omni$Type <- as.factor(comp.omni$Type)#
+summary(comp.omni)#
+#
+#Reaction Times#
+ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
+ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
+#
+ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Big"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
+ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Dark"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
+#
+ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Big" & Stim != "One Word"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
+ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Dark" & Stim != "One Word"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
+ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Big" & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
+ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type == "Dark" & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
+# Accuracy#
+ezANOVA(comp.omni, Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
+#
+# GLMER Analysis (Type between subject). Convert Stim into numeric so we don't have to deal with 3-level factor.#
+comp.omni$Num.Stim <- 0#
+comp.omni[comp.omni$Stim == "One Word",]$Num.Stim <- -1#
+comp.omni[comp.omni$Stim == "Three Words",]$Num.Stim <- 1#
+summary(glmer(Acc ~ Type * Num.Stim + (1+Num.Stim|Subj), data = comp.omni, family = "binomial"))
