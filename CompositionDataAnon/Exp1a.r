@@ -88,11 +88,21 @@ print(catch)
 comp <- Comp_Import("./Exp1a")
 contrasts(comp$Stim) <- c(-0.5,0.5)
 contrasts(comp$Task) <- c(-0.5,0.5)
+comp.trials <- summaryBy(rt ~ Subj, data = comp, FUN = length, keep.names =T)
+
 comp <- comp[comp$rt > 300 & comp$rt <1500,]
 comp$Acc <- 0
 comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1
 comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1
 comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])
+
+comp.trials$rt.after <- summaryBy(rt ~ Subj, data = comp, FUN = length, keep.names =T)$rt
+comp.trials$excluded_trials = comp.trials$rt - comp.trials$rt.after
+print(paste("Excluded ", sum(comp.trials$excluded_trials), " out of ", sum(comp.trials$rt)," trials, i.e., ",
+		round((sum(comp.trials$excluded_trials)/sum(comp.trials$rt))*100,2),"%", sep = ""))
+print(paste("Excluded median of ", median(comp.trials$excluded_trials), " trials per subject, with SD ", round(sd(comp.trials$excluded_trials),2),".", sep = ""))
+
+
 
 # Calcs for within subj SEs
 comp$rtAdj <- NA

@@ -88,6 +88,8 @@ library(lme4)
 catch <- Catch_Import("./Exp1b")
 print(catch)
 comp <- Comp_Import("./Exp1b")
+comp.trials <- summaryBy(rt ~ Subj, data = comp, FUN = length, keep.names =T)
+
 contrasts(comp$Stim) <- c(-0.5,0.5)
 comp <- comp[comp$rt > 300 & comp$rt <1500,]
 comp$Acc <- 0
@@ -102,6 +104,14 @@ for (i in unique(comp$Subj)){
 	comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))
 	comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))
 	}
+
+
+comp.trials$rt.after <- summaryBy(rt ~ Subj, data = comp, FUN = length, keep.names =T)$rt
+comp.trials$excluded_trials = comp.trials$rt - comp.trials$rt.after
+print(paste("Excluded ", sum(comp.trials$excluded_trials), " out of ", sum(comp.trials$rt)," trials, i.e., ",
+		round((sum(comp.trials$excluded_trials)/sum(comp.trials$rt))*100,2),"%", sep = ""))
+print(paste("Excluded median of ", median(comp.trials$excluded_trials), " trials per subject, with SD ", round(sd(comp.trials$excluded_trials),2),".", sep = ""))
+
 
 
 comp$base_item <- as.factor(colsplit(comp$Item,"_",names = c("word1","word2"))[,2])

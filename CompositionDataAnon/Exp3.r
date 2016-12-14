@@ -106,6 +106,7 @@ comp <- Comp_Import("./Exp3")
 
 
 comp <- subset(comp, Type %in% c("Adj3","Adj4", "Adv4"))
+comp.trials <- summaryBy(rt ~ Subj, data = comp, FUN = length, keep.names =T)
 
 
 
@@ -130,6 +131,13 @@ contrasts( comp$Stim) <-contrasts(C(comp$Stim, "contr.sum"))
 comp$Num.Stim <- 0
 comp[comp$Stim == "One Word",]$Num.Stim <- -1
 comp[comp$Stim == "Three Words",]$Num.Stim <- 1
+
+comp.trials$rt.after <- summaryBy(rt ~ Subj, data = comp, FUN = length, keep.names =T)$rt
+comp.trials$excluded_trials = comp.trials$rt - comp.trials$rt.after
+print(paste("Excluded ", sum(comp.trials$excluded_trials), " out of ", sum(comp.trials$rt)," trials, i.e., ",
+		round((sum(comp.trials$excluded_trials)/sum(comp.trials$rt))*100,2),"%", sep = ""))
+print(paste("Excluded median of ", median(comp.trials$excluded_trials), " trials per subject, with SD ", round(sd(comp.trials$excluded_trials),2),".", sep = ""))
+
 
 
 # Reaction Times (remove num.stim as RanEf of Item as doesn't converge)

@@ -107,6 +107,8 @@ for (x in file_list){
 comp_process = function(comp){
 		#contrasts(comp$Stim) <- c(-0.5,0.5)
 		#contrasts(comp$Task) <- c(-0.5,0.5)
+		comp.trials <- summaryBy(rt ~ Subj, data = comp, FUN = length, keep.names =T)
+
 		comp <- comp[comp$rt > 300 & comp$rt <1500,]
 		comp$Acc <- 0
 		comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1
@@ -118,6 +120,14 @@ comp_process = function(comp){
 			comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))
 			comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))
 			}
+		
+		comp.trials$rt.after <- summaryBy(rt ~ Subj, data = comp, FUN = length, keep.names =T)$rt
+		comp.trials$excluded_trials = comp.trials$rt - comp.trials$rt.after
+		print(paste("Excluded ", sum(comp.trials$excluded_trials), " out of ", sum(comp.trials$rt)," trials, i.e., ",
+				round((sum(comp.trials$excluded_trials)/sum(comp.trials$rt))*100,2),"%", sep = ""))
+		print(paste("Excluded median of ", median(comp.trials$excluded_trials), " trials per subject, with SD ", round(sd(comp.trials$excluded_trials),2),".", sep = ""))
+
+
 	return(comp)
 	}
 	
@@ -137,13 +147,17 @@ arrows(c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) + c(comp.graph.se)+0.01),
 }
 
 
-
-comp.1 <- comp_process(Comp_Import_Big("./Exp2/Exp2Big/data"))
+comp.1 <- Comp_Import_Big("./Exp2/Exp2Big/data")
 comp.1$Type <- "Big"
-comp.2 <- comp_process(Comp_Import_light("./Exp2/Exp2Dark/data"))
+
+comp.2 <- Comp_Import_light("./Exp2/Exp2Dark/data")
 comp.2$Type <- "Dark"
 
 comp.omni <- rbind(comp.1,comp.2)
+
+comp <- comp_process(comp.omni)
+
+
 comp.omni$PicType = NA
 for (colors in c("big", "small","dark","light")){
 	comp.omni[grep(colors,comp.omni$Pic, ignore.case = TRUE),]$PicType <- colors

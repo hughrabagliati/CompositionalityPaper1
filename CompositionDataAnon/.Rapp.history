@@ -22,25 +22,6 @@ LargeSample <- matrix(NA, nrow = 10000, ncol = 1)#
 #
 perm = list(OneSample = OneSample,LargeSample = LargeSample)#
 #
-for (j in seq(1:10)){#
-a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
-#
-for (i in 1:20){#
-a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
-t <- t.test(a[,1],a[,2])$p.value#
-if(t < 0.05){#
-	break#
-	}#
-}#
-#
-perm$LargeSample[j] <- i#
-}
-perm$LargeSample[1:20]
-OneSample <- q#
-LargeSample <- matrix(NA, nrow = 10000, ncol = 1)#
-#
-perm = list(OneSample = OneSample,LargeSample = LargeSample)#
-#
 for (j in seq(1:10000)){#
 a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
 #
@@ -2722,134 +2703,21 @@ grep(a,"b")
 grep("b",a)
 grep("b",a) -1
 a[(grep("b",a) -1)]
-library(ggplot2)#
-library(gridExtra)#
-library(grid)#
-library(jsonlite)#
-#
-# This script is used to read in all the csv files in a folder.#
-#
-library(doBy)#
-## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
-library(bootstrap)#
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}#
-ci.low <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)} #  mean(x,na.rm=na.rm) -#
-ci.high <- function(x,na.rm=T) {#
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) } #- mean(x,na.rm=na.rm)}#
-Catch_Import= function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[1:2,]   ##df$data[4]$trialdata$key_press %in% c(71,32),]#
-	d$Subj <- unique(df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]$Subj)[2]#
-	output <- cbind(key = d$key_press,Subj = d$Subj)#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-Comp_Import = function(path_name){#
-library(jsonlite)#
-#
-list.files(path = path_name,full.names = T, pattern = ".txt") -> file_list#
-comp = c()#
-for (x in file_list){#
-	file_name = x#
-	df <- fromJSON(file_name)#
-	d <- df$data$trialdata[df$data$trialdata$Screen == "Real-Response",]#
-	d <- d[ grep("match",d$stims$Cond, ignore.case = TRUE),]#
-	d$Cond <- as.factor(d$stims$Cond)#
-	d$Type <- as.factor(d$stims$Type)#
-	d$Phrase <- as.factor(d$stims$Phrase)#
-	d$Length <- as.factor(d$stims$Length)#
-	d$Task <- "Phrase"#
-	d$Task <- as.factor(d$Task)#
-	d$Stim <- "Two Words"#
-	d[d$Length == "1",]$Stim <- "One Word"#
-	d[d$Length == "3",]$Stim <- "Three Words"#
-	d$Stim <- ordered(d$Stim, levels = c("One Word", "Two Words", "Three Words"))#
-	d$PicType <- "Striped"#
-	d[grep("spotted",d$stims$Pic, ignore.case = TRUE),]$PicType <- "Spotted"#
-	d$Match <- "Match"#
-	d[grep("mismatch",d$Cond, ignore.case = TRUE),]$Match <- "MisMatch"#
-	d$Block = rep(c(1,2), each = 150)#
-	d$Match <- as.factor(d$Match)#
-	output <- data.frame(rt = as.numeric(as.character(d$rt)), key_press = d$key_press, Subj = d$Subj, Cond = d$Cond, Type = d$Type, Task = d$Task, Stim = d$Stim, Pic = d$stims$Pic, Phrase = d$Phrase, Match = d$Match, PicType = d$PicType, Block = d$Block, File = d$stimulus)#
-	#print(summary(d))#
-	output$rt <- as.numeric(as.character(output$rt))#
-	comp = rbind(comp,output)#
-	print(x)#
-	}#
-	return(comp)#
-}#
-#
-# Function for plotting data#
-Comp_Graph = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
-DV.se <- DV.se/(sqrt(length(unique(Subj))))#
-comp.graph.mean <- tapply(DV.mean,list(IV1, IV2), mean)#
-comp.graph.se <- tapply(DV.se,list(IV1, IV2), mean)#
-if (leg == TRUE){#
-barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab, legend = T, xpd = FALSE, names.arg = c("Simple Structure\nBig Striped Tree","Complex Structure\nBig Striped Tree"),  col = c("gray47"), density = c(40,65,100), args.legend = list(bty = "n", x = 3.5), tck = -0.01)#
-} else{#
-barplot(comp.graph.mean, beside = T, ylim = ylimit, ylab = ylab,  legend = F, xpd = FALSE, names.arg = c("Simple Structure\nBig Striped Tree","Complex Structure\nBig Striped Tree"),   col = c("gray47"), density = c(40,65,100), tick = FALSE, axes = FALSE)#
-axis(2, at = c(0.5,0.75,1), labels = c(0.5,0.75,1.0), tck = -0.03)#
-}#
-arrows(c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) + c(comp.graph.se)+0.01), c(1.5,2.5,3.5,5.5,6.5,7.5), (c(comp.graph.mean) - c(comp.graph.se)-0.01), code = 0)#
-}#
-library(lme4)#
-library(ez)#
-catch <- Catch_Import("./Exp3")#
-print(catch)#
-comp <- Comp_Import("./Exp3")#
-comp <- subset(comp, Type %in% c("Adj3","Adj4", "Adv4"))#
-comp$Acc <- 0#
-comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1#
-comp[comp$key_press == 90 & comp$Match == "MisMatch",]$Acc <- 1#
-comp$Task <- factor(comp$Task, levels(comp$Task)[c(2,1)])#
-comp <- comp[comp$rt > 300 & comp$rt <1500,]#
-comp$rtAdj <- NA#
-comp$AccAdj <- NA#
-for (i in unique(comp$Subj)){#
-	comp[comp$Subj == i,]$rtAdj <- ((comp[comp$Subj == i,]$rt - mean(comp[comp$Subj == i,]$rt, na.rm = T)) + mean(comp$rt, na.rm = T))#
-	comp[comp$Subj == i,]$AccAdj <- ((comp[comp$Subj == i,]$Acc - mean(comp[comp$Subj == i,]$Acc, na.rm = T)) + mean(comp$Acc, na.rm = T))#
-	}#
-# Reaction Times#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4")), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4") & Stim != "One Word"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4"), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4" & Stim != "Three Words" ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj3" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adj4" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-ezANOVA(subset(comp, Acc ==1 & Match == "Match" & Type == "Adv4" & Stim != "One Word" ), rt, wid = .(Subj), within = .(Stim))$ANOVA#
-#
-# Accuracy#
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4")), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "One Word"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Two Words"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-ezANOVA(subset(comp, Type %in% c("Adj3","Adj4", "Adv4") & Stim != "Three Words"), Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
-#
-# GLMER Accuracy analysis: Doesn't converge with random slope for stim (detailedType between subject)#
-comp$Num.Stim <- 0#
-comp[comp$Stim == "One Word",]$Num.Stim <- -1#
-comp[comp$Stim == "Three Words",]$Num.Stim <- 1#
-summary(glmer(Acc ~ Type * Num.Stim + (1+Num.Stim|Subj), data = comp, family = "binomial"))
+?rlnorm
+runif(1,0,.5)
+rlnorm(n(),1.5,.7)
 library(ggplot2)#
 library(gridExtra)#
 library(grid)#
 library(ez)#
 library(lme4)#
 library(doBy)#
+library(reshape2)#
+library(ggplot2)#
+library(gridExtra)#
+library(grid)#
+library(jsonlite)#
+library(ez)#
 #
 library(doBy)#
 ## for bootstrapping 95% confidence intervals -- from Mike Frank https://github.com/langcog/KTE/blob/master/mcf.useful.R#
@@ -2975,7 +2843,47 @@ comp.omni$PicType <- as.factor(comp.omni$PicType)#
 comp.omni$Type <- as.factor(comp.omni$Type)#
 summary(comp.omni)#
 #
+comp.omni$base_item <- as.factor(colsplit(comp.omni$Item,"_",names = c("word1","word2","word3"))[,3])#
+#
+contrasts( comp.omni$Type) <-contrasts(C(comp.omni$Type, "contr.sum"))#
+contrasts( comp.omni$Stim) <-contrasts(C(comp.omni$Stim, "contr.sum"))#
 #Reaction Times#
+comp.omni$Num.Stim <- 0#
+comp.omni[comp.omni$Stim == "One Word",]$Num.Stim <- -1#
+comp.omni[comp.omni$Stim == "Three Words",]$Num.Stim <- 1#
+#
+lmer(rt ~ Num.Stim * Type  + (1+Num.Stim|Subj) + (1+Num.Stim+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase")) -> omni.full#
+lmer(rt ~ Num.Stim + Type  + (1+Num.Stim|Subj) + (1+Num.Stim+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase")) -> omni.noint#
+anova(omni.full,omni.noint)#
+#
+# Effect for 2 and 3 word phrases#
+lmer(rt ~ Num.Stim * Type  + (1+Num.Stim|Subj) + (1+Num.Stim+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "One Word")) -> omni.two_three#
+lmer(rt ~ Num.Stim + Type  + (1+Num.Stim|Subj) + (1+Num.Stim+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "One Word")) -> omni.two_three_sub#
+anova(omni.two_three,omni.two_three_sub)#
+#
+# Effect for 1 and 2 word phrases#
+lmer(rt ~ Num.Stim * Type  + (1+Num.Stim|Subj) + (1+Num.Stim+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "Three Words")) -> omni.one_two#
+lmer(rt ~ Num.Stim + Type  + (1+Num.Stim|Subj) + (1+Num.Stim+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase"& Stim != "Three Words")) -> omni.one_two_sub#
+anova(omni.one_two,omni.one_two_sub)#
+#
+# Number of word effects for 2 and 3 word phrases for each condition#
+lmer(rt ~ Num.Stim   + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type %in% c("Big") & Stim != "One Word")) -> exp2.full.two_three.big#
+lmer(rt ~ 1  + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type %in% c("Big")& Stim != "One Word")) -> exp2.noint.two_three.big#
+anova(exp2.full.two_three.big,exp2.noint.two_three.big)#
+#
+lmer(rt ~ Num.Stim   + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type %in% c("Dark") & Stim != "One Word")) -> exp2.full.two_three.dark#
+lmer(rt ~ 1  + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Type %in% c("Dark")& Stim != "One Word")) -> exp2.noint.two_three.dark#
+anova(exp2.full.two_three.dark,exp2.noint.two_three.dark)#
+#
+# Number of word effects for 1 and 2 word phrases#
+lmer(rt ~ Num.Stim   + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase"  & Stim != "Three Words")) -> exp2.full.one_two.length#
+lmer(rt ~ 1  + (1+Num.Stim|Subj) + (1+Num.Stim|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "Three Words")) -> exp2.noint.one_two.length#
+anova(exp2.full.one_two.length,exp2.noint.one_two.length)#
+#
+# Type Effects - remove by subject for convergence#
+lmer(rt ~ Type   + (1|Subj) + (1+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase"  & Stim != "Three Words")) -> exp2.full.one_two.type#
+lmer(rt ~ 1  + (1|Subj) + (1+Type|base_item), data = subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "Three Words")) -> exp2.noint.one_two.type#
+anova(exp2.full.one_two.type,exp2.noint.one_two.type)#
 ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
 ezANOVA(subset(comp.omni, Acc ==1 & Match == "Match" & Task == "Phrase" & Stim != "Three Words"), rt, wid = .(Subj), within = .(Stim), between = .(Type))$ANOVA#
 #
@@ -2993,4 +2901,109 @@ ezANOVA(comp.omni, Acc, wid = .(Subj), within = .(Stim), between = .(Type))$ANOV
 comp.omni$Num.Stim <- 0#
 comp.omni[comp.omni$Stim == "One Word",]$Num.Stim <- -1#
 comp.omni[comp.omni$Stim == "Three Words",]$Num.Stim <- 1#
-summary(glmer(Acc ~ Type * Num.Stim + (1+Num.Stim|Subj), data = comp.omni, family = "binomial"))
+exp2.acc.full <- glmer(Acc ~ Type * Num.Stim + (1+Num.Stim+Type|Subj) + (1|base_item) , data = comp.omni, family = "binomial")#
+exp2.acc.noint <- glmer(Acc ~ Type + Num.Stim + (1+Num.Stim+Type|Subj) + (1|base_item), data = comp.omni, family = "binomial")#
+anova(exp2.acc.full,exp2.acc.noint)#
+#
+# Length effect#
+exp2.acc.full.length <- glmer(Acc ~  Num.Stim + (1+Num.Stim|Subj) , data = comp.omni, family = "binomial")#
+exp2.acc.noint.length <- glmer(Acc ~ 1 + (1+Num.Stim|Subj) , data = comp.omni, family = "binomial")#
+anova(exp2.acc.full.length,exp2.acc.noint.length)#
+#
+comp.omni$rtAdj <- NA#
+comp.omni$AccAdj <- NA#
+for (i in unique(comp.omni$Subj)){#
+	comp.omni[comp.omni$Subj == i,]$rtAdj <- ((comp.omni[comp.omni$Subj == i,]$rt - mean(comp.omni[comp.omni$Subj == i,]$rt, na.rm = T)) + mean(comp.omni$rt, na.rm = T))#
+	comp.omni[comp.omni$Subj == i,]$AccAdj <- ((comp.omni[comp.omni$Subj == i,]$Acc - mean(comp.omni[comp.omni$Subj == i,]$Acc, na.rm = T)) + mean(comp.omni$Acc, na.rm = T))#
+	}#
+#
+# Prep for bar graph#
+comp.omni$DetailedType <- "Complex (Dark Pink Tree)"#
+comp.omni[comp.omni$Type == "Big",]$DetailedType <- "Simple (Big Pink Tree)"#
+comp.omni$DetailedType <- ordered(comp.omni$DetailedType, levels = c("Simple (Big Pink Tree)", "Complex (Dark Pink Tree)"))#
+comp.omni$Stim <- ordered(comp.omni$Stim, levels = c( "One Word","Two Words","Three Words"))#
+#
+comp.omni.rt <- summaryBy(rt + rtAdj ~ Type+ DetailedType + Stim + Subj, , data = subset(comp.omni, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
+comp.omni.rt <- summaryBy(rt + rtAdj ~ Type+ DetailedType + Stim , , data = comp.omni.rt, FUN = c(mean,sd), na.rm = T )#
+print(comp.omni.rt)#
+#
+comp.omni.Acc <- summaryBy(Acc + AccAdj~  Type + DetailedType+ Stim  +Subj, , data = comp.omni, FUN = c(mean), na.rm = T , keep.names = T)#
+comp.omni.Acc <- summaryBy(Acc + AccAdj~  Type + DetailedType+ Stim  , , data = comp.omni.Acc, FUN = c(mean,sd), na.rm = T )#
+print(comp.omni.Acc)#
+#
+par(fig = c(0,1,0.35,1),mar = c(3,4,2,2))#
+Comp_Graph(comp.omni.rt$rt.mean,comp.omni.rt$rtAdj.sd, comp.omni.rt$Stim, comp.omni.rt$Type, comp.omni$Subj, paste("Three Words", "Reaction Time", sep = " "), c(650,900),"Reaction Time (ms)",leg = TRUE)#
+par(fig = c(0,1,0,0.35),mar = c(3,4,2,2), new = TRUE)#
+Comp_Graph(comp.omni.Acc$Acc.mean,comp.omni.Acc$AccAdj.sd, comp.omni.Acc$Stim, comp.omni.Acc$Type, comp.omni$Subj, paste("Three Words", "Accuracy", sep = " "), c(0.5,1),"Accuracy")#
+# Prep for line graph#
+comp.omni$Stim <- ordered(comp.omni$Stim,  levels = c("One Word", "Two Words", "Three Words"))#
+comp.omni$DetailedType <- ordered(comp.omni$DetailedType, levels = c("Complex (Dark Pink Tree)","Simple (Big Pink Tree)"))#
+comp.omni.rt <- summaryBy(rt + rtAdj ~ Type+ DetailedType + Stim + Subj, , data = subset(comp.omni, Acc ==1 & Match == "Match"), FUN = c(mean), na.rm = T , keep.names = T)#
+ci.m <- aggregate(rt ~  Stim + DetailedType , comp.omni.rt, mean); ci.m#
+ci.l <- aggregate(rt ~  Stim + DetailedType , comp.omni.rt, ci.low); ci.l#
+ci.h <- aggregate(rt ~  Stim + DetailedType , comp.omni.rt, ci.high); ci.h#
+#
+comp.omni.rt <- summaryBy(rt + rtAdj ~ Type+ DetailedType + Stim , , data = comp.omni.rt, FUN = c(mean,sd), na.rm = T )#
+#
+comp.omni.Acc <- summaryBy(Acc + AccAdj~  Type + DetailedType+ Stim  +Subj, , data = comp.omni, FUN = c(mean), na.rm = T , keep.names = T)#
+comp.omni.Acc <- summaryBy(Acc + AccAdj~  Type + DetailedType+ Stim  , , data = comp.omni.Acc, FUN = c(mean,sd), na.rm = T )#
+#
+# Function for plotting data#
+Comp_Graph_l = function(DV.mean, DV.se, IV1, IV2, Subj, title,ylimit,ylab,leg = FALSE){#
+theme_set(theme_bw())#
+DV.se <- DV.se/(sqrt((length(unique(Subj))/2)))#
+graph_data <- data.frame(Stim = IV1, Task = IV2, DV = DV.mean, SE = DV.se)#
+print((graph_data))#
+if (leg == TRUE){#
+# PRetty ggplot2 code drawn from https://github.com/langcog/KTE/blob/master/full%20analysis%20all%20experiments.R#
+#
+#		#
+x <- ggplot(graph_data, aes(x=Stim, y=DV,group = Task, linetype = Task)) + #
+		ylim(ylimit) +#
+		ylab(ylab) +#
+		geom_line(aes(group = Task, linetype = Task),position=position_dodge(width=.1),stat="identity") + #
+		geom_linerange(aes(ymin=DV - SE, ymax=DV + SE), position=position_dodge(width=.1))+ #
+#
+		guides(colour=guide_legend()) +#
+		theme(strip.background = element_rect(fill="#FFFFFF"), #
+        strip.text = element_text(size=12), #
+        axis.text = element_text(size=12),#
+        axis.title = element_text(size=14),#
+        legend.text = element_text(size=12),#
+        legend.key = element_blank(),#
+       legend.title=element_blank(),#
+        title = element_text(size=16),#
+        panel.grid = element_blank(),#
+         axis.title.x=element_blank(),#
+        legend.position=c(0.2,0.8))#
+} else{#
+x <- ggplot(graph_data, aes(x=Stim, y=DV,group = Task, linetype = Task)) + #
+		ylim(ylimit) +#
+		ylab(ylab) +#
+		geom_line(aes(group = Task, linetype = Task),position=position_dodge(width=.1),stat="identity") + #
+		geom_linerange(aes(ymin=DV - SE, ymax=DV + SE), position=position_dodge(width=.1))+#
+		theme(strip.background = element_rect(fill="#FFFFFF"), #
+        strip.text = element_text(size=12), #
+        axis.text = element_text(size=12),#
+        axis.title = element_text(size=14),#
+        title = element_text(size=16),#
+        panel.grid = element_blank(),#
+        axis.text.x=element_blank(),#
+       axis.title.x=element_blank(),#
+  	   	legend.position= "none")}#
+return(x)#
+}#
+RT <- Comp_Graph_l(comp.omni.rt$rt.mean,comp.omni.rt$rtAdj.sd, comp.omni.rt$Stim, comp.omni.rt$DetailedType, comp.omni$Subj, paste("Three Words", "Reaction Time", sep = " "), c(650,800),"Reaction Time (ms)",leg = TRUE)#
+par(fig = c(0,1,0,0.35),mar = c(3,4,2,2), new = TRUE)#
+Acc <- Comp_Graph_l(comp.omni.Acc$Acc.mean,comp.omni.Acc$AccAdj.sd, comp.omni.Acc$Stim, comp.omni.Acc$DetailedType, comp.omni$Subj, paste("Three Words", "Accuracy", sep = " "), c(0.7,1),"Accuracy")#
+# Get the gtables#
+gRT <- ggplotGrob(RT)#
+gAcc <- ggplotGrob(Acc)#
+#
+# Set the widths#
+gAcc$widths <- gRT$widths#
+#
+# Arrange the two charts.#
+# The legend boxes are centered#
+grid.newpage()#
+grid.arrange(gAcc, gRT, nrow = 2, heights = c(1,2))

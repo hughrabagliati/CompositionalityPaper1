@@ -89,6 +89,7 @@ catch <- Catch_Import("./Exp1c")
 print(catch)
 comp <- Comp_Import("./Exp1c")
 
+comp.trials <- summaryBy(rt ~ Subj, data = comp, FUN = length, keep.names =T)
 
 comp$Acc <- 0
 comp[comp$key_press == 77 & comp$Match == "Match",]$Acc <- 1
@@ -107,6 +108,14 @@ contrasts(comp$Stim)[1] <- -1
 contrasts(comp$Type)[1] <- -1
 contrasts(comp$Stim)[2] <- 1
 contrasts(comp$Type)[2] <- 1
+
+comp.trials <- subset(comp.trials, Subj %in% unique(comp$Subj))
+comp.trials$rt.after <- summaryBy(rt ~ Subj, data = comp, FUN = length, keep.names =T)$rt
+comp.trials$excluded_trials = comp.trials$rt - comp.trials$rt.after
+print(paste("Excluded ", sum(comp.trials$excluded_trials), " out of ", sum(comp.trials$rt)," trials, i.e., ",
+		round((sum(comp.trials$excluded_trials)/sum(comp.trials$rt))*100,2),"%", sep = ""))
+print(paste("Excluded median of ", median(comp.trials$excluded_trials), " trials per subject, with SD ", round(sd(comp.trials$excluded_trials),2),".", sep = ""))
+
 
 # RT Analyses
 lmer(rt ~ Stim * Type + (1+Stim|Subj)+ (1+Stim*Type|base_item) , data = subset(comp, Acc ==1 & Match == "Match")) -> exp1c.full
